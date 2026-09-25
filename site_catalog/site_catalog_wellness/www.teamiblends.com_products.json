@@ -1,0 +1,605 @@
+[
+  {
+    "id": "gid://shopify/Product/2545332912228",
+    "title": "Teami Tea Tumbler 20 oz",
+    "description": {
+      "html": "Stay healthy on the go with our cute on-the-go Teami Tumblers! Easy to use, our tumblers are made of BPA Free Plastic, come in 20 fun colors and are double-walled to ensure your Teami is kept warm for up to 4 hours! Extra reasons why our one of a kind, Teami Tumblers are pretty amazing: No mess, no spill Heat Resistant - double-layered walls and durable BPA free plastic tumblers will ensure that you never ever burn yourself! Perfect for hot & cold beverages - hot tea, juice, fruit-infused detox water, smoothies and more! So many cute colors to choose from ( and we are always launching new ones, so make sure you keep following us on Instagram! ) Take your tumbler to the gym, work and everywhere you go! Tumbler Description & Functions: BPA FREE Double Layered Walls Easily Removable Mesh Insert Sports Flip Top Additional Bottom (Secret) Compartment to hold tea, vitamins, snacks and more!"
+    },
+    "url": "https://www.teamiblends.com/products/tea-tumbler",
+    "handle": "tea-tumbler",
+    "price_range": {
+      "min": {
+        "amount": 1999,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 2999,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 2999,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 2999,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/23683202646116",
+        "sku": "T20-RED",
+        "title": "Red",
+        "description": {
+          "html": "Stay healthy on the go with our cute on-the-go Teami Tumblers! Easy to use, our tumblers are made of BPA Free Plastic, come in 20 fun colors and are double-walled to ensure your Teami is kept warm for up to 4 hours! Extra reasons why our one of a kind, Teami Tumblers are pretty amazing: No mess, no spill Heat Resistant - double-layered walls and durable BPA free plastic tumblers will ensure that you never ever burn yourself! Perfect for hot & cold beverages - hot tea, juice, fruit-infused detox water, smoothies and more! So many cute colors to choose from ( and we are always launching new ones, so make sure you keep following us on Instagram! ) Take your tumbler to the gym, work and everywhere you go! Tumbler Description & Functions: BPA FREE Double Layered Walls Easily Removable Mesh Insert Sports Flip Top Additional Bottom (Secret) Compartment to hold tea, vitamins, snacks and more!"
+        },
+        "price": {
+          "amount": 2999,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Color",
+            "label": "Red"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0191/6439/7668/products/WebsiteStock-1000px-20ozTumbler-Red.png?v=1675384732"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://teamiblends-us.myshopify.com/cart/23683202646116:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/23682794258532",
+        "sku": "T20-GREEN",
+        "title": "Green",
+        "description": {
+          "html": "Stay healthy on the go with our cute on-the-go Teami Tumblers! Easy to use, our tumblers are made of BPA Free Plastic, come in 20 fun colors and are double-walled to ensure your Teami is kept warm for up to 4 hours! Extra reasons why our one of a kind, Teami Tumblers are pretty amazing: No mess, no spill Heat Resistant - double-layered walls and durable BPA free plastic tumblers will ensure that you never ever burn yourself! Perfect for hot & cold beverages - hot tea, juice, fruit-infused detox water, smoothies and more! So many cute colors to choose from ( and we are always launching new ones, so make sure you keep following us on Instagram! ) Take your tumbler to the gym, work and everywhere you go! Tumbler Description & Functions: BPA FREE Double Layered Walls Easily Removable Mesh Insert Sports Flip Top Additional Bottom (Secret) Compartment to hold tea, vitamins, snacks and more!"
+        },
+        "price": {
+          "amount": 1999,
+          "currency": "USD"
+        },
+        "list_price": {
+          "amount": 2999,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Color",
+            "label": "Green"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0191/6439/7668/products/WebsiteStock-1000px-20ozTumbler-Green.png?v=1675384728"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://teamiblends-us.myshopify.com/cart/23682794258532:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/31350810837107",
+        "sku": "T20-DustyRose",
+        "title": "Dusty Rose",
+        "description": {
+          "html": "Stay healthy on the go with our cute on-the-go Teami Tumblers! Easy to use, our tumblers are made of BPA Free Plastic, come in 20 fun colors and are double-walled to ensure your Teami is kept warm for up to 4 hours! Extra reasons why our one of a kind, Teami Tumblers are pretty amazing: No mess, no spill Heat Resistant - double-layered walls and durable BPA free plastic tumblers will ensure that you never ever burn yourself! Perfect for hot & cold beverages - hot tea, juice, fruit-infused detox water, smoothies and more! So many cute colors to choose from ( and we are always launching new ones, so make sure you keep following us on Instagram! ) Take your tumbler to the gym, work and everywhere you go! Tumbler Description & Functions: BPA FREE Double Layered Walls Easily Removable Mesh Insert Sports Flip Top Additional Bottom (Secret) Compartment to hold tea, vitamins, snacks and more!"
+        },
+        "price": {
+          "amount": 2999,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Color",
+            "label": "Dusty Rose"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0191/6439/7668/products/WebsiteStock-1000px-20ozTumbler-DustyRose_a6769e3c-607e-491f-9d34-5c94f662e262.png?v=1580242984"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://teamiblends-us.myshopify.com/cart/31350810837107:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/23683202482276",
+        "sku": "T20-PINK",
+        "title": "Pink",
+        "description": {
+          "html": "Stay healthy on the go with our cute on-the-go Teami Tumblers! Easy to use, our tumblers are made of BPA Free Plastic, come in 20 fun colors and are double-walled to ensure your Teami is kept warm for up to 4 hours! Extra reasons why our one of a kind, Teami Tumblers are pretty amazing: No mess, no spill Heat Resistant - double-layered walls and durable BPA free plastic tumblers will ensure that you never ever burn yourself! Perfect for hot & cold beverages - hot tea, juice, fruit-infused detox water, smoothies and more! So many cute colors to choose from ( and we are always launching new ones, so make sure you keep following us on Instagram! ) Take your tumbler to the gym, work and everywhere you go! Tumbler Description & Functions: BPA FREE Double Layered Walls Easily Removable Mesh Insert Sports Flip Top Additional Bottom (Secret) Compartment to hold tea, vitamins, snacks and more!"
+        },
+        "price": {
+          "amount": 1999,
+          "currency": "USD"
+        },
+        "list_price": {
+          "amount": 2999,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Color",
+            "label": "Pink"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0191/6439/7668/products/WebsiteStock-1000px-20ozTumbler-Pink.png?v=1675384728"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://teamiblends-us.myshopify.com/cart/23683202482276:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/23683202580580",
+        "sku": "T20-PURPLE",
+        "title": "Purple",
+        "description": {
+          "html": "Stay healthy on the go with our cute on-the-go Teami Tumblers! Easy to use, our tumblers are made of BPA Free Plastic, come in 20 fun colors and are double-walled to ensure your Teami is kept warm for up to 4 hours! Extra reasons why our one of a kind, Teami Tumblers are pretty amazing: No mess, no spill Heat Resistant - double-layered walls and durable BPA free plastic tumblers will ensure that you never ever burn yourself! Perfect for hot & cold beverages - hot tea, juice, fruit-infused detox water, smoothies and more! So many cute colors to choose from ( and we are always launching new ones, so make sure you keep following us on Instagram! ) Take your tumbler to the gym, work and everywhere you go! Tumbler Description & Functions: BPA FREE Double Layered Walls Easily Removable Mesh Insert Sports Flip Top Additional Bottom (Secret) Compartment to hold tea, vitamins, snacks and more!"
+        },
+        "price": {
+          "amount": 1999,
+          "currency": "USD"
+        },
+        "list_price": {
+          "amount": 2999,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Color",
+            "label": "Purple"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0191/6439/7668/products/WebsiteStock-1000px-20ozTumbler-Purple.png?v=1675384728"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://teamiblends-us.myshopify.com/cart/23683202580580:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/23683202613348",
+        "sku": "T20-BLUE",
+        "title": "Blue",
+        "description": {
+          "html": "Stay healthy on the go with our cute on-the-go Teami Tumblers! Easy to use, our tumblers are made of BPA Free Plastic, come in 20 fun colors and are double-walled to ensure your Teami is kept warm for up to 4 hours! Extra reasons why our one of a kind, Teami Tumblers are pretty amazing: No mess, no spill Heat Resistant - double-layered walls and durable BPA free plastic tumblers will ensure that you never ever burn yourself! Perfect for hot & cold beverages - hot tea, juice, fruit-infused detox water, smoothies and more! So many cute colors to choose from ( and we are always launching new ones, so make sure you keep following us on Instagram! ) Take your tumbler to the gym, work and everywhere you go! Tumbler Description & Functions: BPA FREE Double Layered Walls Easily Removable Mesh Insert Sports Flip Top Additional Bottom (Secret) Compartment to hold tea, vitamins, snacks and more!"
+        },
+        "price": {
+          "amount": 1999,
+          "currency": "USD"
+        },
+        "list_price": {
+          "amount": 2999,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Color",
+            "label": "Blue"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0191/6439/7668/products/WebsiteStock-1000px-20ozTumbler-Blue.png?v=1675384728"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://teamiblends-us.myshopify.com/cart/23683202613348:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/23683202678884",
+        "sku": "T20-YELLOW",
+        "title": "Yellow",
+        "description": {
+          "html": "Stay healthy on the go with our cute on-the-go Teami Tumblers! Easy to use, our tumblers are made of BPA Free Plastic, come in 20 fun colors and are double-walled to ensure your Teami is kept warm for up to 4 hours! Extra reasons why our one of a kind, Teami Tumblers are pretty amazing: No mess, no spill Heat Resistant - double-layered walls and durable BPA free plastic tumblers will ensure that you never ever burn yourself! Perfect for hot & cold beverages - hot tea, juice, fruit-infused detox water, smoothies and more! So many cute colors to choose from ( and we are always launching new ones, so make sure you keep following us on Instagram! ) Take your tumbler to the gym, work and everywhere you go! Tumbler Description & Functions: BPA FREE Double Layered Walls Easily Removable Mesh Insert Sports Flip Top Additional Bottom (Secret) Compartment to hold tea, vitamins, snacks and more!"
+        },
+        "price": {
+          "amount": 1999,
+          "currency": "USD"
+        },
+        "list_price": {
+          "amount": 2999,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Color",
+            "label": "Yellow"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0191/6439/7668/products/WebsiteStock-1000px-20ozTumbler-Yellow.png?v=1675384732"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://teamiblends-us.myshopify.com/cart/23683202678884:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/23683202711652",
+        "sku": "T20-ORANGE",
+        "title": "Orange",
+        "description": {
+          "html": "Stay healthy on the go with our cute on-the-go Teami Tumblers! Easy to use, our tumblers are made of BPA Free Plastic, come in 20 fun colors and are double-walled to ensure your Teami is kept warm for up to 4 hours! Extra reasons why our one of a kind, Teami Tumblers are pretty amazing: No mess, no spill Heat Resistant - double-layered walls and durable BPA free plastic tumblers will ensure that you never ever burn yourself! Perfect for hot & cold beverages - hot tea, juice, fruit-infused detox water, smoothies and more! So many cute colors to choose from ( and we are always launching new ones, so make sure you keep following us on Instagram! ) Take your tumbler to the gym, work and everywhere you go! Tumbler Description & Functions: BPA FREE Double Layered Walls Easily Removable Mesh Insert Sports Flip Top Additional Bottom (Secret) Compartment to hold tea, vitamins, snacks and more!"
+        },
+        "price": {
+          "amount": 1999,
+          "currency": "USD"
+        },
+        "list_price": {
+          "amount": 2999,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Color",
+            "label": "Orange"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0191/6439/7668/products/WebsiteStock-1000px-20ozTumbler-Orange.png?v=1578599419"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://teamiblends-us.myshopify.com/cart/23683202711652:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/23683202744420",
+        "sku": "T20-BURGUN",
+        "title": "Burgundy",
+        "description": {
+          "html": "Stay healthy on the go with our cute on-the-go Teami Tumblers! Easy to use, our tumblers are made of BPA Free Plastic, come in 20 fun colors and are double-walled to ensure your Teami is kept warm for up to 4 hours! Extra reasons why our one of a kind, Teami Tumblers are pretty amazing: No mess, no spill Heat Resistant - double-layered walls and durable BPA free plastic tumblers will ensure that you never ever burn yourself! Perfect for hot & cold beverages - hot tea, juice, fruit-infused detox water, smoothies and more! So many cute colors to choose from ( and we are always launching new ones, so make sure you keep following us on Instagram! ) Take your tumbler to the gym, work and everywhere you go! Tumbler Description & Functions: BPA FREE Double Layered Walls Easily Removable Mesh Insert Sports Flip Top Additional Bottom (Secret) Compartment to hold tea, vitamins, snacks and more!"
+        },
+        "price": {
+          "amount": 1999,
+          "currency": "USD"
+        },
+        "list_price": {
+          "amount": 2999,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Color",
+            "label": "Burgundy"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0191/6439/7668/products/WebsiteStock-1000px-20ozTumbler-Burgundy.png?v=1578599419"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://teamiblends-us.myshopify.com/cart/23683202744420:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/23683203006564",
+        "sku": "T20-WHITE",
+        "title": "White",
+        "description": {
+          "html": "Stay healthy on the go with our cute on-the-go Teami Tumblers! Easy to use, our tumblers are made of BPA Free Plastic, come in 20 fun colors and are double-walled to ensure your Teami is kept warm for up to 4 hours! Extra reasons why our one of a kind, Teami Tumblers are pretty amazing: No mess, no spill Heat Resistant - double-layered walls and durable BPA free plastic tumblers will ensure that you never ever burn yourself! Perfect for hot & cold beverages - hot tea, juice, fruit-infused detox water, smoothies and more! So many cute colors to choose from ( and we are always launching new ones, so make sure you keep following us on Instagram! ) Take your tumbler to the gym, work and everywhere you go! Tumbler Description & Functions: BPA FREE Double Layered Walls Easily Removable Mesh Insert Sports Flip Top Additional Bottom (Secret) Compartment to hold tea, vitamins, snacks and more!"
+        },
+        "price": {
+          "amount": 1999,
+          "currency": "USD"
+        },
+        "list_price": {
+          "amount": 2999,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Color",
+            "label": "White"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0191/6439/7668/products/WebsiteStock-1000px-20ozTumbler-White.png?v=1578599419"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://teamiblends-us.myshopify.com/cart/23683203006564:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Color",
+        "values": [
+          {
+            "label": "Red"
+          },
+          {
+            "label": "Green"
+          },
+          {
+            "label": "Dusty Rose"
+          },
+          {
+            "label": "Pink"
+          },
+          {
+            "label": "Purple"
+          },
+          {
+            "label": "Blue"
+          },
+          {
+            "label": "Yellow"
+          },
+          {
+            "label": "Orange"
+          },
+          {
+            "label": "Burgundy"
+          },
+          {
+            "label": "White"
+          },
+          {
+            "label": "Navy"
+          },
+          {
+            "label": "Black"
+          },
+          {
+            "label": "Grey"
+          },
+          {
+            "label": "Baby Pink"
+          },
+          {
+            "label": "Lavender"
+          },
+          {
+            "label": "Olive"
+          },
+          {
+            "label": "Mint"
+          },
+          {
+            "label": "Baby Blue"
+          },
+          {
+            "label": "Coral"
+          },
+          {
+            "label": "Periwinkle"
+          },
+          {
+            "label": "Plum"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/0191/6439/7668/products/WebsiteStock-1000px-PrimaryImage-20ozTumbler-Green.png?v=1578598374"
+      }
+    ],
+    "categories": [
+      {
+        "value": "gid://shopify/TaxonomyCategory/hg-11-10-5-8",
+        "taxonomy": "shopify"
+      }
+    ],
+    "tags": [
+      "live_on_site",
+      "theme_color_green4"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/106852909156",
+        "handle": "tumblers-accessories",
+        "title": "TUMBLERS + ACCESSORIES",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/114753831012",
+        "handle": "tumblers",
+        "title": "TUMBLERS",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/114754355300",
+        "handle": "accessories",
+        "title": "ACCESSORIES",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/261022679155",
+        "handle": "shop-all",
+        "title": "SHOP ALL",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/280151752819",
+        "handle": "all-products-excluding-lifebox-1",
+        "title": "Shop All - excluding LifeBox, MixIt",
+        "description": {
+          "html": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/4524599083123",
+    "title": "4 Day Detox Sample",
+    "description": {
+      "html": "Ready to kickstart your healthy lifestyle?! We believe that maintaining a healthy gut is vital in living your happiest, healthiest life! Feeling your best truly starts from within, which is why we created this 100% natural, plant-based detoxifying cleanse! The purpose of the 4 Day Detox sample is to help you naturally help cleanse, reset and refresh your body in just two simple steps: 1) Drink your Teami Skinny every morning. 2) Drink your Teami Colon every other night before bed. This program is perfect for everyone's lifestyle, no matter where you are at in your current wellness journey! Our blends are created with the highest quality, premium loose leaf tea, and lots of love to help you get the best results. Our Teami 4 Day Detox Pack includes: 4 Teami Skinny tea bags 2 Teami Colon tea bags GMO-Free, Gluten-Free, Dairy-Free, and Sugar-Free! ** Ready to commit to the full 30 Day Detox? Order your Program here!"
+    },
+    "url": "https://www.teamiblends.com/products/4-day-detox-sample",
+    "handle": "4-day-detox-sample",
+    "price_range": {
+      "min": {
+        "amount": 1000,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 1000,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/31801893126259",
+        "sku": "4-DAY-SMPL-PK",
+        "title": "Default Title",
+        "description": {
+          "html": "Ready to kickstart your healthy lifestyle?! We believe that maintaining a healthy gut is vital in living your happiest, healthiest life! Feeling your best truly starts from within, which is why we created this 100% natural, plant-based detoxifying cleanse! The purpose of the 4 Day Detox sample is to help you naturally help cleanse, reset and refresh your body in just two simple steps: 1) Drink your Teami Skinny every morning. 2) Drink your Teami Colon every other night before bed. This program is perfect for everyone's lifestyle, no matter where you are at in your current wellness journey! Our blends are created with the highest quality, premium loose leaf tea, and lots of love to help you get the best results. Our Teami 4 Day Detox Pack includes: 4 Teami Skinny tea bags 2 Teami Colon tea bags GMO-Free, Gluten-Free, Dairy-Free, and Sugar-Free! ** Ready to commit to the full 30 Day Detox? Order your Program here!"
+        },
+        "price": {
+          "amount": 1000,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Title",
+            "label": "Default Title"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0191/6439/7668/products/4daydetox.png?v=1623942254"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://teamiblends-us.myshopify.com/cart/31801893126259:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          {
+            "label": "Default Title"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/0191/6439/7668/products/4daydetox.png?v=1623942254"
+      }
+    ],
+    "tags": [
+      "hide_japan",
+      "live_on_site"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/261022679155",
+        "handle": "shop-all",
+        "title": "SHOP ALL",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/280151752819",
+        "handle": "all-products-excluding-lifebox-1",
+        "title": "Shop All - excluding LifeBox, MixIt",
+        "description": {
+          "html": ""
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "file": "allstar-nutrition.com_products.json",
+    "total": 101,
+    "kept": 86,
+    "output": "site_catalog_wellness\\allstar-nutrition.com_products.json",
+    "error": null
+  },
+  {
+    "file": "americanmetabolix.com_products.json",
+    "total": 0,
+    "kept": 0,
+    "output": "site_catalog_wellness\\americanmetabolix.com_products.json",
+    "error": null
+  },
+  {
+    "file": "ancestralsupplements.com_products.json",
+    "total": 52,
+    "kept": 52,
+    "output": "site_catalog_wellness\\ancestralsupplements.com_products.json",
+    "error": null
+  },
+  {
+    "file": "assault-labs.com_products.json",
+    "total": 3,
+    "kept": 3,
+    "output": "site_catalog_wellness\\assault-labs.com_products.json",
+    "error": null
+  },
+  {
+    "file": "blackstonelabs.com_products.json",
+    "total": 49,
+    "kept": 43,
+    "output": "site_catalog_wellness\\blackstonelabs.com_products.json",
+    "error": null
+  },
+  {
+    "file": "bloomnu.com_products.json",
+    "total": 67,
+    "kept": 31,
+    "output": "site_catalog_wellness\\bloomnu.com_products.json",
+    "error": null
+  },
+  {
+    "file": "blueprint.bryanjohnson.com_products.json",
+    "total": 54,
+    "kept": 37,
+    "output": "site_catalog_wellness\\blueprint.bryanjohnson.com_products.json",
+    "error": null
+  },
+  {
+    "file": "completenutrition.com_products.json",
+    "total": 90,
+    "kept": 87,
+    "output": "site_catalog_wellness\\completenutrition.com_products.json",
+    "error": null
+  },
+  {
+    "file": "goop.com_products.json",
+    "total": 0,
+    "kept": 0,
+    "output": "site_catalog_wellness\\goop.com_products.json",
+    "error": null
+  },
+  {
+    "file": "ironmaglabs.com_products.json",
+    "total": 0,
+    "kept": 0,
+    "output": "site_catalog_wellness\\ironmaglabs.com_products.json",
+    "error": null
+  },
+  {
+    "file": "maxmuscle.com_products.json",
+    "total": 36,
+    "kept": 31,
+    "output": "site_catalog_wellness\\maxmuscle.com_products.json",
+    "error": null
+  },
+  {
+    "file": "moonjuice.com_products.json",
+    "total": 51,
+    "kept": 48,
+    "output": "site_catalog_wellness\\moonjuice.com_products.json",
+    "error": null
+  },
+  {
+    "file": "naturesbounty.com_products.json",
+    "total": 186,
+    "kept": 170,
+    "output": "site_catalog_wellness\\naturesbounty.com_products.json",
+    "error": null
+  },
+  {
+    "file": "performaxlabs.com_products.json",
+    "total": 16,
+    "kept": 12,
+    "output": "site_catalog_wellness\\performaxlabs.com_products.json",
+    "error": null
+  },
+  {
+    "file": "prevagen.com_products.json",
+    "total": 9,
+    "kept": 8,
+    "output": "site_catalog_wellness\\prevagen.com_products.json",
+    "error": null
+  },
+  {
+    "file": "pureforyou.com_products.json",
+    "total": 384,
+    "kept": 383,
+    "output": "site_catalog_wellness\\pureforyou.com_products.json",
+    "error": null
+  },
+  {
+    "file": "steelsupplements.com_products.json",
+    "total": 279,
+    "kept": 135,
+    "output": "site_catalog_wellness\\steelsupplements.com_products.json",
+    "error": null
+  },
+  {
+    "file": "www.huel.com_products.json",
+    "total": 101,
+    "kept": 16,
+    "output": "site_catalog_wellness\\www.huel.com_products.json",
+    "error": null
+  },
+  {
+    "file": "www.onnit.com_products.json",
+    "total": 32,
+    "kept": 32,
+    "output": "site_catalog_wellness\\www.onnit.com_products.json",
+    "error": null
+  },
+  {
+    "file": "www.teamiblends.com_products.json",
+    "total": 3,
+    "kept": 2,
+    "output": "site_catalog_wellness\\www.teamiblends.com_products.json",
+    "error": null
+  }
+]

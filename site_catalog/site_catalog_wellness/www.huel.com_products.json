@@ -1,0 +1,4760 @@
+[
+  {
+    "id": "gid://shopify/Product/7977537601647",
+    "title": "High-Protein Starter Kit",
+    "description": {
+      "html": ""
+    },
+    "url": "https://checkout.huel.com/products/high-protein-starter-kit",
+    "handle": "high-protein-starter-kit",
+    "price_range": {
+      "min": {
+        "amount": 7535,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 7535,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/43992037982319",
+        "sku": "HIGHPROTEINBUNDLE-US",
+        "title": "High-protein Starter Bundle",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 7535,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Name",
+            "label": "High-protein Starter Bundle"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/z_Flatlay_Highproteinstarterkit__US_b5a0008b-b186-43b7-84f6-e88e1e5ef507.png?v=1786463573"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/43992037982319:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Name",
+        "values": [
+          {
+            "label": "High-protein Starter Bundle"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/z_Flatlay_Highproteinstarterkit__US_c565e895-4a62-486f-9354-448664e831f4.png?v=1786463573",
+        "alt_text": "A flatlay grid image of a bag of Huel Black Edition powder surrounded by five bottles of Huel Black Edition Ready-to-drink"
+      }
+    ],
+    "categories": [
+      {
+        "value": "gid://shopify/TaxonomyCategory/na",
+        "taxonomy": "shopify"
+      }
+    ],
+    "tags": [
+      "huel_merch_product",
+      "managed_by_huel"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/297487237231",
+        "handle": "new-all-products",
+        "title": "NEW - All Products",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/303014183023",
+        "handle": "managed-by-huel",
+        "title": "Managed by Huel",
+        "description": {
+          "html": "USED FOR: - BUYXGETY Discounts"
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/318779916399",
+        "handle": "new-huel-bundles-us",
+        "title": "NEW - Huel Bundles - US",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/318782013551",
+        "handle": "shopper-mission-more-protein-us",
+        "title": "Shopper Mission - More Protein - US",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/318820122735",
+        "handle": "new-all-products-us",
+        "title": "NEW - All Products - US",
+        "description": {
+          "html": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/7701157281903",
+    "title": "High-Protein Bundle",
+    "description": {
+      "html": ""
+    },
+    "url": "https://checkout.huel.com/products/huel-high-protein-bundle",
+    "handle": "huel-high-protein-bundle",
+    "price_range": {
+      "min": {
+        "amount": 15335,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 15335,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/42700879102063",
+        "sku": "US-BNDL-PTN-02",
+        "title": "Huel High Protein Bundle",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 15335,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Huel High Protein Bundle",
+            "label": "Huel High Protein Bundle"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/z_flatlay_10Serve_11gfiber_abc7e9bb-4b86-41f4-82a3-71dbff1eb16e.png?v=1786463737"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/42700879102063:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Huel High Protein Bundle",
+        "values": [
+          {
+            "label": "Huel High Protein Bundle"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/z_flatlay_10Serve_11gfiber_d8f6433b-4111-474c-8e6d-8bb0b922650b.png?v=1786463736"
+      }
+    ],
+    "categories": [
+      {
+        "value": "gid://shopify/TaxonomyCategory/na",
+        "taxonomy": "shopify"
+      }
+    ],
+    "tags": [
+      "huel_merch_product",
+      "managed_by_huel"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/297487237231",
+        "handle": "new-all-products",
+        "title": "NEW - All Products",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/303014183023",
+        "handle": "managed-by-huel",
+        "title": "Managed by Huel",
+        "description": {
+          "html": "USED FOR: - BUYXGETY Discounts"
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/318779916399",
+        "handle": "new-huel-bundles-us",
+        "title": "NEW - Huel Bundles - US",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/318782013551",
+        "handle": "shopper-mission-more-protein-us",
+        "title": "Shopper Mission - More Protein - US",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/318820122735",
+        "handle": "new-all-products-us",
+        "title": "NEW - All Products - US",
+        "description": {
+          "html": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/7687377420399",
+    "title": "Complete Nutrition Bars",
+    "description": {
+      "html": ""
+    },
+    "url": "https://checkout.huel.com/products/5x-complete-nutrition-bar",
+    "handle": "5x-complete-nutrition-bar",
+    "price_range": {
+      "min": {
+        "amount": 1775,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 1775,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/42660695572591",
+        "sku": "BARBUNDLE",
+        "title": "x5",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 1775,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Quantity",
+            "label": "x5"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Bar_20Mix_20Bundle_202_4a133a5d-97be-46f5-a43b-ac589fcebcc7.png?v=1788787872"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/42660695572591:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Quantity",
+        "values": [
+          {
+            "label": "x5"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Bar_20Mix_20Bundle_202.png?v=1788787872"
+      }
+    ],
+    "tags": [
+      "huel_merch_product",
+      "managed_by_huel"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/303014183023",
+        "handle": "managed-by-huel",
+        "title": "Managed by Huel",
+        "description": {
+          "html": "USED FOR: - BUYXGETY Discounts"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/7687375356015",
+    "title": "5x Complete Nutrition Bars",
+    "description": {
+      "html": ""
+    },
+    "url": "https://checkout.huel.com/products/5x-complete-nutrition-bars",
+    "handle": "5x-complete-nutrition-bars",
+    "price_range": {
+      "min": {
+        "amount": 355,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 355,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/42660686266479",
+        "sku": "US-CNB-CHC-11",
+        "title": "Chocolate Caramel",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 355,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Chocolate Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/complete_nutriton_bar_CNB_chocolate-caramel.png?v=1767714102"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/42660686266479:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/42660686299247",
+        "sku": "US-CNB-CDO-11",
+        "title": "Chocolate Chip Cookie Dough",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 355,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Chocolate Chip Cookie Dough"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/complete_nutriton_bar_CNB_Cookie-Dough.png?v=1767714102"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/42660686299247:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/42660686332015",
+        "sku": "US-CNB-CFB-11",
+        "title": "Chocolate Fudge Brownie",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 355,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Chocolate Fudge Brownie"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/complete_nutriton_bar_CNB_Choc-fudge-brownie.png?v=1767714103"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/42660686332015:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/42660686364783",
+        "sku": "US-CNB-DCR-11",
+        "title": "Dark Chocolate & Raspberry",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 355,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Dark Chocolate & Raspberry"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/complete_nutriton_bar_CNB_Dark-Chocolate-Raspberry.png?v=1767714103"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/42660686364783:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/42660686397551",
+        "sku": "US-CNB-PNC-11",
+        "title": "Peanut Caramel",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 355,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Peanut Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/complete_nutriton_bar_CNB_Peanut-Caramel.png?v=1767714104"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/42660686397551:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Flavor",
+        "values": [
+          {
+            "label": "Chocolate Fudge Brownie"
+          },
+          {
+            "label": "Dark Chocolate & Raspberry"
+          },
+          {
+            "label": "Peanut Caramel"
+          },
+          {
+            "label": "Chocolate Caramel"
+          },
+          {
+            "label": "Chocolate Chip Cookie Dough"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Bar_20Mix_20Bundle_202_4729ea10-aa32-4f61-8cc6-60df58938d1d.png?v=1767714101"
+      }
+    ],
+    "tags": [
+      "huel_merch_product",
+      "managed_by_huel"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/303014183023",
+        "handle": "managed-by-huel",
+        "title": "Managed by Huel",
+        "description": {
+          "html": "USED FOR: - BUYXGETY Discounts"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/7240207204463",
+    "title": "Complete Nutrition Bar Box",
+    "description": {
+      "html": ""
+    },
+    "url": "https://checkout.huel.com/products/single-huel-complete-nutrition-box",
+    "handle": "single-huel-complete-nutrition-box",
+    "price_range": {
+      "min": {
+        "amount": 4480,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 5960,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/42542957461615",
+        "sku": "US-CNB12-CDO-11",
+        "title": "Chocolate Chip Cookie Dough",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 4480,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Chocolate Chip Cookie Dough"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/US-choc-chip-cookie-dough-single_d2ed0635-99b8-43ff-a358-1ddb01c79cde.png?v=1789028822"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/42542957461615:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/42172937568367",
+        "sku": "US-CNB12-CHC-11",
+        "title": "Chocolate Caramel",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 4480,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Chocolate Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/us_bar_nav_bar_360_382334b8-e5b4-453d-b8d2-0db0e2015aaf.png?v=1789028822"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/42172937568367:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/42172937601135",
+        "sku": "US-CNB12-PNC-11",
+        "title": "Peanut Caramel",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 4480,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Peanut Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/peanut-caramel-US_nav_featured_40b36163-6bf0-40ae-ade2-30ee216e2d46.png?v=1789028823"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/42172937601135:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/42172937633903",
+        "sku": "US-CNB12-CFB-11",
+        "title": "Chocolate Fudge Brownie",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 4480,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Chocolate Fudge Brownie"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/choc-fudge_nav_featured_-US_0121f363-7527-4a77-883e-5891e2ebb7ce.png?v=1789028824"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/42172937633903:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/42172937666671",
+        "sku": "US-CNB12-DCR-11",
+        "title": "Dark Chocolate & Raspberry",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 4480,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Dark Chocolate & Raspberry"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/dark-rasp_nav_featured_US_8fce3b74-b196-46d6-a44c-af74d721268d.png?v=1789028825"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/42172937666671:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/42167834673263",
+        "sku": "US-CNB15-MX1-11",
+        "title": "Variety Box",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 5960,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Variety Box"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/CNB_20-_20Selection_20Box_20-_20UK.png?v=1789028825"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/42167834673263:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Flavor",
+        "values": [
+          {
+            "label": "Chocolate Chip Cookie Dough"
+          },
+          {
+            "label": "Chocolate Fudge Brownie"
+          },
+          {
+            "label": "Variety Box"
+          },
+          {
+            "label": "Dark Chocolate & Raspberry"
+          },
+          {
+            "label": "Chocolate Caramel"
+          },
+          {
+            "label": "Peanut Caramel"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Bars_20Cart_20Image_7b0b7962-02ec-4410-bf96-ae00698438ae.png?v=1789028821"
+      }
+    ],
+    "tags": [
+      "huel_merch_product",
+      "managed_by_huel"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/166091161711",
+        "handle": "upsell-products-new",
+        "title": "Upsell Products New",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/303014183023",
+        "handle": "managed-by-huel",
+        "title": "Managed by Huel",
+        "description": {
+          "html": "USED FOR: - BUYXGETY Discounts"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/7216804593775",
+    "title": "Huel Complete Nutrition Bar",
+    "description": {
+      "html": ""
+    },
+    "url": "https://checkout.huel.com/products/single-huel-bar-cross-sell",
+    "handle": "single-huel-bar-cross-sell",
+    "price_range": {
+      "min": {
+        "amount": 285,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 285,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/41351515242607",
+        "sku": "US-CNB-CHC-11",
+        "title": "Chocolate Caramel",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 285,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavour",
+            "label": "Chocolate Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/us_bar_nav_bar_360_bcb8ed49-f173-4f6f-b155-3996ae6975ed.png?v=1787592733"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41351515242607:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41351515275375",
+        "sku": "US-CNB-PNC-11",
+        "title": "Peanut Caramel",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 285,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavour",
+            "label": "Peanut Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/peanut-caramel-US_nav_featured_d9d1a898-b33a-4070-8ac2-f61e34ec12b0.png?v=1787592734"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41351515275375:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41423126986863",
+        "sku": "US-CNB-CFB-11",
+        "title": "Chocolate Fudge Brownie",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 285,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Flavour",
+            "label": "Chocolate Fudge Brownie"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/choc-fudge_nav_featured_-US_9d60bdd6-1687-4ec6-9f8b-7d4ac0982836.png?v=1787592735"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41423126986863:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41423127019631",
+        "sku": "US-CNB-DCR-11",
+        "title": "Dark Chocolate & Raspberry",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 285,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Flavour",
+            "label": "Dark Chocolate & Raspberry"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/dark-rasp_nav_featured_US_a12322dc-f3d2-48fd-ba62-40970d83e640.png?v=1787592735"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41423127019631:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/42542801715311",
+        "sku": "US-CNB-CDO-11",
+        "title": "Complete Nutrition Bar Chocolate Chip Cookie Dough",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 285,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavour",
+            "label": "Complete Nutrition Bar Chocolate Chip Cookie Dough"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/US-choc-chip-cookie-dough-single.png?v=1787592736"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/42542801715311:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Flavour",
+        "values": [
+          {
+            "label": "Peanut Caramel"
+          },
+          {
+            "label": "Chocolate Fudge Brownie"
+          },
+          {
+            "label": "Chocolate Caramel"
+          },
+          {
+            "label": "Complete Nutrition Bar Chocolate Chip Cookie Dough"
+          },
+          {
+            "label": "Dark Chocolate & Raspberry"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/choc-caramel-US_cross-sell_a9227b20-517c-4d72-b7e8-32e613ed9d94.png?v=1787592733"
+      }
+    ],
+    "tags": [
+      "HUEL_HIDDEN",
+      "huel_merch_product",
+      "managed_by_huel"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/303014183023",
+        "handle": "managed-by-huel",
+        "title": "Managed by Huel",
+        "description": {
+          "html": "USED FOR: - BUYXGETY Discounts"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/7191384785007",
+    "title": "Huel Complete Nutrition Bar",
+    "description": {
+      "html": ""
+    },
+    "url": "https://checkout.huel.com/products/single-complete-nutrition-bar-50-off",
+    "handle": "single-complete-nutrition-bar-50-off",
+    "price_range": {
+      "min": {
+        "amount": 178,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 178,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/41253755322479",
+        "sku": "US-CNB-CHC-11",
+        "title": "Chocolate Caramel",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 178,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavour",
+            "label": "Chocolate Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/us_bar_nav_bar_360_dbf0be6e-febf-4b56-8811-33ae394640bf.png?v=1787582311"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41253755322479:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41253755355247",
+        "sku": "US-CNB-PNC-11",
+        "title": "Peanut Caramel",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 178,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavour",
+            "label": "Peanut Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/peanut-caramel-US_nav_featured_45f9752f-790d-48d9-94ab-027e59ecaff6.png?v=1787582312"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41253755355247:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41440443990127",
+        "sku": "US-CNB-DCR-11",
+        "title": "Dark Chocolate & Raspberry",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 178,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavour",
+            "label": "Dark Chocolate & Raspberry"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/dark-rasp_nav_featured_US_79a3f5ee-4a33-42f0-9e6d-811ce8a04a5c.png?v=1787582313"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41440443990127:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41440444022895",
+        "sku": "US-CNB-CFB-11",
+        "title": "Chocolate Fudge Brownie",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 178,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavour",
+            "label": "Chocolate Fudge Brownie"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/choc-fudge_nav_featured_-US_2a26843f-d191-4871-8fe7-f5846a4e61a4.png?v=1787582313"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41440444022895:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Flavour",
+        "values": [
+          {
+            "label": "Peanut Caramel"
+          },
+          {
+            "label": "Chocolate Fudge Brownie"
+          },
+          {
+            "label": "Dark Chocolate & Raspberry"
+          },
+          {
+            "label": "Chocolate Caramel"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Bar_2050_25_20off_163fa6f5-44ed-40e6-a855-d9432a1789af.png?v=1787582310"
+      }
+    ],
+    "tags": [
+      "HUEL_HIDDEN",
+      "huel_merch_product",
+      "managed_by_huel"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/284552495215",
+        "handle": "upsell-products-acc-area",
+        "title": "Upsell Products (Acc Area)",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/303014183023",
+        "handle": "managed-by-huel",
+        "title": "Managed by Huel",
+        "description": {
+          "html": "USED FOR: - BUYXGETY Discounts"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/7167689457775",
+    "title": "Complete Nutrition Bar",
+    "description": {
+      "html": ""
+    },
+    "url": "https://checkout.huel.com/products/single-huel-bar",
+    "handle": "single-huel-bar",
+    "price_range": {
+      "min": {
+        "amount": 355,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 355,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/41192229961839",
+        "sku": "US-CNB-CHC-11",
+        "title": "Chocolate Caramel",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 355,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Chocolate Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/us_bar_nav_bar_360.png?v=1788787809"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41192229961839:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41192229929071",
+        "sku": "US-CNB-PNC-11",
+        "title": "Peanut Caramel",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 355,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Peanut Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/peanut-caramel-US_nav_featured.png?v=1788787809"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41192229929071:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41383020101743",
+        "sku": "US-CNB-DCR-11",
+        "title": "Dark Chocolate & Raspberry",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 355,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Dark Chocolate & Raspberry"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/dark-rasp_nav_featured_US.png?v=1788787810"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41383020101743:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41383023771759",
+        "sku": "US-CNB-CFB-11",
+        "title": "Chocolate Fudge Brownie",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 355,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Chocolate Fudge Brownie"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/choc-fudge_nav_featured_-US.png?v=1788787811"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41383023771759:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/42540664815727",
+        "sku": "US-CNB-CDO-11",
+        "title": "Chocolate Chip Cookie Dough",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 355,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Chocolate Chip Cookie Dough"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/US-choc-chip-cookie-dough-single_3cd1bdab-fa78-45ca-a3d9-06dd3dcddbf9.png?v=1788787812"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/42540664815727:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Flavor",
+        "values": [
+          {
+            "label": "Dark Chocolate & Raspberry"
+          },
+          {
+            "label": "Chocolate Chip Cookie Dough"
+          },
+          {
+            "label": "Peanut Caramel"
+          },
+          {
+            "label": "Chocolate Caramel"
+          },
+          {
+            "label": "Chocolate Fudge Brownie"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/NEW_Bar_CookieDough_US_7gFibre_flatlay_render_db88855e-8211-43a8-af53-2508567d9282.png?v=1788787808"
+      }
+    ],
+    "tags": [
+      "HUEL_HIDDEN",
+      "huel_merch_product",
+      "managed_by_huel"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/284552495215",
+        "handle": "upsell-products-acc-area",
+        "title": "Upsell Products (Acc Area)",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/303014183023",
+        "handle": "managed-by-huel",
+        "title": "Managed by Huel",
+        "description": {
+          "html": "USED FOR: - BUYXGETY Discounts"
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/304749510767",
+        "handle": "new-account-area-main-collection",
+        "title": "NEW - Account Area Main Collection",
+        "description": {
+          "html": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/7127826792559",
+    "title": "Complete Nutrition Bar",
+    "description": {
+      "html": ""
+    },
+    "url": "https://checkout.huel.com/products/huel-bar",
+    "handle": "huel-bar",
+    "price_range": {
+      "min": {
+        "amount": 4375,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 5960,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/43023057682543",
+        "sku": "US-CNB15-MX1-11",
+        "title": "Selection Box (15)",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 5960,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavour",
+            "label": "Selection Box (15)"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Bars_SelectionBox_x15_5flavours.png?v=1789028793"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/43023057682543:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/42525112795247",
+        "sku": "US-CNB12-CDO-11",
+        "title": "Chocolate Chip Cookie Dough",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 4480,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavour",
+            "label": "Chocolate Chip Cookie Dough"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Bars_Cookie_Variant_Featured.png?v=1789028794"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/42525112795247:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41379221504111",
+        "sku": "US-CNB12-DCR-11",
+        "title": "Dark Chocolate Raspberry",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 4480,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavour",
+            "label": "Dark Chocolate Raspberry"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Bars_Rasp_Variant_Featured.png?v=1789028795"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41379221504111:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41379221536879",
+        "sku": "US-CNB12-CFB-11",
+        "title": "Chocolate Fudge Brownie",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 4480,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavour",
+            "label": "Chocolate Fudge Brownie"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Bars_Brownie_Variant_Featured.png?v=1789028796"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41379221536879:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41111911465071",
+        "sku": "US-CNB12-PNC-11",
+        "title": "Peanut Caramel",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 4480,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavour",
+            "label": "Peanut Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Bars_Peanut_Variant_Featured.png?v=1789028797"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41111911465071:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41111911432303",
+        "sku": "US-CNB12-CHC-11",
+        "title": "Chocolate Caramel",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 4480,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavour",
+            "label": "Chocolate Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Bars_ChocolateCaramel_Variant_Featured.png?v=1789028798"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41111911432303:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41599903203439",
+        "sku": "US-CNB12-MX1-10",
+        "title": "Selection Box",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 4375,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Flavour",
+            "label": "Selection Box"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Bars_SelectionBox_Variant_Featured.png?v=1789028799"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41599903203439:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Flavour",
+        "values": [
+          {
+            "label": "Chocolate Fudge Brownie"
+          },
+          {
+            "label": "Dark Chocolate Raspberry"
+          },
+          {
+            "label": "Peanut Caramel"
+          },
+          {
+            "label": "Chocolate Chip Cookie Dough"
+          },
+          {
+            "label": "Selection Box (15)"
+          },
+          {
+            "label": "Chocolate Caramel"
+          },
+          {
+            "label": "Selection Box"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Bars_20Cart_20Image_7766d8ce-a328-45e3-970a-44887a917fa8.png?v=1789028792",
+        "alt_text": "Huel Complete Nutrition Bar in Chocolate Caramel flavor. The wrapper is white with a chocolate and caramel design on one end and 'Huel Complete Nutrition Bar' in black lettering. The image includes 'x12 per box,' indicating 12 bars per box"
+      }
+    ],
+    "tags": [
+      "ct_huel_food",
+      "huel_merch_product",
+      "managed_by_huel"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/328883079",
+        "handle": "other-huel-products",
+        "title": "All Huel Products",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/289804779631",
+        "handle": "aftership-products",
+        "title": "Aftership Products",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/295264321647",
+        "handle": "affiliate-bundle",
+        "title": "Affiliate bundle",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/297487237231",
+        "handle": "new-all-products",
+        "title": "NEW - All Products",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/297487335535",
+        "handle": "new-high-protein-snacks",
+        "title": "NEW - High Protein Snacks",
+        "description": {
+          "html": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/6577924079727",
+    "title": "Huel Complete Protein",
+    "description": {
+      "html": ""
+    },
+    "url": "https://checkout.huel.com/products/single-complete-protein",
+    "handle": "single-complete-protein",
+    "price_range": {
+      "min": {
+        "amount": 3250,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 4665,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/39348516814959",
+        "sku": "US-PTN-CFB-10",
+        "title": "Chocolate Fudge Brownie",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 4665,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Chocolate Fudge Brownie"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/dd470399-2f22-4bf6-b59f-b490cb81947a_2aa7c55c-0ca2-42de-80d6-88c7ba74d34c.png?v=1786462506"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/39348516814959:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/39348516847727",
+        "sku": "US-PTN-BNP-10",
+        "title": "Banana Pudding",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 4665,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Banana Pudding"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/dd470399-2f22-4bf6-b59f-b490cb81947a_95b363b3-281a-48d6-afe2-bb647c319ec0.png?v=1786462506"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/39348516847727:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/39348516880495",
+        "sku": "US-PTN-SSC-10",
+        "title": "Strawberry Shortcake",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 4665,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Strawberry Shortcake"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/dd470399-2f22-4bf6-b59f-b490cb81947a_0d9f03f0-f7ab-40fc-817b-73a59c586443.png?v=1786462507"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/39348516880495:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/39348516946031",
+        "sku": "US-PTN-UNF-10",
+        "title": "Unflavored & Unsweetened",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 3250,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Unflavored & Unsweetened"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/dd470399-2f22-4bf6-b59f-b490cb81947a_79127317-c374-4600-a2c5-b59822c3e5e4.png?v=1786462507"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/39348516946031:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/39348516913263",
+        "sku": "US-PTN-SCA-10",
+        "title": "Salted Caramel",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 4665,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Salted Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/dd470399-2f22-4bf6-b59f-b490cb81947a_5229721b-1955-4235-9a4f-812e1543ba8f.png?v=1786462508"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/39348516913263:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/39348516782191",
+        "sku": "US-PTN-VNC-10",
+        "title": "Vanilla Caramel",
+        "description": {
+          "html": ""
+        },
+        "price": {
+          "amount": 4665,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Vanilla Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/dd470399-2f22-4bf6-b59f-b490cb81947a_691487a6-5a76-4ad0-b2b0-8af68565ae3b.png?v=1786462510"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/39348516782191:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Flavor",
+        "values": [
+          {
+            "label": "Unflavored & Unsweetened"
+          },
+          {
+            "label": "Chocolate Fudge Brownie"
+          },
+          {
+            "label": "Vanilla Caramel"
+          },
+          {
+            "label": "Strawberry Shortcake"
+          },
+          {
+            "label": "Salted Caramel"
+          },
+          {
+            "label": "Banana Pudding"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/c4b62f41-effc-42df-9b13-48b957ef2e0a.png?v=1786462504"
+      }
+    ],
+    "tags": [
+      "HUEL_HIDDEN",
+      "huel_merch_product",
+      "managed_by_huel"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/155468529775",
+        "handle": "subscription-products",
+        "title": "Subscription Products",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/166985072751",
+        "handle": "upsell-products-account-area",
+        "title": "Upsell Products - Account Area",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/284552495215",
+        "handle": "upsell-products-acc-area",
+        "title": "Upsell Products (Acc Area)",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/303014183023",
+        "handle": "managed-by-huel",
+        "title": "Managed by Huel",
+        "description": {
+          "html": "USED FOR: - BUYXGETY Discounts"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/6577907368047",
+    "title": "Complete Protein",
+    "description": {
+      "html": "Huel Complete Protein is a nutritionally complete, plant-based, high-protein snack that contains more essential amino acids (EAAs) per gram than whey protein. It's made from sustainably sourced, high-quality, animal-free ingredients such as hemp, faba, and pea protein, and is naturally gluten-free. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. FREE Shaker included for first-time Huel customers. Scoop included inside every tub of Complete Protein."
+    },
+    "url": "https://checkout.huel.com/products/huel-complete-protein",
+    "handle": "huel-complete-protein",
+    "price_range": {
+      "min": {
+        "amount": 4050,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 4665,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/41671592968303",
+        "sku": "US-PTN-CFB-10",
+        "title": "Chocolate Fudge Brownie",
+        "description": {
+          "html": "Huel Complete Protein is a nutritionally complete, plant-based, high-protein snack that contains more essential amino acids (EAAs) per gram than whey protein. It's made from sustainably sourced, high-quality, animal-free ingredients such as hemp, faba, and pea protein, and is naturally gluten-free. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. FREE Shaker included for first-time Huel customers. Scoop included inside every tub of Complete Protein."
+        },
+        "price": {
+          "amount": 4665,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Chocolate Fudge Brownie"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/62e072a5-5f43-4812-b3ad-a42075599b5b.png?v=1786462695"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41671592968303:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41671593295983",
+        "sku": "US-PTN-VNC-10",
+        "title": "Vanilla",
+        "description": {
+          "html": "Huel Complete Protein is a nutritionally complete, plant-based, high-protein snack that contains more essential amino acids (EAAs) per gram than whey protein. It's made from sustainably sourced, high-quality, animal-free ingredients such as hemp, faba, and pea protein, and is naturally gluten-free. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. FREE Shaker included for first-time Huel customers. Scoop included inside every tub of Complete Protein."
+        },
+        "price": {
+          "amount": 4665,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Vanilla"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/62e072a5-5f43-4812-b3ad-a42075599b5b_8e629a6b-69b3-440e-9ff5-e7c1b188a5bb.png?v=1786462696"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41671593295983:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41671593328751",
+        "sku": "US-PTN-SSC-10",
+        "title": "Strawberry",
+        "description": {
+          "html": "Huel Complete Protein is a nutritionally complete, plant-based, high-protein snack that contains more essential amino acids (EAAs) per gram than whey protein. It's made from sustainably sourced, high-quality, animal-free ingredients such as hemp, faba, and pea protein, and is naturally gluten-free. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. FREE Shaker included for first-time Huel customers. Scoop included inside every tub of Complete Protein."
+        },
+        "price": {
+          "amount": 4665,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Strawberry"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/62e072a5-5f43-4812-b3ad-a42075599b5b_43e5c078-362c-4b4a-b741-3adc64c02b87.png?v=1786462697"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41671593328751:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41671593361519",
+        "sku": "US-PTN-BNP-10",
+        "title": "Banana Pudding",
+        "description": {
+          "html": "Huel Complete Protein is a nutritionally complete, plant-based, high-protein snack that contains more essential amino acids (EAAs) per gram than whey protein. It's made from sustainably sourced, high-quality, animal-free ingredients such as hemp, faba, and pea protein, and is naturally gluten-free. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. FREE Shaker included for first-time Huel customers. Scoop included inside every tub of Complete Protein."
+        },
+        "price": {
+          "amount": 4050,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Banana Pudding"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/62e072a5-5f43-4812-b3ad-a42075599b5b_dd9353b4-703c-453c-95bf-c216bbeab458.png?v=1786462698"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41671593361519:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41671593394287",
+        "sku": "US-PTN-SCA-10",
+        "title": "Salted Caramel",
+        "description": {
+          "html": "Huel Complete Protein is a nutritionally complete, plant-based, high-protein snack that contains more essential amino acids (EAAs) per gram than whey protein. It's made from sustainably sourced, high-quality, animal-free ingredients such as hemp, faba, and pea protein, and is naturally gluten-free. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. FREE Shaker included for first-time Huel customers. Scoop included inside every tub of Complete Protein."
+        },
+        "price": {
+          "amount": 4050,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Salted Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/62e072a5-5f43-4812-b3ad-a42075599b5b_a9c2c77b-03cc-4c01-9897-eaa5c9eeeefc.png?v=1786462699"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41671593394287:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41671593427055",
+        "sku": "US-PTN-UNF-10",
+        "title": "Unflavoured & Unsweetened",
+        "description": {
+          "html": "Huel Complete Protein is a nutritionally complete, plant-based, high-protein snack that contains more essential amino acids (EAAs) per gram than whey protein. It's made from sustainably sourced, high-quality, animal-free ingredients such as hemp, faba, and pea protein, and is naturally gluten-free. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. FREE Shaker included for first-time Huel customers. Scoop included inside every tub of Complete Protein."
+        },
+        "price": {
+          "amount": 4050,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Unflavoured & Unsweetened"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/62e072a5-5f43-4812-b3ad-a42075599b5b_207f1cd6-fe75-486f-bf9a-a25908b28563.png?v=1786462699"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41671593427055:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Flavor",
+        "values": [
+          {
+            "label": "Unflavoured & Unsweetened"
+          },
+          {
+            "label": "Banana Pudding"
+          },
+          {
+            "label": "Salted Caramel"
+          },
+          {
+            "label": "Chocolate Fudge Brownie"
+          },
+          {
+            "label": "Strawberry"
+          },
+          {
+            "label": "Vanilla"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/FeatureProductImg_CompleteProtein_3c0f1c02-e33f-4793-93cc-f8b832c7b3fc.png?v=1786462694",
+        "alt_text": "An image showing a bag of Huel Complete Protein"
+      }
+    ],
+    "tags": [
+      "huel_merch_product",
+      "managed_by_huel",
+      "SUB_DISCOUNT_10"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/328883079",
+        "handle": "other-huel-products",
+        "title": "All Huel Products",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/2418180106",
+        "handle": "huel-powder",
+        "title": "Huel Powder",
+        "description": {
+          "html": "Which Huel Powder is right for me?"
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/155468529775",
+        "handle": "subscription-products",
+        "title": "Subscription Products",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/297487237231",
+        "handle": "new-all-products",
+        "title": "NEW - All Products",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/297487335535",
+        "handle": "new-high-protein-snacks",
+        "title": "NEW - High Protein Snacks",
+        "description": {
+          "html": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/4373262008431",
+    "title": "Powder",
+    "description": {
+      "html": "Try a single bag of Huel Powder v3.0Our new and improved nutritionally complete food."
+    },
+    "url": "https://checkout.huel.com/products/single-huel-powder",
+    "handle": "single-huel-powder",
+    "price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 3750,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/32227097575535",
+        "sku": "US-POW-SC-30",
+        "title": "Salted Caramel",
+        "description": {
+          "html": "Try a single bag of Huel Powder v3.0Our new and improved nutritionally complete food."
+        },
+        "price": {
+          "amount": 3750,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Salted Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/3961046f-3025-4b27-a86d-dad916cb4660_3832ecca-b0c9-433b-bd41-37712a3c6e35.png?v=1788513090"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/32227097575535:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/31266566570095",
+        "sku": "US-PGF-VAN-31",
+        "title": "Vanilla",
+        "description": {
+          "html": "Try a single bag of Huel Powder v3.0Our new and improved nutritionally complete food."
+        },
+        "price": {
+          "amount": 3750,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Vanilla"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/3961046f-3025-4b27-a86d-dad916cb4660_370be4e4-645b-4dba-baa2-e72599e2b745.png?v=1788513091"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/31266566570095:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/31266566602863",
+        "sku": "US-POW-CH-30",
+        "title": "Chocolate",
+        "description": {
+          "html": "Try a single bag of Huel Powder v3.0Our new and improved nutritionally complete food."
+        },
+        "price": {
+          "amount": 3750,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Chocolate"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/3961046f-3025-4b27-a86d-dad916cb4660_c994e806-2eb4-4742-9730-07b4672dfe1f.png?v=1788513092"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/31266566602863:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/32227094397039",
+        "sku": "US-POW-BN-30",
+        "title": "Banana",
+        "description": {
+          "html": "Try a single bag of Huel Powder v3.0Our new and improved nutritionally complete food."
+        },
+        "price": {
+          "amount": 3750,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Banana"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/3961046f-3025-4b27-a86d-dad916cb4660_cb3482fb-ff91-40bb-8c72-cf2e70b91284.png?v=1788513093"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/32227094397039:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/40620562022511",
+        "sku": "",
+        "title": "Mint-Chocolate",
+        "description": {
+          "html": "Try a single bag of Huel Powder v3.0Our new and improved nutritionally complete food."
+        },
+        "price": {
+          "amount": 0,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Mint-Chocolate"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/320aa457-bb12-446e-aa5d-f5b4a68f9ccd.png?v=1788513094"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/40620562022511:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/31956137607279",
+        "sku": "US-POW-OG-30",
+        "title": "Original",
+        "description": {
+          "html": "Try a single bag of Huel Powder v3.0Our new and improved nutritionally complete food."
+        },
+        "price": {
+          "amount": 3750,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Original"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/3961046f-3025-4b27-a86d-dad916cb4660_c5a15ed3-76aa-4c26-bbde-cdbd8ed0c31f.png?v=1788513094"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/31956137607279:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/31266566897775",
+        "sku": "US-POW-BE-30",
+        "title": "Berry",
+        "description": {
+          "html": "Try a single bag of Huel Powder v3.0Our new and improved nutritionally complete food."
+        },
+        "price": {
+          "amount": 3750,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Berry"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/3961046f-3025-4b27-a86d-dad916cb4660_b96cc7a8-f872-44ba-9d6a-21a030930d94.png?v=1788513095"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/31266566897775:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/40620561989743",
+        "sku": "",
+        "title": "Coffee",
+        "description": {
+          "html": "Try a single bag of Huel Powder v3.0Our new and improved nutritionally complete food."
+        },
+        "price": {
+          "amount": 0,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Coffee"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/9c45c212-5a2a-4f80-a100-243f98c64b27.png?v=1788513096"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/40620561989743:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/32227095642223",
+        "sku": "US-POW-CL-30",
+        "title": "Caff\u00e8 Latte",
+        "description": {
+          "html": "Try a single bag of Huel Powder v3.0Our new and improved nutritionally complete food."
+        },
+        "price": {
+          "amount": 3750,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Caff\u00e8 Latte"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/3961046f-3025-4b27-a86d-dad916cb4660_d21816b7-b095-4ebd-aba3-37e2244190d3.png?v=1788513097"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/32227095642223:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/32175693267055",
+        "sku": "US-POW-PB-30",
+        "title": "Peanut Butter",
+        "description": {
+          "html": "Try a single bag of Huel Powder v3.0Our new and improved nutritionally complete food."
+        },
+        "price": {
+          "amount": 3750,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Peanut Butter"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/3961046f-3025-4b27-a86d-dad916cb4660_4ec53f3f-8626-44f9-8880-9fe36c597825.png?v=1788513098"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/32175693267055:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Flavor",
+        "values": [
+          {
+            "label": "Unflavoured & Unsweetened"
+          },
+          {
+            "label": "Salted Caramel"
+          },
+          {
+            "label": "Banana"
+          },
+          {
+            "label": "Original"
+          },
+          {
+            "label": "Chocolate"
+          },
+          {
+            "label": "Coffee"
+          },
+          {
+            "label": "Vanilla"
+          },
+          {
+            "label": "Berry"
+          },
+          {
+            "label": "Caff\u00e8 Latte"
+          },
+          {
+            "label": "Peanut Butter"
+          },
+          {
+            "label": "Mint-Chocolate"
+          },
+          {
+            "label": "Cinnamon Roll"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/3961046f-3025-4b27-a86d-dad916cb4660_20c291d2-88f0-4a37-a133-2a86d7eba548.png?v=1788513089"
+      }
+    ],
+    "tags": [
+      "HUEL_HIDDEN",
+      "huel_merch_product",
+      "managed_by_huel"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/155468529775",
+        "handle": "subscription-products",
+        "title": "Subscription Products",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/156278882415",
+        "handle": "upsell-products",
+        "title": "Upsell Products",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/166985072751",
+        "handle": "upsell-products-account-area",
+        "title": "Upsell Products - Account Area",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/284552495215",
+        "handle": "upsell-products-acc-area",
+        "title": "Upsell Products (Acc Area)",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/303014183023",
+        "handle": "managed-by-huel",
+        "title": "Managed by Huel",
+        "description": {
+          "html": "USED FOR: - BUYXGETY Discounts"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/4373258666095",
+    "title": "Black Edition",
+    "description": {
+      "html": "Try a single bag of Huel Black Edition50% less carbs, 33% more protein, zero artificial sweeteners."
+    },
+    "url": "https://checkout.huel.com/products/single-huel-be",
+    "handle": "single-huel-be",
+    "price_range": {
+      "min": {
+        "amount": 4250,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 4250,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/39320554471535",
+        "sku": "US-BLK-SSC-11",
+        "title": "Strawberry Shortcake",
+        "description": {
+          "html": "Try a single bag of Huel Black Edition50% less carbs, 33% more protein, zero artificial sweeteners."
+        },
+        "price": {
+          "amount": 4250,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Strawberry Shortcake"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/52c39bd1-7af9-441f-a82b-b94320afa2bf_f237ac50-1e44-4f75-adce-dc8a3e68ae5d.png?v=1788461181"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/39320554471535:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/32250789953647",
+        "sku": "US-BLK-SC-11",
+        "title": "Salted Caramel",
+        "description": {
+          "html": "Try a single bag of Huel Black Edition50% less carbs, 33% more protein, zero artificial sweeteners."
+        },
+        "price": {
+          "amount": 4250,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Salted Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/52c39bd1-7af9-441f-a82b-b94320afa2bf_0a542aba-4c2b-4cf0-819e-096f08c49231.png?v=1788461182"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/32250789953647:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/40753110155375",
+        "sku": "US-BLK-CIN-11",
+        "title": "Cinnamon Roll",
+        "description": {
+          "html": "Try a single bag of Huel Black Edition50% less carbs, 33% more protein, zero artificial sweeteners."
+        },
+        "price": {
+          "amount": 4250,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Cinnamon Roll"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/52c39bd1-7af9-441f-a82b-b94320afa2bf_bcab2e2e-0ffa-476c-8aee-4048646dc211.png?v=1788461183"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/40753110155375:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/32250789920879",
+        "sku": "US-BLK-BN-11",
+        "title": "Banana",
+        "description": {
+          "html": "Try a single bag of Huel Black Edition50% less carbs, 33% more protein, zero artificial sweeteners."
+        },
+        "price": {
+          "amount": 4250,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Banana"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/52c39bd1-7af9-441f-a82b-b94320afa2bf_063210fc-6b0b-4af3-a805-765c4e2d345a.png?v=1788461184"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/32250789920879:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/31266565947503",
+        "sku": "US-BLK-VA-11",
+        "title": "Vanilla",
+        "description": {
+          "html": "Try a single bag of Huel Black Edition50% less carbs, 33% more protein, zero artificial sweeteners."
+        },
+        "price": {
+          "amount": 4250,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Vanilla"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/52c39bd1-7af9-441f-a82b-b94320afa2bf_3014a580-8be3-4b37-9575-15cdd5cec723.png?v=1788461185"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/31266565947503:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/31266565980271",
+        "sku": "US-BLK-CH-11",
+        "title": "Chocolate",
+        "description": {
+          "html": "Try a single bag of Huel Black Edition50% less carbs, 33% more protein, zero artificial sweeteners."
+        },
+        "price": {
+          "amount": 4250,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Chocolate"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/52c39bd1-7af9-441f-a82b-b94320afa2bf_f5dc511c-06e1-4c3e-9f9e-8b85575f03c2.png?v=1788461186"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/31266565980271:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/32083521699951",
+        "sku": "US-BLK-CC-11",
+        "title": "Coffee Caramel",
+        "description": {
+          "html": "Try a single bag of Huel Black Edition50% less carbs, 33% more protein, zero artificial sweeteners."
+        },
+        "price": {
+          "amount": 4250,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Coffee Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/52c39bd1-7af9-441f-a82b-b94320afa2bf_b24154aa-56f7-482a-b4b5-c43731cdd24e.png?v=1788461187"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/32083521699951:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/32083522748527",
+        "sku": "US-BLK-UU-11",
+        "title": "Unflavoured & Unsweetened",
+        "description": {
+          "html": "Try a single bag of Huel Black Edition50% less carbs, 33% more protein, zero artificial sweeteners."
+        },
+        "price": {
+          "amount": 4250,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Unflavoured & Unsweetened"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/52c39bd1-7af9-441f-a82b-b94320afa2bf_7b427235-83fd-4da4-85bf-ae20966877db.png?v=1788461188"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/32083522748527:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/32175693889647",
+        "sku": "US-BLK-PB-11",
+        "title": "Peanut Butter",
+        "description": {
+          "html": "Try a single bag of Huel Black Edition50% less carbs, 33% more protein, zero artificial sweeteners."
+        },
+        "price": {
+          "amount": 4250,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Peanut Butter"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/52c39bd1-7af9-441f-a82b-b94320afa2bf_3d7f514b-1141-41c5-b43f-572fc087ee94.png?v=1788461188"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/32175693889647:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/40796568584303",
+        "sku": "US-BLK-CCR-11",
+        "title": "Cookies & Cream",
+        "description": {
+          "html": "Try a single bag of Huel Black Edition50% less carbs, 33% more protein, zero artificial sweeteners."
+        },
+        "price": {
+          "amount": 4250,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Cookies & Cream"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/3f1e1986-065f-4cb5-8768-01dd103763a1.jpg?v=1788461190"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/40796568584303:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Flavor",
+        "values": [
+          {
+            "label": "Salted Caramel"
+          },
+          {
+            "label": "Peanut Butter"
+          },
+          {
+            "label": "Banana"
+          },
+          {
+            "label": "Chocolate"
+          },
+          {
+            "label": "Unflavoured & Unsweetened"
+          },
+          {
+            "label": "Cookies & Cream"
+          },
+          {
+            "label": "Strawberry Shortcake"
+          },
+          {
+            "label": "Coffee Caramel"
+          },
+          {
+            "label": "Cinnamon Roll"
+          },
+          {
+            "label": "Vanilla"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/52c39bd1-7af9-441f-a82b-b94320afa2bf.png?v=1788461179"
+      }
+    ],
+    "tags": [
+      "HUEL_HIDDEN",
+      "huel_merch_product",
+      "managed_by_huel"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/155468529775",
+        "handle": "subscription-products",
+        "title": "Subscription Products",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/156278882415",
+        "handle": "upsell-products",
+        "title": "Upsell Products",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/166985072751",
+        "handle": "upsell-products-account-area",
+        "title": "Upsell Products - Account Area",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/284552495215",
+        "handle": "upsell-products-acc-area",
+        "title": "Upsell Products (Acc Area)",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/303014183023",
+        "handle": "managed-by-huel",
+        "title": "Managed by Huel",
+        "description": {
+          "html": "USED FOR: - BUYXGETY Discounts"
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/4357631246447",
+    "title": "Black Edition",
+    "description": {
+      "html": "Huel Black Edition contains 50% less carbs, 33% more protein, zero artificial sweeteners, and is naturally gluten-free. And it still contains all 27 essential vitamins and minerals, essential fats, fiber, and phytonutrients. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+    },
+    "url": "https://checkout.huel.com/products/huel-black-edition",
+    "handle": "huel-black-edition",
+    "price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 12665,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/53021543104623",
+        "sku": "US-BE-SELECTIONBOX-BUNDLE",
+        "title": "16 meals / 1 box / Variety Box - Bundle",
+        "description": {
+          "html": "Huel Black Edition contains 50% less carbs, 33% more protein, zero artificial sweeteners, and is naturally gluten-free. And it still contains all 27 essential vitamins and minerals, essential fats, fiber, and phytonutrients. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 8125,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Format",
+            "label": "16 meals"
+          },
+          {
+            "name": "Unit type",
+            "label": "1 box"
+          },
+          {
+            "name": "Flavor",
+            "label": "Variety Box - Bundle"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/BlackEdition_SingleServeSelectionBox__US_x16_a8d3005f-db9e-459e-8aad-bd6f724281fe.png?v=1788982536"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/53021543104623:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/42912640368751",
+        "sku": "US-BLK10-BNDL",
+        "title": "30 meals / 3 bags / Bestseller Trio",
+        "description": {
+          "html": "Huel Black Edition contains 50% less carbs, 33% more protein, zero artificial sweeteners, and is naturally gluten-free. And it still contains all 27 essential vitamins and minerals, essential fats, fiber, and phytonutrients. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 12665,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Format",
+            "label": "30 meals"
+          },
+          {
+            "name": "Unit type",
+            "label": "3 bags"
+          },
+          {
+            "name": "Flavor",
+            "label": "Bestseller Trio"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/BPOW_20Trio.png?v=1788982537"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/42912640368751:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/53308404367471",
+        "sku": "US-BLK-SBN-11",
+        "title": "17 meals / 1 bag / Strawberry Banana",
+        "description": {
+          "html": "Huel Black Edition contains 50% less carbs, 33% more protein, zero artificial sweeteners, and is naturally gluten-free. And it still contains all 27 essential vitamins and minerals, essential fats, fiber, and phytonutrients. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 6000,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Format",
+            "label": "17 meals"
+          },
+          {
+            "name": "Unit type",
+            "label": "1 bag"
+          },
+          {
+            "name": "Flavor",
+            "label": "Strawberry Banana"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/FeatureProductImg_BlackEdition_NEW_8b088547-57b9-4324-921a-a200e7aa34bf.png?v=1788982538"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/53308404367471:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41890740338799",
+        "sku": "US-BLK-CH-11",
+        "title": "17 meals / 1 bag / Chocolate",
+        "description": {
+          "html": "Huel Black Edition contains 50% less carbs, 33% more protein, zero artificial sweeteners, and is naturally gluten-free. And it still contains all 27 essential vitamins and minerals, essential fats, fiber, and phytonutrients. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 6000,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Format",
+            "label": "17 meals"
+          },
+          {
+            "name": "Unit type",
+            "label": "1 bag"
+          },
+          {
+            "name": "Flavor",
+            "label": "Chocolate"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/FeatureProductImg_BlackEdition_NEW_7d698055-b8d0-4ad1-9163-60056ed670ab.png?v=1788982539"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41890740338799:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/43742011916399",
+        "sku": "US-BLK-CPB-11",
+        "title": "17 meals / 1 bag / Chocolate Peanut Butter",
+        "description": {
+          "html": "Huel Black Edition contains 50% less carbs, 33% more protein, zero artificial sweeteners, and is naturally gluten-free. And it still contains all 27 essential vitamins and minerals, essential fats, fiber, and phytonutrients. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 6000,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Format",
+            "label": "17 meals"
+          },
+          {
+            "name": "Unit type",
+            "label": "1 bag"
+          },
+          {
+            "name": "Flavor",
+            "label": "Chocolate Peanut Butter"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/FeatureProductImg_BlackEdition_NEW_aeee9156-c049-464f-bbf8-f0be057d9cc3.png?v=1788982540"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/43742011916399:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41890740371567",
+        "sku": "US-BLK-BN-11",
+        "title": "17 meals / 1 bag / Banana",
+        "description": {
+          "html": "Huel Black Edition contains 50% less carbs, 33% more protein, zero artificial sweeteners, and is naturally gluten-free. And it still contains all 27 essential vitamins and minerals, essential fats, fiber, and phytonutrients. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 6000,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Format",
+            "label": "17 meals"
+          },
+          {
+            "name": "Unit type",
+            "label": "1 bag"
+          },
+          {
+            "name": "Flavor",
+            "label": "Banana"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/FeatureProductImg_BlackEdition_NEW_d285c673-96e8-4b43-9a76-1ece2447f597.png?v=1788982541"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41890740371567:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41890740306031",
+        "sku": "US-BLK-VA-11",
+        "title": "17 meals / 1 bag / Vanilla",
+        "description": {
+          "html": "Huel Black Edition contains 50% less carbs, 33% more protein, zero artificial sweeteners, and is naturally gluten-free. And it still contains all 27 essential vitamins and minerals, essential fats, fiber, and phytonutrients. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 6000,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Format",
+            "label": "17 meals"
+          },
+          {
+            "name": "Unit type",
+            "label": "1 bag"
+          },
+          {
+            "name": "Flavor",
+            "label": "Vanilla"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/FeatureProductImg_BlackEdition_NEW_7f481125-4933-448c-9235-3f9036a8a736.png?v=1788982543"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41890740306031:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41890741780591",
+        "sku": "US-BLK-CIN-11",
+        "title": "17 meals / 1 bag / Cinnamon Roll",
+        "description": {
+          "html": "Huel Black Edition contains 50% less carbs, 33% more protein, zero artificial sweeteners, and is naturally gluten-free. And it still contains all 27 essential vitamins and minerals, essential fats, fiber, and phytonutrients. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 6000,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Format",
+            "label": "17 meals"
+          },
+          {
+            "name": "Unit type",
+            "label": "1 bag"
+          },
+          {
+            "name": "Flavor",
+            "label": "Cinnamon Roll"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/FeatureProductImg_BlackEdition_NEW_88514d9f-e04b-4cc2-954f-342a4fa8fa38.png?v=1788982543"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41890741780591:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41890740666479",
+        "sku": "US-BLK-SSC-11",
+        "title": "17 meals / 1 bag / Strawberry",
+        "description": {
+          "html": "Huel Black Edition contains 50% less carbs, 33% more protein, zero artificial sweeteners, and is naturally gluten-free. And it still contains all 27 essential vitamins and minerals, essential fats, fiber, and phytonutrients. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 6000,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Format",
+            "label": "17 meals"
+          },
+          {
+            "name": "Unit type",
+            "label": "1 bag"
+          },
+          {
+            "name": "Flavor",
+            "label": "Strawberry"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/FeatureProductImg_BlackEdition_NEW_fe95a9da-43cc-49dd-9dd6-4d8cd77fa1c1.png?v=1788982544"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41890740666479:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41890740732015",
+        "sku": "US-BLK-CC-11",
+        "title": "17 meals / 1 bag / Coffee Caramel",
+        "description": {
+          "html": "Huel Black Edition contains 50% less carbs, 33% more protein, zero artificial sweeteners, and is naturally gluten-free. And it still contains all 27 essential vitamins and minerals, essential fats, fiber, and phytonutrients. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 6000,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Format",
+            "label": "17 meals"
+          },
+          {
+            "name": "Unit type",
+            "label": "1 bag"
+          },
+          {
+            "name": "Flavor",
+            "label": "Coffee Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/FeatureProductImg_BlackEdition_NEW_15cce2ed-389c-440c-9420-e45fd979f943.png?v=1788982545"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41890740732015:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Format",
+        "values": [
+          {
+            "label": "16 meals"
+          },
+          {
+            "label": "30 meals"
+          },
+          {
+            "label": "20 meals"
+          },
+          {
+            "label": "17 meals"
+          }
+        ]
+      },
+      {
+        "name": "Unit type",
+        "values": [
+          {
+            "label": "1 box"
+          },
+          {
+            "label": "3 bags"
+          },
+          {
+            "label": "1 bag"
+          }
+        ]
+      },
+      {
+        "name": "Flavor",
+        "values": [
+          {
+            "label": "Cookies & Cream"
+          },
+          {
+            "label": "Strawberry"
+          },
+          {
+            "label": "Salted Caramel"
+          },
+          {
+            "label": "Vanilla"
+          },
+          {
+            "label": "Variety Box - Bundle"
+          },
+          {
+            "label": "Coffee Caramel"
+          },
+          {
+            "label": "Chocolate"
+          },
+          {
+            "label": "Strawberry Banana"
+          },
+          {
+            "label": "Banana"
+          },
+          {
+            "label": "Variety Box"
+          },
+          {
+            "label": "Peach Yogurt"
+          },
+          {
+            "label": "Matcha Latte"
+          },
+          {
+            "label": "Cinnamon Roll"
+          },
+          {
+            "label": "Chocolate Peanut Butter"
+          },
+          {
+            "label": "Unflavored & Unsweetened"
+          },
+          {
+            "label": "Bestseller Trio"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/28765294-d685-4d07-aaa1-d6cf5d699de4.png?v=1788982535",
+        "alt_text": "Black Edition powder bag from Huel with a sleek black design featuring white 'Huel' text written sideways on the right-hand side."
+      }
+    ],
+    "tags": [
+      "ct_huel_food",
+      "huel_merch_product",
+      "managed_by_huel",
+      "SUB_DISCOUNT_10"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/328883079",
+        "handle": "other-huel-products",
+        "title": "All Huel Products",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/328883143",
+        "handle": "huel",
+        "title": "Huel",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/2418180106",
+        "handle": "huel-powder",
+        "title": "Huel Powder",
+        "description": {
+          "html": "Which Huel Powder is right for me?"
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/155468529775",
+        "handle": "subscription-products",
+        "title": "Subscription Products",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/289804779631",
+        "handle": "aftership-products",
+        "title": "Aftership Products",
+        "description": {
+          "html": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/1954221817967",
+    "title": "Ready-to-drink",
+    "description": {
+      "html": "A delicious, complete, and affordable meal in a handy bottle, delivered straight to your door. Huel Ready-to-drink contains all 27 essential vitamins and minerals plus the perfect balance of carbohydrates, protein, fat, fiber, and phytonutrients, and is naturally gluten-free. First time ordering Huel? Claim your FREE Huel T-shirt at checkout when you order 24 bottles or more."
+    },
+    "url": "https://checkout.huel.com/products/huel-ready-to-drink",
+    "handle": "huel-ready-to-drink",
+    "price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 7335,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/41890172239983",
+        "sku": "US-RTD12-MX2-20",
+        "title": "v2.0 Selection Box",
+        "description": {
+          "html": "A delicious, complete, and affordable meal in a handy bottle, delivered straight to your door. Huel Ready-to-drink contains all 27 essential vitamins and minerals plus the perfect balance of carbohydrates, protein, fat, fiber, and phytonutrients, and is naturally gluten-free. First time ordering Huel? Claim your FREE Huel T-shirt at checkout when you order 24 bottles or more."
+        },
+        "price": {
+          "amount": 7335,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "v2.0 Selection Box"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/RTD_20-_20Selection_20Box_20-_202.png?v=1788426905"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41890172239983:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41890172207215",
+        "sku": "US-RTD12-MX1-10",
+        "title": "Variety Box",
+        "description": {
+          "html": "A delicious, complete, and affordable meal in a handy bottle, delivered straight to your door. Huel Ready-to-drink contains all 27 essential vitamins and minerals plus the perfect balance of carbohydrates, protein, fat, fiber, and phytonutrients, and is naturally gluten-free. First time ordering Huel? Claim your FREE Huel T-shirt at checkout when you order 24 bottles or more."
+        },
+        "price": {
+          "amount": 7335,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Variety Box"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/RTD_20-_20Selection_20Box_20-_201.png?v=1788426906"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41890172207215:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41890172076143",
+        "sku": "US-RTD12-CH-10R",
+        "title": "Chocolate",
+        "description": {
+          "html": "A delicious, complete, and affordable meal in a handy bottle, delivered straight to your door. Huel Ready-to-drink contains all 27 essential vitamins and minerals plus the perfect balance of carbohydrates, protein, fat, fiber, and phytonutrients, and is naturally gluten-free. First time ordering Huel? Claim your FREE Huel T-shirt at checkout when you order 24 bottles or more."
+        },
+        "price": {
+          "amount": 7065,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Chocolate"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/RTD_20-_20Choc.png?v=1788426907"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41890172076143:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41890172338287",
+        "sku": "US-RTD12-BN-10R",
+        "title": "Banana",
+        "description": {
+          "html": "A delicious, complete, and affordable meal in a handy bottle, delivered straight to your door. Huel Ready-to-drink contains all 27 essential vitamins and minerals plus the perfect balance of carbohydrates, protein, fat, fiber, and phytonutrients, and is naturally gluten-free. First time ordering Huel? Claim your FREE Huel T-shirt at checkout when you order 24 bottles or more."
+        },
+        "price": {
+          "amount": 7065,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Banana"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/RTD_20-_20Banana.png?v=1788426908"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41890172338287:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41890172108911",
+        "sku": "US-RTD12-VA-10R",
+        "title": "Vanilla",
+        "description": {
+          "html": "A delicious, complete, and affordable meal in a handy bottle, delivered straight to your door. Huel Ready-to-drink contains all 27 essential vitamins and minerals plus the perfect balance of carbohydrates, protein, fat, fiber, and phytonutrients, and is naturally gluten-free. First time ordering Huel? Claim your FREE Huel T-shirt at checkout when you order 24 bottles or more."
+        },
+        "price": {
+          "amount": 7065,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Vanilla"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/RTD_20-_20Vanilla.png?v=1788426909"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41890172108911:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41890172141679",
+        "sku": "US-RTD12-STR-20R",
+        "title": "Strawberry",
+        "description": {
+          "html": "A delicious, complete, and affordable meal in a handy bottle, delivered straight to your door. Huel Ready-to-drink contains all 27 essential vitamins and minerals plus the perfect balance of carbohydrates, protein, fat, fiber, and phytonutrients, and is naturally gluten-free. First time ordering Huel? Claim your FREE Huel T-shirt at checkout when you order 24 bottles or more."
+        },
+        "price": {
+          "amount": 7065,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Strawberry"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/RTD_20-_20Strawberry.png?v=1788426910"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41890172141679:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41890172305519",
+        "sku": "US-RTD12-BE-10R",
+        "title": "Berry",
+        "description": {
+          "html": "A delicious, complete, and affordable meal in a handy bottle, delivered straight to your door. Huel Ready-to-drink contains all 27 essential vitamins and minerals plus the perfect balance of carbohydrates, protein, fat, fiber, and phytonutrients, and is naturally gluten-free. First time ordering Huel? Claim your FREE Huel T-shirt at checkout when you order 24 bottles or more."
+        },
+        "price": {
+          "amount": 7065,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Berry"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/RTD_20-_20Berry.png?v=1788426911"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41890172305519:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41890172272751",
+        "sku": "US-RTD12-SCA-20R",
+        "title": "Salted Caramel",
+        "description": {
+          "html": "A delicious, complete, and affordable meal in a handy bottle, delivered straight to your door. Huel Ready-to-drink contains all 27 essential vitamins and minerals plus the perfect balance of carbohydrates, protein, fat, fiber, and phytonutrients, and is naturally gluten-free. First time ordering Huel? Claim your FREE Huel T-shirt at checkout when you order 24 bottles or more."
+        },
+        "price": {
+          "amount": 7065,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Salted Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/RTD_20-_20Salted_20Caramel.png?v=1788426912"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41890172272751:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41890172371055",
+        "sku": "US-RTD12-COF-20R",
+        "title": "Iced Coffee Caramel",
+        "description": {
+          "html": "A delicious, complete, and affordable meal in a handy bottle, delivered straight to your door. Huel Ready-to-drink contains all 27 essential vitamins and minerals plus the perfect balance of carbohydrates, protein, fat, fiber, and phytonutrients, and is naturally gluten-free. First time ordering Huel? Claim your FREE Huel T-shirt at checkout when you order 24 bottles or more."
+        },
+        "price": {
+          "amount": 7065,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Iced Coffee Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/RTD_20-_20Iced_20Coffee_20Caramel.png?v=1788426913"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41890172371055:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41890172174447",
+        "sku": "US-RTD12-CIN-20R",
+        "title": "Cinnamon Roll",
+        "description": {
+          "html": "A delicious, complete, and affordable meal in a handy bottle, delivered straight to your door. Huel Ready-to-drink contains all 27 essential vitamins and minerals plus the perfect balance of carbohydrates, protein, fat, fiber, and phytonutrients, and is naturally gluten-free. First time ordering Huel? Claim your FREE Huel T-shirt at checkout when you order 24 bottles or more."
+        },
+        "price": {
+          "amount": 7065,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": false
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Cinnamon Roll"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/RTD_20-_20Cinnamon_20Swirl.png?v=1788426914"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41890172174447:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Flavor",
+        "values": [
+          {
+            "label": "Vanilla"
+          },
+          {
+            "label": "Strawberry"
+          },
+          {
+            "label": "Iced Coffee Caramel"
+          },
+          {
+            "label": "Chocolate"
+          },
+          {
+            "label": "Variety Box"
+          },
+          {
+            "label": "Cinnamon Roll"
+          },
+          {
+            "label": "Selection Box (JP)"
+          },
+          {
+            "label": "Banana"
+          },
+          {
+            "label": "Salted Caramel"
+          },
+          {
+            "label": "Berry"
+          },
+          {
+            "label": "v2.0 Selection Box"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/US_Vanilla_Single_Bottle-RTD.png?v=1788426904",
+        "alt_text": "Huel Ready-to-drink Banana flavor bottle with a white design and 'Huel' written sideways in black lettering. The bottle features 'Banana' and '100% nutritionally complete meal' at the top, followed by protein, vitamins & minerals, and sugar amount. Plant-based and gluten-free. The image also includes 'x12 per box,' indicating 12 bottles per box."
+      }
+    ],
+    "tags": [
+      "huel_merch_product",
+      "managed_by_huel",
+      "SUB_DISCOUNT_10"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/328883079",
+        "handle": "other-huel-products",
+        "title": "All Huel Products",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/155468529775",
+        "handle": "subscription-products",
+        "title": "Subscription Products",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/284552495215",
+        "handle": "upsell-products-acc-area",
+        "title": "Upsell Products (Acc Area)",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/289804779631",
+        "handle": "aftership-products",
+        "title": "Aftership Products",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/291204857967",
+        "handle": "huel-ready-to-drink",
+        "title": "Huel Ready-to-drink",
+        "description": {
+          "html": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/12142612234",
+    "title": "Powder",
+    "description": {
+      "html": "Huel Powder v3.0 is a nutritionally complete meal in powdered form. Just mix with water in the free shaker provided and you\u2019re good to go. Huel Powder contains an ideal balance of protein, carbs, essential fats, fiber, all 27 essential vitamins and minerals, phytonutrients, kombucha, pre- and probiotics. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+    },
+    "url": "https://checkout.huel.com/products/huel",
+    "handle": "huel",
+    "price_range": {
+      "min": {
+        "amount": 4700,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 5200,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/41891624747119",
+        "sku": "US-POW-CH-30",
+        "title": "Chocolate",
+        "description": {
+          "html": "Huel Powder v3.0 is a nutritionally complete meal in powdered form. Just mix with water in the free shaker provided and you\u2019re good to go. Huel Powder contains an ideal balance of protein, carbs, essential fats, fiber, all 27 essential vitamins and minerals, phytonutrients, kombucha, pre- and probiotics. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 5000,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Chocolate"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Powder_20Featured_8bf40546-f7ab-4677-97ef-2fc5430da946.png?v=1788775318"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41891624747119:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41891624714351",
+        "sku": "US-PGF-VAN-31",
+        "title": "Vanilla",
+        "description": {
+          "html": "Huel Powder v3.0 is a nutritionally complete meal in powdered form. Just mix with water in the free shaker provided and you\u2019re good to go. Huel Powder contains an ideal balance of protein, carbs, essential fats, fiber, all 27 essential vitamins and minerals, phytonutrients, kombucha, pre- and probiotics. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 5000,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Vanilla"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Powder_20Featured_cbb4db56-4dde-4ade-8eb6-d0f151d62834.png?v=1788775319"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41891624714351:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41891624812655",
+        "sku": "US-POW-BN-30",
+        "title": "Banana",
+        "description": {
+          "html": "Huel Powder v3.0 is a nutritionally complete meal in powdered form. Just mix with water in the free shaker provided and you\u2019re good to go. Huel Powder contains an ideal balance of protein, carbs, essential fats, fiber, all 27 essential vitamins and minerals, phytonutrients, kombucha, pre- and probiotics. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 5000,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Banana"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Powder_20Featured_47b05bbf-6eb6-4d86-bcdf-a17491607626.png?v=1788775320"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41891624812655:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41891624878191",
+        "sku": "US-POW-BE-30",
+        "title": "Berry",
+        "description": {
+          "html": "Huel Powder v3.0 is a nutritionally complete meal in powdered form. Just mix with water in the free shaker provided and you\u2019re good to go. Huel Powder contains an ideal balance of protein, carbs, essential fats, fiber, all 27 essential vitamins and minerals, phytonutrients, kombucha, pre- and probiotics. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 5000,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Berry"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Powder_20Featured_c37fa867-de77-4fda-a8d3-91f138b3c78a.png?v=1788775321"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41891624878191:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41891624779887",
+        "sku": "US-POW-CO-30",
+        "title": "Coffee",
+        "description": {
+          "html": "Huel Powder v3.0 is a nutritionally complete meal in powdered form. Just mix with water in the free shaker provided and you\u2019re good to go. Huel Powder contains an ideal balance of protein, carbs, essential fats, fiber, all 27 essential vitamins and minerals, phytonutrients, kombucha, pre- and probiotics. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 5000,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Coffee"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Powder_20Featured_1d66d628-4259-4e18-828e-c62322461dc8.png?v=1788775322"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41891624779887:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41891624681583",
+        "sku": "US-POW-MC-30",
+        "title": "Mint Chocolate",
+        "description": {
+          "html": "Huel Powder v3.0 is a nutritionally complete meal in powdered form. Just mix with water in the free shaker provided and you\u2019re good to go. Huel Powder contains an ideal balance of protein, carbs, essential fats, fiber, all 27 essential vitamins and minerals, phytonutrients, kombucha, pre- and probiotics. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 5000,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Mint Chocolate"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Powder_20Featured_37dbf38e-a3b5-4a11-bdde-c7f09caea86a.png?v=1788775323"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41891624681583:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41891624845423",
+        "sku": "US-POW-SC-30",
+        "title": "Salted Caramel",
+        "description": {
+          "html": "Huel Powder v3.0 is a nutritionally complete meal in powdered form. Just mix with water in the free shaker provided and you\u2019re good to go. Huel Powder contains an ideal balance of protein, carbs, essential fats, fiber, all 27 essential vitamins and minerals, phytonutrients, kombucha, pre- and probiotics. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 5000,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Salted Caramel"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Powder_20Featured_8044dbc6-7738-4905-93d6-949002fba04e.png?v=1788775324"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41891624845423:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41891625074799",
+        "sku": "US-POW-CIN-30",
+        "title": "Cinnamon Roll",
+        "description": {
+          "html": "Huel Powder v3.0 is a nutritionally complete meal in powdered form. Just mix with water in the free shaker provided and you\u2019re good to go. Huel Powder contains an ideal balance of protein, carbs, essential fats, fiber, all 27 essential vitamins and minerals, phytonutrients, kombucha, pre- and probiotics. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 5200,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Cinnamon Roll"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Powder_20Featured_91c62be8-65dc-4dad-9136-b62a251edd20.png?v=1788775325"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41891625074799:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41891625304175",
+        "sku": "US-POW-OG-30",
+        "title": "Original",
+        "description": {
+          "html": "Huel Powder v3.0 is a nutritionally complete meal in powdered form. Just mix with water in the free shaker provided and you\u2019re good to go. Huel Powder contains an ideal balance of protein, carbs, essential fats, fiber, all 27 essential vitamins and minerals, phytonutrients, kombucha, pre- and probiotics. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 5000,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Original"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Powder_20Featured_27b51bcb-ffff-45d3-8a63-cc75d26b6251.png?v=1788775326"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41891625304175:1"
+      },
+      {
+        "id": "gid://shopify/ProductVariant/41891625336943",
+        "sku": "US-POW-UU-30",
+        "title": "Unflavored & Unsweetened",
+        "description": {
+          "html": "Huel Powder v3.0 is a nutritionally complete meal in powdered form. Just mix with water in the free shaker provided and you\u2019re good to go. Huel Powder contains an ideal balance of protein, carbs, essential fats, fiber, all 27 essential vitamins and minerals, phytonutrients, kombucha, pre- and probiotics. First time ordering Huel? Claim your FREE Huel T-shirt at checkout. All first orders of Huel Powder include a FREE Shaker and Scoop."
+        },
+        "price": {
+          "amount": 5000,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Flavor",
+            "label": "Unflavored & Unsweetened"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Powder_20Featured_6361ec05-e239-400f-8930-9336a97462e5.png?v=1788775327"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://huelamerica.myshopify.com/cart/41891625336943:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Flavor",
+        "values": [
+          {
+            "label": "Caff\u00e8 Latte"
+          },
+          {
+            "label": "Mint Chocolate"
+          },
+          {
+            "label": "Berry"
+          },
+          {
+            "label": "Unflavored & Unsweetened"
+          },
+          {
+            "label": "Chocolate"
+          },
+          {
+            "label": "Vanilla"
+          },
+          {
+            "label": "Salted Caramel"
+          },
+          {
+            "label": "Banana"
+          },
+          {
+            "label": "Original"
+          },
+          {
+            "label": "Coffee"
+          },
+          {
+            "label": "Cinnamon Roll"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/1374/5287/files/Powder_20Featured_5c57c2ce-fbb5-4814-85bd-10b75ca5be06.png?v=1788775317",
+        "alt_text": "Huel Powder in a white resealable bag with 'Huel' written sideways in black lettering. The bag has a clean and minimalistic design."
+      }
+    ],
+    "tags": [
+      "ct_huel_powder",
+      "huel_merch_product",
+      "managed_by_huel",
+      "SUB_DISCOUNT_10"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/328883079",
+        "handle": "other-huel-products",
+        "title": "All Huel Products",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/328883143",
+        "handle": "huel",
+        "title": "Huel",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/328883207",
+        "handle": "huel-and-sample",
+        "title": "Huel and sample",
+        "description": {
+          "html": ""
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/2418180106",
+        "handle": "huel-powder",
+        "title": "Huel Powder",
+        "description": {
+          "html": "Which Huel Powder is right for me?"
+        }
+      },
+      {
+        "id": "gid://shopify/Collection/155468529775",
+        "handle": "subscription-products",
+        "title": "Subscription Products",
+        "description": {
+          "html": ""
+        }
+      }
+    ]
+  }
+]

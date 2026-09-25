@@ -1,0 +1,938 @@
+[
+  {
+    "id": "gid://shopify/Product/6941919641787",
+    "title": "Prevagen\u00ae Regular Strength Capsules - 10mg Apoaequorin, 30ct",
+    "description": {
+      "html": "A single bottle of Prevagen Regular Strength 30 Day Supply contains 30 capsules. Tested & Safe Ingredient Only One Capsule Per Day Full 30 Day Supply Unique Ingredient: 10 mg of apoaequorin per capsule Directions: For best results take one capsule daily, in the morning, with or without food. Contains: 30 Regular Strength capsules *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease."
+    },
+    "url": "https://prevagen.com/products/prevagen-regular-strength-brain-supplements",
+    "handle": "prevagen-regular-strength-brain-supplements",
+    "price_range": {
+      "min": {
+        "amount": 3995,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 3995,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/41648684040379",
+        "sku": "FG-723-30",
+        "title": "Default Title",
+        "description": {
+          "html": "A single bottle of Prevagen Regular Strength 30 Day Supply contains 30 capsules. Tested & Safe Ingredient Only One Capsule Per Day Full 30 Day Supply Unique Ingredient: 10 mg of apoaequorin per capsule Directions: For best results take one capsule daily, in the morning, with or without food. Contains: 30 Regular Strength capsules *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease."
+        },
+        "price": {
+          "amount": 3995,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Title",
+            "label": "Default Title"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0583/2268/2043/files/RS30-FYB-0225-copy_8a2c5c6d-7ed4-4fcf-9d64-d746ccdac533.jpg?v=1742933519"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://prevagen.myshopify.com/cart/41648684040379:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          {
+            "label": "Default Title"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/0583/2268/2043/files/RS30-FYB-0225-copy_8a2c5c6d-7ed4-4fcf-9d64-d746ccdac533.jpg?v=1742933519",
+        "alt_text": "Prevagen Regular Strength - 30ct \u2014 Unique Ingredient, Tested Safe, Once Daily"
+      }
+    ],
+    "categories": [
+      {
+        "value": "gid://shopify/TaxonomyCategory/hb-1-9-6",
+        "taxonomy": "shopify"
+      }
+    ],
+    "tags": [
+      "import_2021_07_01_204308",
+      "joined-description-fields",
+      "PRODUCTS_Regular Strength",
+      "Regular Strength",
+      "validate-product-description"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/273315659963",
+        "handle": "supplements-for-your-brain",
+        "title": "Prevagen",
+        "description": {
+          "html": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/6941919674555",
+    "title": "Prevagen\u00ae Extra Strength Capsules - 20mg Apoaequorin, 30ct",
+    "description": {
+      "html": "A single bottle of Prevagen Extra Strength 30 Day Supply contains 30 capsules. Tested & Safe Ingredient Only One Capsule Per Day Full 30 Day Supply Unique Ingredient: 20 mg of apoaequorin per capsule Directions: For best results take one capsule daily, in the morning, with or without food. Contains: 30 Extra Strength capsules *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease."
+    },
+    "url": "https://prevagen.com/products/prevagen-extra-strength-brain-supplements",
+    "handle": "prevagen-extra-strength-brain-supplements",
+    "price_range": {
+      "min": {
+        "amount": 5995,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 5995,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/41648724050107",
+        "sku": "FG-811-30",
+        "title": "Default Title",
+        "description": {
+          "html": "A single bottle of Prevagen Extra Strength 30 Day Supply contains 30 capsules. Tested & Safe Ingredient Only One Capsule Per Day Full 30 Day Supply Unique Ingredient: 20 mg of apoaequorin per capsule Directions: For best results take one capsule daily, in the morning, with or without food. Contains: 30 Extra Strength capsules *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease."
+        },
+        "price": {
+          "amount": 5995,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Title",
+            "label": "Default Title"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0583/2268/2043/files/ES30-FYB-0225-copy_9def213d-dd7a-454c-b111-8207a2fefc3d.jpg?v=1742933480"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://prevagen.myshopify.com/cart/41648724050107:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          {
+            "label": "Default Title"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/0583/2268/2043/files/ES30-FYB-0225-copy_9def213d-dd7a-454c-b111-8207a2fefc3d.jpg?v=1742933480",
+        "alt_text": "Prevagen Extra Strength - 30ct \u2014 Unique Ingredient, Tested Safe, Once Daily"
+      }
+    ],
+    "categories": [
+      {
+        "value": "gid://shopify/TaxonomyCategory/hb-1-9-6",
+        "taxonomy": "shopify"
+      }
+    ],
+    "tags": [
+      "Extra Strength",
+      "import_2021_07_01_204308",
+      "joined-description-fields",
+      "Most Popular",
+      "PRODUCTS_Extra Strength",
+      "validate-product-description"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/273315659963",
+        "handle": "supplements-for-your-brain",
+        "title": "Prevagen",
+        "description": {
+          "html": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/6941919707323",
+    "title": "Prevagen\u00ae Regular Strength Berry Flavor Chewables - 10mg Apoaequorin, 30ct",
+    "description": {
+      "html": "A single bottle of Prevagen Regular Strength Chewables Mixed Berry Flavor 30 Day Supply contains 30 tablets. Tested & Safe Ingredient Only One Tablet Per Day Full 30 Day Supply Unique Ingredient: 10 mg of apoaequorin per tablet Directions: For best results take one tablet daily, in the morning, with or without food. Contains: 30 Regular Strength Mixed Berry Flavor Chewable Tablets *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease."
+    },
+    "url": "https://prevagen.com/products/prevagen-chewables-brain-supplements",
+    "handle": "prevagen-chewables-brain-supplements",
+    "price_range": {
+      "min": {
+        "amount": 3995,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 3995,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/41648700326075",
+        "sku": "FG-103-30",
+        "title": "Default Title",
+        "description": {
+          "html": "A single bottle of Prevagen Regular Strength Chewables Mixed Berry Flavor 30 Day Supply contains 30 tablets. Tested & Safe Ingredient Only One Tablet Per Day Full 30 Day Supply Unique Ingredient: 10 mg of apoaequorin per tablet Directions: For best results take one tablet daily, in the morning, with or without food. Contains: 30 Regular Strength Mixed Berry Flavor Chewable Tablets *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease."
+        },
+        "price": {
+          "amount": 3995,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Title",
+            "label": "Default Title"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0583/2268/2043/files/RSCHEW-FYB-0225-copy_22e0d020-8446-4317-ae4a-c4d9e6609f88.jpg?v=1742933428"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://prevagen.myshopify.com/cart/41648700326075:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          {
+            "label": "Default Title"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/0583/2268/2043/files/RSCHEW-FYB-0225-copy_22e0d020-8446-4317-ae4a-c4d9e6609f88.jpg?v=1742933428",
+        "alt_text": "Prevagen Chewables - Mixed Berry Tablets - 30ct \u2014 Unique Ingredient, Tested Safe, Once Daily"
+      }
+    ],
+    "categories": [
+      {
+        "value": "gid://shopify/TaxonomyCategory/hb-1-9-6",
+        "taxonomy": "shopify"
+      }
+    ],
+    "tags": [
+      "Chewables",
+      "import_2021_07_01_204308",
+      "joined-description-fields",
+      "PRODUCTS_Chewables",
+      "PRODUCTS_Regular Strength",
+      "Regular Strength",
+      "validate-product-description"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/273315659963",
+        "handle": "supplements-for-your-brain",
+        "title": "Prevagen",
+        "description": {
+          "html": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/6941919740091",
+    "title": "Prevagen\u00ae Extra Strength Berry Flavor Chewables - 20mg Apoaequorin, 30ct",
+    "description": {
+      "html": "A single bottle of Prevagen Extra Strength Chewables Mixed Berry Flavor 30 Day Supply contains 30 tablets. Tested & Safe Ingredient Only One Tablet Per Day Full 30 Day Supply Unique Ingredient: 20 mg of apoaequorin per tablet Directions: For best results take one tablet daily, in the morning, with or without food. Contains: 30 Extra Strength Mixed Berry Flavor Chewable Tablets *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease."
+    },
+    "url": "https://prevagen.com/products/prevagen-extra-strength-chewables-brain-supplements",
+    "handle": "prevagen-extra-strength-chewables-brain-supplements",
+    "price_range": {
+      "min": {
+        "amount": 5995,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 5995,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/41648703930555",
+        "sku": "FG-814-30",
+        "title": "Default Title",
+        "description": {
+          "html": "A single bottle of Prevagen Extra Strength Chewables Mixed Berry Flavor 30 Day Supply contains 30 tablets. Tested & Safe Ingredient Only One Tablet Per Day Full 30 Day Supply Unique Ingredient: 20 mg of apoaequorin per tablet Directions: For best results take one tablet daily, in the morning, with or without food. Contains: 30 Extra Strength Mixed Berry Flavor Chewable Tablets *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease."
+        },
+        "price": {
+          "amount": 5995,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Title",
+            "label": "Default Title"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0583/2268/2043/files/ESCHEW-FYB-0225-copy_b35a2083-3918-416a-8d76-2e091b1b7c60.jpg?v=1742933245"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://prevagen.myshopify.com/cart/41648703930555:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          {
+            "label": "Default Title"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/0583/2268/2043/files/ESCHEW-FYB-0225-copy_b35a2083-3918-416a-8d76-2e091b1b7c60.jpg?v=1742933245",
+        "alt_text": "Prevagen Chewables - Mixed Berry Tablets - Extra Strength - 30ct \u2014 Unique Ingredient, Tested Safe, Once Daily"
+      }
+    ],
+    "categories": [
+      {
+        "value": "gid://shopify/TaxonomyCategory/hb-1-9-6",
+        "taxonomy": "shopify"
+      }
+    ],
+    "tags": [
+      "Chewables",
+      "Extra Strength",
+      "Extra Strength Chewables",
+      "import_2021_07_01_204308",
+      "joined-description-fields",
+      "PRODUCTS_Chewables",
+      "PRODUCTS_Extra Strength",
+      "validate-product-description"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/273315659963",
+        "handle": "supplements-for-your-brain",
+        "title": "Prevagen",
+        "description": {
+          "html": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/6941919772859",
+    "title": "Prevagen\u00ae Regular Strength Capsules - 10mg Apoaequorin, 60ct",
+    "description": {
+      "html": "A single bottle of Prevagen Regular Strength 60 Day Supply contains 60 capsules. Tested & Safe Ingredient Only One Capsule Per Day Full 60 Day Supply Unique Ingredient: 10 mg of apoaequorin per capsule Directions: For best results take one capsule daily, in the morning, with or without food. Contains: 60 Regular Strength capsules *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease."
+    },
+    "url": "https://prevagen.com/products/prevagen-regular-strength-60-count-brain-supplements",
+    "handle": "prevagen-regular-strength-60-count-brain-supplements",
+    "price_range": {
+      "min": {
+        "amount": 7495,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 7495,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/41648712712379",
+        "sku": "FG-723-60",
+        "title": "Default Title",
+        "description": {
+          "html": "A single bottle of Prevagen Regular Strength 60 Day Supply contains 60 capsules. Tested & Safe Ingredient Only One Capsule Per Day Full 60 Day Supply Unique Ingredient: 10 mg of apoaequorin per capsule Directions: For best results take one capsule daily, in the morning, with or without food. Contains: 60 Regular Strength capsules *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease."
+        },
+        "price": {
+          "amount": 7495,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Title",
+            "label": "Default Title"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0583/2268/2043/files/RS60-FYB-0225-copy_fe4a05c8-ac51-4d49-b39e-337c2da25fd4.jpg?v=1742933166"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://prevagen.myshopify.com/cart/41648712712379:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          {
+            "label": "Default Title"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/0583/2268/2043/files/RS60-FYB-0225-copy_fe4a05c8-ac51-4d49-b39e-337c2da25fd4.jpg?v=1742933166",
+        "alt_text": "Prevagen Regular Strength - 60ct \u2014 Unique Ingredient, Tested Safe, Once Daily"
+      }
+    ],
+    "categories": [
+      {
+        "value": "gid://shopify/TaxonomyCategory/hb-1-9-6",
+        "taxonomy": "shopify"
+      }
+    ],
+    "tags": [
+      "import_2021_07_01_204308",
+      "joined-description-fields",
+      "PRODUCTS_60 Count",
+      "PRODUCTS_Regular Strength",
+      "Regular Strength",
+      "validate-product-description"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/273315659963",
+        "handle": "supplements-for-your-brain",
+        "title": "Prevagen",
+        "description": {
+          "html": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/6941919805627",
+    "title": "Prevagen\u00ae Professional Formula Capsules - 40mg Apoaequorin, 30ct",
+    "description": {
+      "html": "A single bottle of Prevagen Professional Formula contains 30 capsules. Tested & Safe Ingredient Only One Capsule Per Day Full 30 Day Supply Unique Ingredient: 40 mg of apoaequorin per capsule Directions: For best results take one capsule daily, in the morning, with or without food. Contains: 30 Professional Formula capsules *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease."
+    },
+    "url": "https://prevagen.com/products/prevagen-professional-formula-brain-supplements",
+    "handle": "prevagen-professional-formula-brain-supplements",
+    "price_range": {
+      "min": {
+        "amount": 8995,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 8995,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/41648707371195",
+        "sku": "FG-513-40",
+        "title": "Default Title",
+        "description": {
+          "html": "A single bottle of Prevagen Professional Formula contains 30 capsules. Tested & Safe Ingredient Only One Capsule Per Day Full 30 Day Supply Unique Ingredient: 40 mg of apoaequorin per capsule Directions: For best results take one capsule daily, in the morning, with or without food. Contains: 30 Professional Formula capsules *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease."
+        },
+        "price": {
+          "amount": 8995,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Title",
+            "label": "Default Title"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0583/2268/2043/files/Pro-FYB-0225-copy_ed849fb2-3e24-427b-a4c8-2ee0f0afb799.jpg?v=1742933124"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://prevagen.myshopify.com/cart/41648707371195:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          {
+            "label": "Default Title"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/0583/2268/2043/files/Pro-FYB-0225-copy_ed849fb2-3e24-427b-a4c8-2ee0f0afb799.jpg?v=1742933124",
+        "alt_text": "Prevagen Pro Formula - 30ct \u2014 Unique Ingredient, Tested Safe, Once Daily"
+      }
+    ],
+    "categories": [
+      {
+        "value": "gid://shopify/TaxonomyCategory/hb-1-9-6",
+        "taxonomy": "shopify"
+      }
+    ],
+    "tags": [
+      "import_2021_07_01_204308",
+      "joined-description-fields",
+      "PRODUCTS_Professional",
+      "Professional",
+      "validate-product-description"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/273315659963",
+        "handle": "supplements-for-your-brain",
+        "title": "Prevagen",
+        "description": {
+          "html": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/6941919838395",
+    "title": "Prevagen\u00ae Extra Strength Capsules - 20mg Apoaequorin, 60ct",
+    "description": {
+      "html": "A single bottle of Prevagen Extra Strength 60 Day Supply contains 60 capsules. Tested & Safe Ingredient Only One Capsule Per Day Full 60 Day Supply Unique Ingredient: 20 mg of apoaequorin per capsule Directions: For best results take one capsule daily, in the morning, with or without food. Contains: 60 Extra Strength capsules *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease."
+    },
+    "url": "https://prevagen.com/products/prevagen-extra-strength-60-count-brain-supplements",
+    "handle": "prevagen-extra-strength-60-count-brain-supplements",
+    "price_range": {
+      "min": {
+        "amount": 10995,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 10995,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/41648705863867",
+        "sku": "FG-811-60",
+        "title": "Default Title",
+        "description": {
+          "html": "A single bottle of Prevagen Extra Strength 60 Day Supply contains 60 capsules. Tested & Safe Ingredient Only One Capsule Per Day Full 60 Day Supply Unique Ingredient: 20 mg of apoaequorin per capsule Directions: For best results take one capsule daily, in the morning, with or without food. Contains: 60 Extra Strength capsules *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease."
+        },
+        "price": {
+          "amount": 10995,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Title",
+            "label": "Default Title"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0583/2268/2043/files/ES60-FYB-0225-copy_4e875559-fc4f-4ca6-8b23-dc97ac16b16c.jpg?v=1742933094"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://prevagen.myshopify.com/cart/41648705863867:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          {
+            "label": "Default Title"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/0583/2268/2043/files/ES60-FYB-0225-copy_4e875559-fc4f-4ca6-8b23-dc97ac16b16c.jpg?v=1742933094",
+        "alt_text": "Prevagen Extra Strength - 60ct \u2014 Unique Ingredient, Tested Safe, Once Daily"
+      }
+    ],
+    "categories": [
+      {
+        "value": "gid://shopify/TaxonomyCategory/hb-1-9-6",
+        "taxonomy": "shopify"
+      }
+    ],
+    "tags": [
+      "Extra Strength",
+      "import_2021_07_01_204308",
+      "joined-description-fields",
+      "PRODUCTS_60 Count",
+      "PRODUCTS_Extra Strength",
+      "validate-product-description"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/273315659963",
+        "handle": "supplements-for-your-brain",
+        "title": "Prevagen",
+        "description": {
+          "html": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/6941919871163",
+    "title": "Prevagen\u00ae Regular Strength Orange Flavor Chewables - 10mg Apoaequorin, 30ct",
+    "description": {
+      "html": "A single bottle of Prevagen Regular Strength Chewables Orange Flavor 30 Day Supply contains 30 tablets. Tested & Safe Ingredient Only One Tablet Per Day Full 30 Day Supply Unique Ingredient: 10 mg of apoaequorin per tablet Directions: For best results take one tablet daily, in the morning, with or without food. Contains: 30 Regular Strength Orange Flavor Chewable Tablets *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease."
+    },
+    "url": "https://prevagen.com/products/prevagen-orange-chewables-brain-supplements",
+    "handle": "prevagen-orange-chewables-brain-supplements",
+    "price_range": {
+      "min": {
+        "amount": 3995,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 3995,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/41648701440187",
+        "sku": "FG-104-30",
+        "title": "Default Title",
+        "description": {
+          "html": "A single bottle of Prevagen Regular Strength Chewables Orange Flavor 30 Day Supply contains 30 tablets. Tested & Safe Ingredient Only One Tablet Per Day Full 30 Day Supply Unique Ingredient: 10 mg of apoaequorin per tablet Directions: For best results take one tablet daily, in the morning, with or without food. Contains: 30 Regular Strength Orange Flavor Chewable Tablets *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease."
+        },
+        "price": {
+          "amount": 3995,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Title",
+            "label": "Default Title"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0583/2268/2043/files/OCHEW-FYB-0225-copy_f0d81b91-61e3-4d07-847b-b6ab64cd0608.jpg?v=1742933048"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://prevagen.myshopify.com/cart/41648701440187:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Title",
+        "values": [
+          {
+            "label": "Default Title"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/0583/2268/2043/files/OCHEW-FYB-0225-copy_f0d81b91-61e3-4d07-847b-b6ab64cd0608.jpg?v=1742933048",
+        "alt_text": "Prevagen Chewables - Orange Flavor Tablets - 30ct \u2014 Unique Ingredient, Tested Safe, Once Daily"
+      }
+    ],
+    "categories": [
+      {
+        "value": "gid://shopify/TaxonomyCategory/hb-1-9-6",
+        "taxonomy": "shopify"
+      }
+    ],
+    "tags": [
+      "Chewables",
+      "import_2021_07_01_204308",
+      "joined-description-fields",
+      "PRODUCTS_Chewables",
+      "PRODUCTS_Regular Strength",
+      "Regular Strength",
+      "validate-product-description"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/273315659963",
+        "handle": "supplements-for-your-brain",
+        "title": "Prevagen",
+        "description": {
+          "html": ""
+        }
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/6941919903931",
+    "title": "Prevagen\u00ae NeuroShake Packets - 5mg Apoaequorin, 15ct",
+    "description": {
+      "html": "Prevagen\u00ae NeuroShake Packets 15count"
+    },
+    "url": "https://prevagen.com/products/neuroshake-brain-supplements",
+    "handle": "neuroshake-brain-supplements",
+    "price_range": {
+      "min": {
+        "amount": 1995,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 1995,
+        "currency": "USD"
+      }
+    },
+    "list_price_range": {
+      "min": {
+        "amount": 0,
+        "currency": "USD"
+      },
+      "max": {
+        "amount": 0,
+        "currency": "USD"
+      }
+    },
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/40797478617275",
+        "sku": "FG-129-15",
+        "title": "Single Box $19.95",
+        "description": {
+          "html": "Prevagen\u00ae NeuroShake Packets 15count"
+        },
+        "price": {
+          "amount": 1995,
+          "currency": "USD"
+        },
+        "availability": {
+          "available": true
+        },
+        "options": [
+          {
+            "name": "Selection",
+            "label": "Single Box $19.95"
+          }
+        ],
+        "media": [
+          {
+            "type": "image",
+            "url": "https://cdn.shopify.com/s/files/1/0583/2268/2043/products/Neuroshakev2-web-sw.jpg?v=1715877374"
+          }
+        ],
+        "requires": {
+          "shipping": true
+        },
+        "checkout_url": "https://prevagen.myshopify.com/cart/40797478617275:1"
+      }
+    ],
+    "options": [
+      {
+        "name": "Selection",
+        "values": [
+          {
+            "label": "Single Box $19.95"
+          }
+        ]
+      }
+    ],
+    "media": [
+      {
+        "type": "image",
+        "url": "https://cdn.shopify.com/s/files/1/0583/2268/2043/products/Neuroshakev2-web-sw.jpg?v=1715877374",
+        "alt_text": "Slide 1 of 4, NeuroShake Package"
+      }
+    ],
+    "categories": [
+      {
+        "value": "gid://shopify/TaxonomyCategory/hb-1-9-2",
+        "taxonomy": "shopify"
+      }
+    ],
+    "tags": [
+      "import_2021_07_01_204308",
+      "joined-description-fields",
+      "Other",
+      "validate-product-description"
+    ],
+    "gift_card": false,
+    "collections": [
+      {
+        "id": "gid://shopify/Collection/273315659963",
+        "handle": "supplements-for-your-brain",
+        "title": "Prevagen",
+        "description": {
+          "html": ""
+        }
+      }
+    ]
+  }
+]

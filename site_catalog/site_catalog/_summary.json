@@ -1,0 +1,65 @@
+[
+  {
+    "domain": "ironmaglabs.com",
+    "status": "failed",
+    "product_count": 0,
+    "error": "404 Client Error: Not Found for url: https://www.ironmaglabs.com/.well-known/ucp",
+    "output_file": "site_catalog\\ironmaglabs.com_products.json"
+  },
+  {
+    "domain": "assault-labs.com",
+    "status": "ok",
+    "product_count": 3,
+    "error": null,
+    "output_file": "site_catalog\\assault-labs.com_products.json"
+  },
+  {
+    "domain": "performaxlabs.com",
+    "status": "ok",
+    "product_count": 16,
+    "error": null,
+    "output_file": "site_catalog\\performaxlabs.com_products.json"
+  },
+  {
+    "domain": "completenutrition.com",
+    "status": "ok",
+    "product_count": 90,
+    "error": null,
+    "output_file": "site_catalog\\completenutrition.com_products.json"
+  },
+  {
+    "domain": "maxmuscle.com",
+    "status": "ok",
+    "product_count": 36,
+    "error": null,
+    "output_file": "site_catalog\\maxmuscle.com_products.json"
+  },
+  {
+    "domain": "americanmetabolix.com",
+    "status": "ok",
+    "product_count": 0,
+    "error": null,
+    "output_file": "site_catalog\\americanmetabolix.com_products.json"
+  },
+  {
+    "domain": "steelsupplements.com",
+    "status": "ok",
+    "product_count": 279,
+    "error": null,
+    "output_file": "site_catalog\\steelsupplements.com_products.json"
+  },
+  {
+    "domain": "blackstonelabs.com",
+    "status": "ok",
+    "product_count": 49,
+    "error": null,
+    "output_file": "site_catalog\\blackstonelabs.com_products.json"
+  },
+  {
+    "domain": "allstar-nutrition.com",
+    "status": "ok",
+    "product_count": 101,
+    "error": null,
+    "output_file": "site_catalog\\allstar-nutrition.com_products.json"
+  }
+]

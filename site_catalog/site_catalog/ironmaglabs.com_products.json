@@ -1,0 +1,652 @@
+[
+  {
+    "source": "jsonld",
+    "url": "https://www.ironmaglabs.com/product/anabolic-matrix-rx/",
+    "name": "Anabolic Matrix",
+    "description": "Natural Hormone Optimizer\u2020\r\n\u2714\ufe0f Tribulus Terrestris, Maca Root &amp;amp; Tongkat Ali\r\n\u2714\ufe0f Supports Natural Testosterone Levels\u2020\r\n\u2714\ufe0f Supports Estrogen Balance\u2020\r\n\u2714\ufe0f Healthy Libido and Sex Drive\u2020\r\n\u2714\ufe0f General Health, Energy, and Vitality\u2020\r\n\r\n\r\n\r\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0",
+    "sku": "Anabolic Matrix",
+    "brand": null,
+    "price": "49.99",
+    "currency": "USD",
+    "availability": "https://schema.org/InStock",
+    "images": [
+      "https://www.ironmaglabs.com/wp-content/uploads/Anabolic-Matrix-2.jpg"
+    ],
+    "category": null,
+    "serving_size": "4 capsules",
+    "servings_per_container": 30,
+    "active_ingredients": [
+      {
+        "name": "Tribulus Terrestris (40% Extract)",
+        "amount": "500",
+        "unit": "mg"
+      },
+      {
+        "name": "Maca Root (PE 4:1 Extract)",
+        "amount": "300",
+        "unit": "mg"
+      },
+      {
+        "name": "Chrysin (5,7-Dihydroxyflavone)",
+        "amount": "300",
+        "unit": "mg"
+      },
+      {
+        "name": "Tongkat Ali (PE 20:1 Extract)",
+        "amount": "250",
+        "unit": "mg"
+      },
+      {
+        "name": "Diindolylmethane (DIM)",
+        "amount": "250",
+        "unit": "mg"
+      },
+      {
+        "name": "5-DHEA (Dehydroepiandrosterone)",
+        "amount": "50",
+        "unit": "mg"
+      },
+      {
+        "name": "6,7-dihydroxybergamottin (DHB)",
+        "amount": "25",
+        "unit": "mg"
+      },
+      {
+        "name": "Piperine (from black pepper)",
+        "amount": "10",
+        "unit": "mg"
+      }
+    ],
+    "suggested_use": "As a dietary supplement take two (2) capsules in the AM and two (2) capsules in the PM. Do not exceed 4 capsules daily and do not use for more than 12 weeks."
+  },
+  {
+    "source": "jsonld",
+    "url": "https://www.ironmaglabs.com/product/maximum-pump-extreme/",
+    "name": "Max Pump V2",
+    "description": "Delicious Watermelon Ice\r\n\r\n\u2714\ufe0f Blood Flow &amp; Muscle Pumps\u2020\r\n\u2714\ufe0f Cell Volumizing Effects\u2020\r\n\u2714\ufe0f Helps Strength and Power\u2020\r\n\u2714\ufe0f Helps Energy, Stamina, Recovery\u2020\r\n\u2714\ufe0f Thermogenic Properties\u2020\r\n\u2714\ufe0f Supports Water Loss\u2020\r\n\r\n\r\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0",
+    "sku": "Maximum Pump V2",
+    "brand": null,
+    "price": "49.99",
+    "currency": "USD",
+    "availability": "https://schema.org/InStock",
+    "images": [
+      "https://www.ironmaglabs.com/wp-content/uploads/Prdct-15-MaxPump-Pouch-Front-WaterMelon.jpg"
+    ],
+    "category": null,
+    "serving_size": null,
+    "servings_per_container": null,
+    "active_ingredients": [
+      {
+        "name": "Creatine Monohydrate",
+        "amount": "2000",
+        "unit": "mg"
+      },
+      {
+        "name": "HydroMax\u00ae",
+        "amount": "2000",
+        "unit": "mg"
+      },
+      {
+        "name": "Beta Alanine",
+        "amount": "1600",
+        "unit": "mg"
+      },
+      {
+        "name": "Arginine Alpha-ketoglutarate (AAKG)",
+        "amount": "500",
+        "unit": "mg"
+      },
+      {
+        "name": "L-Taurine",
+        "amount": "500",
+        "unit": "mg"
+      },
+      {
+        "name": "L-Tyrosine",
+        "amount": "500",
+        "unit": "mg"
+      },
+      {
+        "name": "Betanine Anhydrous",
+        "amount": "200",
+        "unit": "mg"
+      },
+      {
+        "name": "Citrulline Malate (2:1)",
+        "amount": "500",
+        "unit": "mg"
+      },
+      {
+        "name": "D-Aspartic Acid (DAA)",
+        "amount": "750",
+        "unit": "mg"
+      },
+      {
+        "name": "N-Acetyl-Glutamine (NAG)",
+        "amount": "500",
+        "unit": "mg"
+      },
+      {
+        "name": "Agmatine",
+        "amount": "500",
+        "unit": "mg"
+      },
+      {
+        "name": "Caffeine Anhydrous",
+        "amount": "300",
+        "unit": "mg"
+      },
+      {
+        "name": "Orchilean\u00ae",
+        "amount": "250",
+        "unit": "mg"
+      },
+      {
+        "name": "Mucuna Pruriens",
+        "amount": "250",
+        "unit": "mg"
+      },
+      {
+        "name": "Huperzine A\u00ae",
+        "amount": "100",
+        "unit": "mcg"
+      },
+      {
+        "name": "Green Tea (98% extract)",
+        "amount": "100",
+        "unit": "mg"
+      }
+    ],
+    "suggested_use": "Mix one (1) full scoop into 12 ounces of water or other preferred beverage and consume approximately 30 minutes before your training session. It is suggested to begin with a half or 3/4 scoop to determine your tolerance and then increase to a full scoop if desired. *Clumping is normal due to the HydroMax\u00ae, store in a cool, dry place."
+  },
+  {
+    "source": "jsonld",
+    "url": "https://www.ironmaglabs.com/product/ultra-male-rx/",
+    "name": "Ultra Male",
+    "description": "Testosterone Support Formula\u2020\r\n\u2714\ufe0f Powered by Prolensis\u00ae (Bulbine Natalensis)\r\n\u2714\ufe0f Supports Natural Testosterone Levels\u2020\r\n\u2714\ufe0f Supports Estrogen Balance\u2020\r\n\u2714\ufe0f Healthy Libido and Sex Drive\u2020\r\n\u2714\ufe0f General Health, Energy, and Vitality\u2020\r\n\r\n\r\n\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;",
+    "sku": "Ultra Male Rx",
+    "brand": null,
+    "price": "49.99",
+    "currency": "USD",
+    "availability": "https://schema.org/InStock",
+    "images": [
+      "https://www.ironmaglabs.com/wp-content/uploads/UltraMale.jpg"
+    ],
+    "category": null,
+    "serving_size": null,
+    "servings_per_container": null,
+    "active_ingredients": [
+      {
+        "name": "Prolensis\u00ae (Bulbine Natalensis PE 10:1 Extract)",
+        "amount": "200",
+        "unit": "mg"
+      },
+      {
+        "name": "Fenusol\u00ae (Fenugreek Seed Extract)",
+        "amount": "200",
+        "unit": "mg"
+      },
+      {
+        "name": "Urtica Dioica (Stinging Nettle PE 10:1 Extract)",
+        "amount": "125",
+        "unit": "mg"
+      },
+      {
+        "name": "Maca Root (PE 20:1 Extract)",
+        "amount": "125",
+        "unit": "mg"
+      },
+      {
+        "name": "Bioperine\u00ae",
+        "amount": "10",
+        "unit": "mg"
+      }
+    ],
+    "suggested_use": "As a dietary supplement take one (1) or two (2) capsules daily with food. Do not exceed two (2) capsules in any 24 hour time period and do not use for more that 12 weeks."
+  },
+  {
+    "source": "jsonld",
+    "url": "https://www.ironmaglabs.com/product/e-control-rx-2-0/",
+    "name": "E-Control",
+    "description": "Anti-Estrogen Control Formula\u2020\r\n\u2714\ufe0f Supports Estrogen Balance\u2020\r\n\u2714\ufe0f Supports Free Testosterone Levels\u2020\r\n\u2714\ufe0f Helps Luteinizing Hormone (LH) levels\u2020\r\n\u2714\ufe0f Supports Water Balance\u2020\r\n\r\n\r\n\r\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0",
+    "sku": "E-Control",
+    "brand": null,
+    "price": "49.99",
+    "currency": "USD",
+    "availability": "https://schema.org/InStock",
+    "images": [
+      "https://www.ironmaglabs.com/wp-content/uploads/IML-E-Control-3.jpg"
+    ],
+    "category": null,
+    "serving_size": null,
+    "servings_per_container": null,
+    "active_ingredients": [
+      {
+        "name": "Androsta-3 5-diene-7 17-dione",
+        "amount": "25",
+        "unit": "mg"
+      },
+      {
+        "name": "Chlorophytum Borivilianum (50% extract)",
+        "amount": "250",
+        "unit": "mg"
+      },
+      {
+        "name": "Indole-3-carbinol (I3C)",
+        "amount": "200",
+        "unit": "mg"
+      }
+    ],
+    "suggested_use": "Take one (1) capsule three (3) times daily in divided doses with food."
+  },
+  {
+    "source": "jsonld",
+    "url": "https://www.ironmaglabs.com/product/dream-n-grow/",
+    "name": "Dream-n-Grow",
+    "description": "Deep Sleep &amp; Relaxation Complex\r\n\u2714\ufe0f Support Healthy Rested Sleep\u2020\r\n\u2714\ufe0f Helps Enhance Relaxation\u2020\r\n\u2714\ufe0f Mental and Cognitive Support\u2020\r\n\r\n&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;",
+    "sku": "Dream n Grow",
+    "brand": null,
+    "price": "49.99",
+    "currency": "USD",
+    "availability": "https://schema.org/InStock",
+    "images": [
+      "https://www.ironmaglabs.com/wp-content/uploads/Dream-n-Grow-1.jpg"
+    ],
+    "category": null,
+    "serving_size": null,
+    "servings_per_container": null,
+    "active_ingredients": [
+      {
+        "name": "Magnesium (from source of MG)",
+        "amount": "100",
+        "unit": "mg"
+      },
+      {
+        "name": "Mitragyna Speciosa Extract (leaves)",
+        "amount": "250",
+        "unit": "mg"
+      },
+      {
+        "name": "L-Theanine",
+        "amount": "200",
+        "unit": "mg"
+      },
+      {
+        "name": "GABA (gamma-Aminobutyric Acid)",
+        "amount": "50",
+        "unit": "mg"
+      },
+      {
+        "name": "Phellodendron Root",
+        "amount": "50",
+        "unit": "mg"
+      },
+      {
+        "name": "Mucuna Pruriens (std. 15% L-Dopa)(seed)",
+        "amount": "50",
+        "unit": "mg"
+      },
+      {
+        "name": "5-HTP (5 Hydroxytryptophan)",
+        "amount": "25",
+        "unit": "mg"
+      },
+      {
+        "name": "Melatonin",
+        "amount": "5",
+        "unit": "mg"
+      }
+    ],
+    "suggested_use": "Take one (1) or two (2) capsules approximately 30-45 minutes before sleeping."
+  },
+  {
+    "source": "jsonld",
+    "url": "https://www.ironmaglabs.com/product/stimulate/",
+    "name": "Stimulate",
+    "description": "Enhanced Nootropic Blend\r\n\u2714\ufe0f Helps Boost Energy\u2020\r\n\u2714\ufe0f Helps Mental Focus\u2020\r\n\u2714\ufe0f Helps Cognition\u2020\r\n\u2714\ufe0f Supports Mood and Memory\u2020\r\n\r\n&amp;nbsp;\r\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0",
+    "sku": "Stimulate",
+    "brand": null,
+    "price": "49.99",
+    "currency": "USD",
+    "availability": "https://schema.org/InStock",
+    "images": [
+      "https://www.ironmaglabs.com/wp-content/uploads/IML-Stimulate.jpg"
+    ],
+    "category": null,
+    "serving_size": null,
+    "servings_per_container": null,
+    "active_ingredients": [
+      {
+        "name": "Beta-Phenylethylalamine \u2013 Helps mental clarity, mood, motivation and energy.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "Di-Caffeine \u2013 Helps boost energy and alertness.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "Synephrine HCL \u2013 Aids in weight-loss, sports performance, energy, mental focus and cognition\u2020.",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "L-Theanine \u2013 Helps with relaxation, reduces stress and cognition.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "Acetyl-L-Tyrosine \u2013 Helps brain function and cognition.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "White Willow Bark \u2013 Has the ability to support natural wellness.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "Panax Ginseng \u2013 Aids with energy, memory and mood.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "Rhodiola Roses \u2013 Support physical and mental energy levels.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "Pregnenolone \u2013 Helps stimulates neurogenesis and neuroprotection.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "Pyrodoxil-5-Phosphate \u2013 Support physical and mental energy.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "Yohimbine HCL \u2013 Supports stress levels and cognition.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "Huperzine A \u2013 Supports memory and neuroprotection.\u2020",
+        "amount": null,
+        "unit": null
+      }
+    ],
+    "suggested_use": "Take one (1) to three (3) capsules daily with food. Begin with one (1) capsule to determine sensitivity, and if desired increase dosage. Do not take more than three (3) capsules in any 24-hour time period."
+  },
+  {
+    "source": "jsonld",
+    "url": "https://www.ironmaglabs.com/product/carb-fix/",
+    "name": "Carb Fix",
+    "description": "Insulin Mimicker &amp; Optimizer\u2020\r\n\u2714\ufe0f Supports Carbohydrate Metabolism\u2020\r\n\u2714\ufe0f Supports Muscle Volume\u2020\r\n\u2714\ufe0f Supports Healthy Metabolism\u2020\r\n\u2714\ufe0f Healthy Blood Sugar Levels\u2020\r\n\u2714\ufe0f Supports Natural Hormone Balance\u2020\r\n\r\n&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;",
+    "sku": "Carb Fix",
+    "brand": null,
+    "price": "49.99",
+    "currency": "USD",
+    "availability": "https://schema.org/InStock",
+    "images": [
+      "https://www.ironmaglabs.com/wp-content/uploads/Carb-Fix_render.jpg"
+    ],
+    "category": null,
+    "serving_size": null,
+    "servings_per_container": null,
+    "active_ingredients": [
+      {
+        "name": "Berberine \u2013 A plant compound that aids in managing blood sugar levels, helps increase the healthy bacteria in the gut, has anti-inflammatory properties and may help improve weight loss.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "Sodium R Lipoate \u2013 Can help produce cognitive benefits, help decrease blood glucose and has antioxidant properties that aid in the protection of free radicals.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "Fenugreek (50% Saponins) \u2013 Aids in lowering blood sugar, supporting healthy testosterone levels, helps lower appetite and helps with inflammation in the body.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "Kaempferol \u2013 A natural flavonoid that helps prevent oxidative stress due to free radicals and can helps support healthy glucose levels.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "Gymnema Slyvestre \u2013 Powerful herb that supports weight loss, may help lower cholesterol and triglyceride levels, supports healthy blood sugar levels and aids in curbing sugar cravings.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "Cinnamon \u2013 Loaded with antioxidants, can help with inflammation and healthy blood glucose levels.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "Bitter Melon \u2013 A spiky fruit that is full of micronutrients, supports healthy blood sugar, supports weight loss and healthy cholesterol levels.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "Chromium Glycosinate \u2013 A mineral that can help improve insulin sensitivity, aid in metabolizing fat & carbohydrates and supports weight loss.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "Banaba \u2013 Helpful leaves that can help control glucose levels and may inhibit the formation of fat cells in the body to aid with weight management.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "Fucoxanthin \u2013 Specific form of seaweed that helps the body burn fat and speed up the metabolism while also aiding in healthy blood sugar levels.\u2020",
+        "amount": null,
+        "unit": null
+      },
+      {
+        "name": "African Mango \u2013 An extract from the African mango seed that can aid in weight loss and fat-burning while also helping manage healthy blood glucose and cholesterol levels.\u2020",
+        "amount": null,
+        "unit": null
+      }
+    ],
+    "suggested_use": "Take one (1) to two (2) capsules with your highest carb meals. Do not exceed four (4) capsules in a 24 hour period."
+  },
+  {
+    "source": "jsonld",
+    "url": "https://www.ironmaglabs.com/product/ephedra-stack/",
+    "name": "Ephedra Stack",
+    "description": "Old School ECA Stack\r\n\u2714\ufe0f Supports Fat Loss\u2020\r\n\u2714\ufe0f Helps Boost Energy\u2020\r\n\u2714\ufe0f Supports Healthy Metabolism\u2020\r\n\u2714\ufe0f Helps Appetite control\u2020\r\n\r\n&amp;nbsp;\r\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0",
+    "sku": "Ephedra Stack",
+    "brand": null,
+    "price": "49.99",
+    "currency": "USD",
+    "availability": "https://schema.org/InStock",
+    "images": [
+      "https://www.ironmaglabs.com/wp-content/uploads/Ephedra-Stack.jpg"
+    ],
+    "category": null,
+    "serving_size": null,
+    "servings_per_container": null,
+    "active_ingredients": [
+      {
+        "name": "Ephedra Leaf (extract)*",
+        "amount": "25",
+        "unit": "mg"
+      },
+      {
+        "name": "Caffeine Anhydrous",
+        "amount": "150",
+        "unit": "mg"
+      },
+      {
+        "name": "White Willow Bark",
+        "amount": "40",
+        "unit": "mg"
+      },
+      {
+        "name": "Synephrine HCL",
+        "amount": "30",
+        "unit": "mg"
+      }
+    ],
+    "suggested_use": "Take one (1) to two (2) capsules in the morning and one (1) capsule early afternoon with 8oz of water. Do not exceed three (3) capsules in any 24 hour period."
+  },
+  {
+    "source": "jsonld",
+    "url": "https://www.ironmaglabs.com/product/advanced-cycle-support/",
+    "name": "Cycle Support",
+    "description": "Liver &amp; Organ Support Formula\u2020\r\n\u2714\ufe0f Helps Protect Major Organs\u2020\r\n\u2714\ufe0f Supports Liver Health\u2020\r\n\u2714\ufe0f Healthy Blood Lipids\u2020\r\n\u2714\ufe0f Blood Pressure Support\u2020\r\n\u2714\ufe0f Supports Prostate Health\u2020\r\n\r\n&amp;nbsp;\r\n&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;",
+    "sku": "Cycle Support",
+    "brand": null,
+    "price": "49.99",
+    "currency": "USD",
+    "availability": "https://schema.org/InStock",
+    "images": [
+      "https://www.ironmaglabs.com/wp-content/uploads/IML-Capsules_Advanced-Cycle-Support.jpg"
+    ],
+    "category": null,
+    "serving_size": null,
+    "servings_per_container": null,
+    "active_ingredients": [
+      {
+        "name": "Milk Thistle (Silybum Marianum)",
+        "amount": "500",
+        "unit": "mg"
+      },
+      {
+        "name": "Glutathione (GSH)",
+        "amount": "400",
+        "unit": "mg"
+      },
+      {
+        "name": "Artichoke (4:1 extract)",
+        "amount": "300",
+        "unit": "mg"
+      },
+      {
+        "name": "Hawthorne Berry",
+        "amount": "300",
+        "unit": "mg"
+      },
+      {
+        "name": "Saw Palmetto (Serenoa Repens)",
+        "amount": "200",
+        "unit": "mg"
+      },
+      {
+        "name": "Coenzyme Q10 (CoQ10)",
+        "amount": "100",
+        "unit": "mg"
+      },
+      {
+        "name": "Celery Seed (Extract)",
+        "amount": "100",
+        "unit": "mg"
+      },
+      {
+        "name": "Grape Seed (Extract)",
+        "amount": "100",
+        "unit": "mg"
+      }
+    ],
+    "suggested_use": "Take three (3) capsules daily with food. This product can be used on or off cycle for any length of time."
+  },
+  {
+    "source": "jsonld",
+    "url": "https://www.ironmaglabs.com/product/turkesterone/",
+    "name": "Turkesterone",
+    "description": "\u2714\ufe0f Supports Muscle Mass\u2020\r\n\u2714\ufe0f Supports Fat Loss\u2020\r\n\u2714\ufe0f Muscle Breakdown Support\u2020\r\n\u2714\ufe0f Supports Endurance\u2020\r\n\u2714\ufe0f Fatigue Support\u2020\r\n\r\n\r\n\r\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0",
+    "sku": "Turkesterone",
+    "brand": null,
+    "price": "49.99",
+    "currency": "USD",
+    "availability": "https://schema.org/InStock",
+    "images": [
+      "https://www.ironmaglabs.com/wp-content/uploads/IML-Capsules-Turkesterone-white.jpg"
+    ],
+    "category": null,
+    "serving_size": null,
+    "servings_per_container": null,
+    "active_ingredients": [],
+    "suggested_use": "As a dietary supplement take one (1) or two (2) capsules per day with food, use in cycles of 8-12 weeks."
+  },
+  {
+    "source": "jsonld",
+    "url": "https://www.ironmaglabs.com/product/ksm-66-max/",
+    "name": "KSM-66 Max",
+    "description": "Recovery and Anabolic Growth Complex\u2020\r\n\u2714\ufe0f Male &amp;amp; Female Friendly\r\n\u2714\ufe0f Supports Recovery and Anabolism\u2020\r\n\u2714\ufe0f Supports Natural Testosterone Levels\u2020\r\n\u2714\ufe0f Helps Promote Endurance, Strength &amp;amp; Muscle Mass\u2020\r\n\u2714\ufe0f Supports Memory and Cognitive Function\u2020\r\n\u2714\ufe0f Helps Enhance Sexual Performance\u2020\r\n\r\n\r\n\r\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0",
+    "sku": "KSM-66 Max",
+    "brand": null,
+    "price": "49.99",
+    "currency": "USD",
+    "availability": "https://schema.org/InStock",
+    "images": [
+      "https://www.ironmaglabs.com/wp-content/uploads/IML-KSM-66-MAX.jpg"
+    ],
+    "category": null,
+    "serving_size": null,
+    "servings_per_container": null,
+    "active_ingredients": [],
+    "suggested_use": "As a dietary supplement take three (3) capsules per day. Do not use for more than 12 weeks."
+  },
+  {
+    "source": "jsonld",
+    "url": "https://www.ironmaglabs.com/product/andro-hard/",
+    "name": "Andro Hard",
+    "description": "MAY HELP WITH:\r\n\u2714\ufe0f Increasing Testosterone Levels\u2020\r\n\u2714\ufe0f Increasing Strength &amp;amp; Power\u2020\r\n\u2714\ufe0f Increased Muscle Hardening\u2020\r\n\u2714\ufe0f Increasing Aggression &amp;amp; Recovery\u2020\r\n\u2714\ufe0f Bloat &amp;amp; Water Reduction\u2020\r\n\r\n\r\n\r\n\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0",
+    "sku": "Andro Hard",
+    "brand": null,
+    "price": "69.99",
+    "currency": "USD",
+    "availability": "https://schema.org/OutOfStock",
+    "images": [
+      "https://www.ironmaglabs.com/wp-content/uploads/IML_AndroHard.jpg"
+    ],
+    "category": null,
+    "serving_size": null,
+    "servings_per_container": null,
+    "active_ingredients": [
+      {
+        "name": "3\u03b1-hydroxy-5\u03b1-androstan-17-one (R-DHEA)",
+        "amount": "100",
+        "unit": "mg"
+      },
+      {
+        "name": "3b-Hydroxy-5a-androstan-17-one (Epi-DHEA)",
+        "amount": "50",
+        "unit": "mg"
+      },
+      {
+        "name": "6,7-dihydroxybergamottin (45%)",
+        "amount": "25",
+        "unit": "mg"
+      },
+      {
+        "name": "Piperine (black pepper)",
+        "amount": "10",
+        "unit": "mg"
+      }
+    ],
+    "suggested_use": "As a dietary supplement take two (1) capsule in the AM and two (1) capsule in the PM. Do not exceed 2 capsules daily and do not use for more than 12 weeks."
+  },
+  {
+    "source": "html_fallback",
+    "url": "https://www.ironmaglabs.com/product-type/all-products/",
+    "name": null,
+    "description": null,
+    "sku": null,
+    "brand": null,
+    "price": null,
+    "currency": null,
+    "availability": null,
+    "images": [],
+    "category": null,
+    "serving_size": null,
+    "servings_per_container": null,
+    "active_ingredients": [],
+    "suggested_use": null
+  }
+]
