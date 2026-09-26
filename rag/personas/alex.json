@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "name": "Alex (fictional)",
+  "goals": [
+    "Keep a consistent, efficient morning routine",
+    "Find immediate relief from tiredness"
+  ],
+  "preferences": [
+    "Plant-based options",
+    "Short, practical suggestions"
+  ],
+  "constraints": [
+    "Budget: at most 30 EUR per month",
+    "No subscriptions or expensive supplement bundles"
+  ],
+  "facts": [
+    "Little time before work",
+    "Very tired today; breakfast feels insufficient"
+  ],
+  "product_interests": [
+    "Plant-based protein powders",
+    "Practical meal preparation ideas"
+  ],
+  "mentioned_products": [
+    "Hist Reset",
+    "Alpha Omega Stack"
+  ]
+}

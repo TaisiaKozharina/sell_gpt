@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "name": "Tim",
+  "goals": [
+    "Eat more",
+    "Maintain energy for better work performance",
+    "Lose weight"
+  ],
+  "preferences": [
+    "Light meals",
+    "Light breakfasts and foods for energy"
+  ],
+  "constraints": [
+    "Avoid heavy, greasy meals, high-calorie snacks, and sugary foods"
+  ],
+  "facts": [
+    "Very tired and hungry at breakfast"
+  ],
+  "product_interests": [
+    "Work-performance aids"
+  ],
+  "mentioned_products": [
+    "Sleepy Magnesi-Om®",
+    "SleepONE",
+    "PureLean® Satiety"
+  ]
+}

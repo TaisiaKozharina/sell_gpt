@@ -1,0 +1,19 @@
+catalog = "../site_catalog/site_catalog"
+index = ".data/index.npz"
+prompt = "prompts/sellgpt.md"
+memory_prompt = "prompts/memory.md"
+ollama_url = "http://127.0.0.1:11434"
+embedding_model = "embeddinggemma:300m"
+answer_model = "qwen3.5:2b"
+top_k = 5
+temperature = 0.7
+context_length = 8192
+output_limit = 512
+chunk_words = 250
+chunk_overlap = 40
+embedding_batch_size = 8
+history_turns = 4
+timeout = 180
+memory_enabled = false
+# Optional persona: read when selected, updated only with memory enabled.
+# persona = "personas/alex.json"

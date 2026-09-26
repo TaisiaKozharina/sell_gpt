@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "name": "Sam (fictional)",
+  "goals": [
+    "Simplify preparation for weekend hikes"
+  ],
+  "preferences": [
+    "Portable snacks",
+    "Compare ingredients before choosing products"
+  ],
+  "constraints": [
+    "Avoid caffeine",
+    "Use existing supplies before buying more"
+  ],
+  "facts": [
+    "Takes short weekend hikes"
+  ],
+  "product_interests": [
+    "Snack bars",
+    "Not interested in pre-workout supplements"
+  ],
+  "mentioned_products": []
+}

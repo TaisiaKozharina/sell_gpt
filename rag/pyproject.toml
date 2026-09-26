@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sellgpt"
+version = "0.1.0"
+description = "Local product-catalog RAG with CLI and Gradio chat"
+requires-python = ">=3.11"
+dynamic = ["dependencies"]
+
+[project.scripts]
+sellgpt = "sellgpt.cli:main"
+sellgpt-ui = "sellgpt.ui:main"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+where = ["src"]
