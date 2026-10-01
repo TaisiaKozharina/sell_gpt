@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "name": "bartholomih",
+  "goals": [
+    "Socialize with friends"
+  ],
+  "preferences": [
+    "Friends",
+    "Smell detection"
+  ],
+  "constraints": [],
+  "facts": [
+    "Has little friends",
+    "Smells"
+  ],
+  "product_interests": [],
+  "mentioned_products": [
+    "Air Scent Refill"
+  ]
+}
