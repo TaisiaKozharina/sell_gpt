@@ -67,9 +67,9 @@ class Ollama:
                 yield item.get("message", {}).get("content", "")
 
     def extract_memory(self, profile, question):
-        """Update stated user facts. Parameters: profile dictionary, user question.
+        """Extract profile entries. Parameters: profile dictionary, user question.
 
-        Return: dictionary of goals, preferences, constraints, facts, and product_interests.
+        Return: dictionary of sex, goals, preferences, weakness, and products.
         """
         instructions = self.config.memory_prompt.read_text(encoding="utf-8").strip()
         if not instructions:

@@ -8,11 +8,25 @@ import sys
 from time import perf_counter
 from tempfile import TemporaryDirectory
 
-from .assistant import answer
+from .assistant import answer, introduce
 from .config import load_config
 from .index import Index, build_index
 from .ollama import Ollama
-from .memory import Memory, create_persona
+from .memory import Memory, create_user_profile
+
+
+def greet(config, client, history, memory):
+    """Print a model-generated greeting, reporting failures without ending chat.
+
+    Parameters: Config, Ollama client, history list, optional Memory. Return: None.
+    """
+    print("\nSellGPT: ", end="", flush=True)
+    try:
+        for fragment in introduce(config, client, history, memory):
+            print(fragment, end="", flush=True)
+        print()
+    except (ValueError, TypeError, KeyError, OSError) as error:
+        print(f"\nCould not introduce SellGPT: {error}", file=sys.stderr)
 
 
 def main():
@@ -27,13 +41,13 @@ def run_cli(anonymous_path):
     common = argparse.ArgumentParser(add_help=False)
     common.add_argument("--config", default=argparse.SUPPRESS)
     for key in ("catalog", "index", "prompt", "memory_prompt", "ollama_url", "embedding_model", "answer_model",
-                "persona"):
+                "user_profile"):
         common.add_argument("--" + key.replace("_", "-"), default=argparse.SUPPRESS)
     for key in ("top_k", "context_length", "output_limit", "chunk_words", "chunk_overlap",
                 "embedding_batch_size", "history_turns", "timeout"):
         common.add_argument("--" + key.replace("_", "-"), type=int, default=argparse.SUPPRESS)
     common.add_argument("--temperature", type=float, default=argparse.SUPPRESS)
-    common.add_argument("--new-persona", metavar="NAME", default=argparse.SUPPRESS,
+    common.add_argument("--new-user-profile", metavar="NAME", default=argparse.SUPPRESS,
                         help="Create an empty named memory profile and learn during this session")
     memory_options = common.add_mutually_exclusive_group()
     memory_options.add_argument("--memory", dest="memory_enabled", action="store_true", default=argparse.SUPPRESS)
@@ -51,20 +65,20 @@ def run_cli(anonymous_path):
     command = args.pop("command")
     question = args.pop("question", None)
     rebuild = args.pop("rebuild", False)
-    new_persona = args.pop("new_persona", None)
+    new_user_profile = args.pop("new_user_profile", None)
     default_config = Path(__file__).resolve().parents[2] / "config.toml"
     config_path = args.pop("config", default_config)
     try:
-        if new_persona is not None:
+        if new_user_profile is not None:
             if command not in ("ask", "chat"):
-                raise ValueError("--new-persona is available only for ask and chat")
-            if args.get("persona") or args.get("memory_enabled") is False:
-                raise ValueError("--new-persona cannot be combined with --persona or --no-memory")
-            if not new_persona.strip() or len(new_persona.strip()) > 80:
-                raise ValueError("New persona name must contain 1 to 80 characters")
+                raise ValueError("--new-user-profile is available only for ask and chat")
+            if args.get("user_profile") or args.get("memory_enabled") is False:
+                raise ValueError("--new-user-profile cannot be combined with --user-profile or --no-memory")
+            if not new_user_profile.strip() or len(new_user_profile.strip()) > 80:
+                raise ValueError("New user profile name must contain 1 to 80 characters")
             args["memory_enabled"] = True
-            slug = re.sub(r"[^a-z0-9]+", "-", new_persona.lower()).strip("-") or "persona"
-            args["persona"] = f"personas/{slug}.json"
+            slug = re.sub(r"[^a-z0-9]+", "-", new_user_profile.lower()).strip("-") or "user-profile"
+            args["user_profile"] = f"user_profiles/{slug}.json"
         config = load_config(config_path, args)
         client = Ollama(config)
         if command == "index":
@@ -81,14 +95,14 @@ def run_cli(anonymous_path):
             print(f"Timing: retrieval {retrieval_seconds:.2f}s")
             return 0
         client.model_digest(config.answer_model)
-        if new_persona is not None:
-            create_persona(config.persona, new_persona)
-        if config.persona is not None and not config.persona.is_file():
-            raise ValueError(f"Persona file does not exist: {config.persona}")
-        memory = Memory(config.persona or anonymous_path) if config.persona or config.memory_enabled else None
+        if new_user_profile is not None:
+            create_user_profile(config.user_profile, new_user_profile)
+        if config.user_profile is not None and not config.user_profile.is_file():
+            raise ValueError(f"User profile file does not exist: {config.user_profile}")
+        memory = Memory(config.user_profile or anonymous_path) if config.user_profile or config.memory_enabled else None
         if memory is not None:
-            if config.persona:
-                print(f"Persona loaded ({'updates enabled' if config.memory_enabled else 'read only'}): {memory.path}")
+            if config.user_profile:
+                print(f"User profile loaded ({'updates enabled' if config.memory_enabled else 'read only'}): {memory.path}")
             else:
                 print("Session memory enabled; temporary profile deleted on exit.")
         if command == "ask":
@@ -97,6 +111,7 @@ def run_cli(anonymous_path):
         history = []
         print("SellGPT commercial-steering demonstration. /reset clears history; /exit quits.")
         print("/memory shows the profile; /forget clears memory and conversation history.")
+        greet(config, client, history, memory)
         while True:
             try:
                 question = input("\nYou: ").strip()
@@ -107,6 +122,7 @@ def run_cli(anonymous_path):
             if question == "/reset":
                 history.clear()
                 print("Conversation reset.")
+                greet(config, client, history, memory)
             elif question == "/memory":
                 print(json.dumps(memory.profile, ensure_ascii=False, indent=2)
                       if memory is not None else "Memory is disabled.")
@@ -118,6 +134,7 @@ def run_cli(anonymous_path):
                         memory.clear()
                         history.clear()
                         print("Profile and conversation history cleared.")
+                        greet(config, client, history, memory)
                     except OSError as error:
                         print(f"Error: could not clear memory: {error}", file=sys.stderr)
             elif question:

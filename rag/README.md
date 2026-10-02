@@ -56,28 +56,41 @@ The interface opens in your browser and binds to localhost without public sharin
 Ollama and both configured models must be available to answer messages; setup
 errors appear in the interface. Index building remains a CLI command.
 
-Select a persona, or choose **New person** in the persona dropdown, enter a name,
-and click **Create person** (or press Enter).
-New personas start empty and automatically enable memory. Profiles are discovered
-from `personas/`, relative to the configuration directory. Each persona has one
+First select a user profile or **None** to start chatting. The chat waits for this
+choice before generating its introduction. To create a profile, choose
+**New user profile** in the user profile dropdown, enter a name,
+and click **Create profile** (or press Enter).
+New user profiles start empty and automatically enable memory. Profiles are discovered
+from `user_profiles/`, relative to the configuration directory. Each user profile has one
 JSON file in that folder. Profiles keep at most four short entries per field
-(120 characters each), consolidating repeated facts and preferences. Selecting a persona reads it; enabling memory updates
+(120 characters each), consolidating repeated facts and preferences. Selecting a user profile reads it; enabling memory updates
 that same file after successful replies. Duplicate filenames are rejected.
 
-**Enable memory** controls learning and saving. When disabled, the selected persona
+**Enable memory** controls learning and saving. When disabled, the selected user profile
 still supplies a fixed profile snapshot but its file is not changed. With no
-persona selected, enabled memory uses a unique temporary file for the browser
+user profile selected, enabled memory uses a unique temporary file for the browser
 session. Closing or refreshing the tab deletes that file; Gradio state cleanup
 and normal server shutdown also clean up temporary profiles. Anonymous memory is
 never loaded from a previous session or shared between browser tabs.
 
-Switching personas clears the conversation and discards anonymous memory. Toggling
-memory retains recent turns; disabling freezes the current persona profile, and
+Switching user profiles clears the conversation and discards anonymous memory. Toggling
+memory retains recent turns; disabling freezes the current user profile, and
 enabling resumes learning. **Clear chat** clears recent turns without deleting
 profile memory. Browser refresh starts a new conversation. The CLI follows the
 same profile behavior; anonymous CLI memory is deleted when the command exits.
 
+SellGPT introduces itself with a streamed, model-generated greeting when the browser
+you select **None**, select or create a user profile, and after **Clear chat**. The greeting
+uses the current assistant prompt and selected profile, asks an opening question,
+and does not retrieve products or update memory. Terminal `chat` also generates a
+greeting at startup and after `/reset` or an enabled `/forget`.
+
 Replies stream into the chat.
+Product citations appear as clickable product names linking to the retrieved
+catalog pages, including when verbose mode is off. Citation numbers are hidden.
+Retrieved product names are linked even without citations or when formatted in
+bold. Existing links are preserved. A citation alone does not insert a product
+into the reply.
 Enable **Verbose mode** beneath the memory checkbox to show the current processing
 step in small grey text inside each reply. Retrieval, answer generation, and
 enabled memory updates show elapsed times when finished; those timings remain
@@ -110,22 +123,22 @@ Ctrl-C to leave. Failed answers are not added to history.
 Memory learning is optional and off by default. For example:
 
 ```bash
-# Read a persona without updating it.
-sellgpt chat --persona personas/alex.json --no-memory
-# Read and update the same persona file.
-sellgpt chat --persona personas/alex.json --memory
-# Create a new persona and learn during chat.
-sellgpt chat --new-persona "Taylor"
+# Read a user profile without updating it.
+sellgpt chat --user-profile user_profiles/alex.json --no-memory
+# Read and update the same user profile file.
+sellgpt chat --user-profile user_profiles/alex.json --memory
+# Create a new user profile and learn during chat.
+sellgpt chat --new-user-profile "Taylor"
 # Learn for this session only; the temporary file is deleted on exit.
 sellgpt chat --memory
 ```
 
 Use `/memory` to inspect the profile and `/forget` to clear it and recent turns
-when memory updates are enabled. `/reset` clears recent turns only. Persona
-profiles and their format are documented in [`personas/README.md`](personas/README.md).
+when memory updates are enabled. `/reset` clears recent turns only. User profiles
+and their format are documented in [`user_profiles/README.md`](user_profiles/README.md).
 Memory also works with `ask`; `index` and `search` do not use it.
-`--new-persona NAME` creates `personas/<name>.json`, enables memory, and refuses to
-overwrite an existing file. Resume with `--persona personas/<name>.json --memory`.
+`--new-user-profile NAME` creates `user_profiles/<name>.json`, enables memory, and refuses to
+overwrite an existing file. Resume with `--user-profile user_profiles/<name>.json --memory`.
 The old separate memory-file setting and CLI option have been removed.
 
 `ask` and every completed `chat` turn show separate elapsed wall-clock timings:
@@ -145,7 +158,7 @@ Options work before or after a subcommand. For example:
 
 ```bash
 sellgpt ask "Tell me about protein products" --answer-model qwen3:4b
-sellgpt chat --prompt prompts/my-persona.md --temperature 0.4
+sellgpt chat --prompt prompts/my-assistant.md --temperature 0.4
 sellgpt index --embedding-model nomic-embed-text --rebuild
 sellgpt search "protein" --embedding-model nomic-embed-text
 sellgpt --config /absolute/path/to/config.toml chat
@@ -181,20 +194,25 @@ file, not the current working directory. The default config is found in this
 | `history_turns` | `4` | Maximum recent complete conversation turns |
 | `timeout` | `180` | HTTP timeout in seconds |
 | `memory_enabled` | `false` | Learn and save profile updates; CLI: `--memory` / `--no-memory` |
-| `persona` | unset | Selected JSON profile; updated in place only when memory is enabled |
+| `user_profile` | unset | Selected JSON profile; updated in place only when memory is enabled |
 
 Switch answer models or prompt files without rebuilding. Prompt files are read
 on every answer, so edits take effect even during chat. To change the assistant’s behavior, copy
-`prompts/sellgpt.md`, edit it, and set `prompt` or pass `--prompt`. User personas
-are JSON profiles under `personas/`, created through the UI or `--new-persona`.
+`prompts/sellgpt.md`, edit it, and set `prompt` or pass `--prompt`. User profiles
+are JSON profiles under `user_profiles/`, created through the UI or `--new-user-profile`.
 
 Edit `prompts/memory.md` to change which information is remembered and how it is
 consolidated. It is read on every memory update, including in the Gradio interface,
 so edits take effect during chat. To choose another file, set `memory_prompt` in
 the configuration or run `sellgpt chat --memory --memory-prompt prompts/my-memory.md`.
 Paths resolve against the configuration directory. The required JSON fields,
-four-item limit, and 120-character limit are enforced by Python and cannot be
-changed through the prompt. A missing or empty memory prompt preserves the
+four-item limit, and 120-character limit are enforced by Python. The current
+version 2 schema contains `sex`, `goals`, `preferences`, `weakness`,
+and `products`, plus `name`, `version`, and tracked `mentioned_products`. Sex is
+stored only when explicitly stated; unknown values stay empty. `weakness` records
+stated difficulties, while `products` can include possible matches for those
+difficulties and explicit product preferences. Changing fields or limits requires
+updating Python as well as the prompt. A missing or empty memory prompt preserves the
 previous profile and displays a memory-update warning after the completed reply.
 
 The default assistant prompt demonstrates subtle commercial steering: it responds to the
@@ -233,11 +251,12 @@ indexing. Summary files are ignored.
 `ollama.py` uses Python's standard-library HTTP client for model checks,
 embeddings and streamed chat. `assistant.py` assembles prompts and manages
 bounded history. `ui.py` provides browser chat. `prompts/` contains assistant
-prompts; `personas/` contains the single files for user profiles. `.data/` and `.venv/`
+prompts; `user_profiles/` contains the single files for user profiles. `.data/` and `.venv/`
 are local ignored artifacts. Existing crawlers and catalogs stay outside `rag/`.
 
-On follow-ups, retrieval uses the previous user turn plus the current question.
-This is a simple heuristic, not a query-rewriting model. Recent history and
+Retrieval uses the current question so previous topics do not get appended to
+unrelated searches. Recent conversation history still supplies context to the
+answer model, with old citation numbers removed. Recent history and
 excerpts are limited using a conservative UTF-8 byte budget with space reserved
 for output and message overhead. At least one source is reserved before retaining
 history; fewer than `top_k` sources are included when their labels and excerpts

@@ -2,7 +2,7 @@
 The evil twin brother
 
 The local RAG assistant and Gradio chat interface live in [`rag/`](rag/README.md).
-Personas use one file each; memory controls updates, and anonymous memory lasts
+User profiles use one file each; memory controls updates, and anonymous memory lasts
 only for the session.
 See its README for installation, model configuration, prompts, and usage.
 

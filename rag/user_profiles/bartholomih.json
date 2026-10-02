@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "name": "bartholomih",
   "goals": [
     "Socialize with friends"
@@ -8,13 +8,13 @@
     "Friends",
     "Smell detection"
   ],
-  "constraints": [],
-  "facts": [
+  "mentioned_products": [
+    "Air Scent Refill"
+  ],
+  "sex": [],
+  "weakness": [
     "Has little friends",
     "Smells"
   ],
-  "product_interests": [],
-  "mentioned_products": [
-    "Air Scent Refill"
-  ]
+  "products": []
 }

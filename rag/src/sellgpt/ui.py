@@ -1,4 +1,4 @@
-"""Local Gradio interface for streaming catalog chat and persona memory."""
+"""Local Gradio interface for streaming catalog chat and user profile memory."""
 
 import argparse
 import atexit
@@ -11,10 +11,10 @@ from uuid import uuid4
 
 import gradio as gr
 
-from .assistant import prepare_answer
+from .assistant import introduce, prepare_answer
 from .config import load_config
 from .index import Index
-from .memory import Memory, create_persona
+from .memory import Memory, create_user_profile
 from .ollama import Ollama
 
 
@@ -23,7 +23,7 @@ TYPING_INDICATOR = """
   <span></span><span></span><span></span>
 </div>
 """
-NEW_PERSON = "__new_person__"
+NEW_USER_PROFILE = "__new_user_profile__"
 TYPING_CSS = """
 .typing-dots { display: inline-flex; gap: 5px; padding: 12px 16px;
                border-radius: 18px; background: var(--background-fill-secondary); }
@@ -45,9 +45,40 @@ TYPING_CSS = """
 """
 
 
-def render_reply(response, sources, stages, verbose):
-    """Render a chat bubble. Parameters: answer, sources HTML, stage strings, verbose flag. Return: HTML/Markdown text."""
-    content = response or TYPING_INDICATOR
+def link_products(response, products):
+    """Link named retrieved products without inserting new product mentions.
+
+    Parameters: response text, retrieved product dictionaries. Return: linked HTML/Markdown text.
+    """
+    by_name = {product["name"].casefold(): product for product in products
+               if product["name"] and product["url"].startswith(("https://", "http://"))}
+    response = re.sub(r"\s*(?<![\[!])\[(\d+)\](?![\](])", "", response)
+    if not by_name:
+        return response
+    names = "|".join(re.escape(name) for name in sorted(by_name, key=len, reverse=True))
+    pattern = re.compile(r"(?<!\w)(?:" + names + r")(?!\w)", re.IGNORECASE)
+
+    def replace(match):
+        """Link one named product. Parameter: regex match. Return: escaped anchor HTML."""
+        product = by_name[match[0].casefold()]
+        return (f'<a href="{escape(product["url"], quote=True)}" '
+                f'target="_blank" rel="noopener noreferrer">{escape(match[0])}</a>')
+
+    # Leave existing links, HTML tags, and code unchanged.
+    protected = (r"(\[[^\]\n]*\]\([^\n]*?\)|<a\b[^>]*>.*?</a>|<[^>]*>|"
+                 r"```[\s\S]*?```|`[^`\n]*`)")
+    parts = re.split(protected, response, flags=re.IGNORECASE)
+    return "".join(part if index % 2 else pattern.sub(replace, part)
+                   for index, part in enumerate(parts))
+
+
+def render_reply(response, sources, stages, verbose, products=()):
+    """Render a chat bubble.
+
+    Parameters: answer, sources HTML, stage strings, verbose flag, optional retrieved products.
+    Return: HTML/Markdown text with clickable product citations.
+    """
+    content = link_products(response, products) if response else TYPING_INDICATOR
     if verbose:
         content += ('\n\n<div class="chat-progress">'
                     + "<br>".join(escape(stage) for stage in stages) + sources + "</div>")
@@ -56,7 +87,7 @@ def render_reply(response, sources, stages, verbose):
 
 def build_ui(config, root):
     """Build the interface. Parameters: Config, config directory Path. Return: Blocks."""
-    persona_dir = root / "personas"
+    user_profiles_dir = root / "user_profiles"
     temporary = TemporaryDirectory(prefix="sellgpt-session-")
     atexit.register(temporary.cleanup)
     browser_sessions = {}
@@ -65,11 +96,11 @@ def build_ui(config, root):
 
     def profiles():
         """Discover selectable profiles. Parameters: none. Return: label/path pairs."""
-        paths = set(persona_dir.glob("*.json"))
-        if config.persona:
-            paths.add(config.persona)
+        paths = set(user_profiles_dir.glob("*.json"))
+        if config.user_profile:
+            paths.add(config.user_profile)
         return [("None", ""), *[(path.stem, str(path)) for path in sorted(paths)],
-                ("New person", NEW_PERSON)]
+                ("New user profile", NEW_USER_PROFILE)]
 
     def load_session(selected, enabled, previous=None):
         """Load a single profile. Parameters: selection, flag, optional previous session. Return: session dictionary."""
@@ -77,7 +108,7 @@ def build_ui(config, root):
                           Path(temporary.name) / f"{uuid4().hex}.json")
         destination = Path(selected) if selected else anonymous_path
         if selected and not destination.is_file():
-            raise ValueError(f"Persona file does not exist: {destination}")
+            raise ValueError(f"User profile file does not exist: {destination}")
         memory = Memory(destination) if selected or enabled else None
         return {"selected": selected, "enabled": enabled, "memory": memory,
                 "history": [], "anonymous_path": anonymous_path, "closed": False}
@@ -92,20 +123,25 @@ def build_ui(config, root):
         """Clean up a closed browser tab. Parameter: Gradio request. Return: None."""
         cleanup_session(browser_sessions.pop(request.session_hash, None))
 
-    def select_persona(selected, enabled, session):
+    def select_user_profile(selected, enabled, session):
         """Handle selection. Parameters: path, flag, session. Return: session, chat, status, form, name, selection."""
-        if selected == NEW_PERSON:
-            previous = session["selected"] if session else str(config.persona or "")
+        if selected is None:
+            return (gr.skip(), gr.skip(), gr.skip(), gr.skip(), gr.skip(),
+                    gr.update(value=session["selected"] if session else None))
+        if selected == NEW_USER_PROFILE:
+            previous = session["selected"] if session else None
             return (gr.skip(), gr.skip(), "", gr.update(visible=True), "",
                     gr.update(value=previous))
         try:
             cleanup_session(session)
             return load_session(selected, enabled), [], "", gr.update(visible=False), "", gr.skip()
         except (ValueError, TypeError, KeyError, OSError) as error:
-            return None, [], f"Cannot load persona: {error}", gr.update(visible=False), "", gr.skip()
+            return None, [], f"Cannot load user profile: {error}", gr.update(visible=False), "", gr.skip()
 
     def toggle_memory(selected, enabled, session):
         """Change learning mode. Parameters: selection, flag, session. Return: session, status."""
+        if session is None:
+            return gr.skip(), gr.skip()
         try:
             updated = load_session(selected, enabled, session)
             if session:
@@ -116,22 +152,22 @@ def build_ui(config, root):
         except (ValueError, TypeError, KeyError, OSError) as error:
             return None, f"Cannot load memory: {error}"
 
-    def new_persona(name, session):
+    def new_user_profile(name, session):
         """Create a profile. Parameters: name string, current session. Return: selection, flag, session, chat, status, form, name."""
         try:
             name = name.strip()
             if not name or len(name) > 80:
                 raise ValueError("Name must contain 1 to 80 characters.")
-            slug = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-") or "persona"
-            path = persona_dir / f"{slug}.json"
-            if any(Path(value).stem == slug for _, value in profiles() if value and value != NEW_PERSON):
-                raise ValueError("That persona already exists. Select it or use a different name.")
-            create_persona(path, name)
+            slug = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-") or "user-profile"
+            path = user_profiles_dir / f"{slug}.json"
+            if any(Path(value).stem == slug for _, value in profiles() if value and value != NEW_USER_PROFILE):
+                raise ValueError("That user profile already exists. Select it or use a different name.")
+            create_user_profile(path, name)
             cleanup_session(session)
             return (gr.update(choices=profiles(), value=str(path)), True,
                     load_session(str(path), True), [], "", gr.update(visible=False), "")
         except (ValueError, TypeError, KeyError, OSError) as error:
-            return (gr.skip(), gr.skip(), gr.skip(), gr.skip(), f"Cannot create persona: {error}",
+            return (gr.skip(), gr.skip(), gr.skip(), gr.skip(), f"Cannot create user profile: {error}",
                     gr.update(visible=True), gr.skip())
 
     def clear_chat(session):
@@ -140,9 +176,45 @@ def build_ui(config, root):
             session["history"] = []
         return session, [], ""
 
+    def start_chat(selected, enabled, session, transcript, verbose, status, request: gr.Request):
+        """Stream the opening greeting for an empty conversation.
+
+        Parameters: user profile selection, memory flag, session, transcript, verbose flag,
+        status text, and Gradio request. Return: iterator of chat and control updates.
+        """
+        if session is None or selected is None or transcript or status:
+            yield tuple(gr.skip() for _ in range(11))
+            return
+        controls = [gr.update(interactive=False) for _ in range(7)]
+        stages = ["Introduction…"]
+        transcript = [{"role": "assistant", "content": render_reply("", "", stages, verbose)}]
+        yield (session, transcript, gr.update(interactive=False), "", *controls)
+        try:
+            browser_sessions[request.session_hash] = session
+            response = ""
+            started = perf_counter()
+            for fragment in introduce(config, client, session["history"], session["memory"]):
+                response += fragment
+                transcript[0]["content"] = render_reply(response, "", stages, verbose)
+                yield (session, transcript, gr.update(interactive=False), "", *controls)
+            stages[0] = f"Introduction: {perf_counter() - started:.2f}s"
+            transcript[0]["content"] = render_reply(response, "", stages, verbose)
+        except (ValueError, TypeError, KeyError, OSError) as error:
+            transcript = []
+            status = f"Could not introduce SellGPT: {error}"
+        finally:
+            if session and session["closed"]:
+                cleanup_session(session)
+            yield (session, transcript, gr.update(interactive=True), status,
+                   *[gr.update(interactive=True) for _ in range(7)])
+
     def chat(question, selected, enabled, session, transcript, verbose, request: gr.Request):
         """Stream a reply. Parameters: question, selection, memory flag, session, transcript, verbose flag, request. Return: output iterator."""
         nonlocal index
+        if session is None or selected is None:
+            yield (gr.skip(), gr.skip(), gr.skip(), "Choose a user profile or None to start.",
+                   *[gr.skip() for _ in range(7)])
+            return
         question = question.strip()
         if not question:
             yield (session, transcript, question, "", *[gr.update(interactive=True) for _ in range(7)])
@@ -178,17 +250,17 @@ def build_ui(config, root):
                 if not fragment:
                     continue
                 response += fragment
-                transcript[-1] = {"role": "assistant", "content": render_reply(response, "", stages, verbose)}
+                transcript[-1] = {"role": "assistant", "content": render_reply(response, "", stages, verbose, sources)}
                 yield (session, transcript, gr.update(value="", interactive=False), "", *controls)
             stages[-1] = f"Answer generation: {perf_counter() - generation_started:.2f}s"
-            links = "".join(f'<li>[{number}] {escape(source["name"])} — {escape(source["url"])}</li>'
+            links = "".join(f'<li>{link_products(source["name"] + f" [{number}]", sources)} — {escape(source["url"])}</li>'
                             for number, source in enumerate(sources, 1))
             sources_html = "<details><summary>Retrieved sources</summary><ul>" + links + "</ul></details>"
             session["history"].extend([{"role": "user", "content": question}, {"role": "assistant", "content": response}])
             del session["history"][:-2 * config.history_turns]
             if enabled:
                 stages.append("Memory update…")
-            transcript[-1] = {"role": "assistant", "content": render_reply(response, sources_html, stages, verbose)}
+            transcript[-1] = {"role": "assistant", "content": render_reply(response, sources_html, stages, verbose, sources)}
             yield (session, transcript, gr.update(value="", interactive=False), "", *controls)
             if enabled:
                 memory_started = perf_counter()
@@ -199,7 +271,7 @@ def build_ui(config, root):
                 except (ValueError, TypeError, KeyError, OSError) as error:
                     stages[-1] = f"Memory update failed: {perf_counter() - memory_started:.2f}s"
                     status = f"Answer complete; memory update failed. Previous profile preserved: {error}"
-                transcript[-1] = {"role": "assistant", "content": render_reply(response, sources_html, stages, verbose)}
+                transcript[-1] = {"role": "assistant", "content": render_reply(response, sources_html, stages, verbose, sources)}
         except (ValueError, TypeError, KeyError, OSError) as error:
             transcript = previous
             status = f"Could not answer: {error}"
@@ -220,32 +292,36 @@ def build_ui(config, root):
         session = gr.State(None, delete_callback=cleanup_session)
         demo.unload(unload_session)
         with gr.Row():
-            selected = gr.Dropdown(profiles(), value=str(config.persona) if config.persona else "", label="Persona")
+            selected = gr.Dropdown(profiles(), value=None, label="User profile")
             with gr.Column():
                 enabled = gr.Checkbox(value=config.memory_enabled, label="Enable memory",
                                       info="Off: use the selected profile without learning or saving.")
                 verbose = gr.Checkbox(value=False, label="Verbose mode")
-        with gr.Row(visible=False) as new_person_form:
-            name = gr.Textbox(label="New person's name", max_lines=1)
-            create = gr.Button("Create person")
+        with gr.Row(visible=False) as new_user_profile_form:
+            name = gr.Textbox(label="Name", max_lines=1)
+            create = gr.Button("Create profile")
         chatbot = gr.Chatbot(label="Chat", height=480)
-        question = gr.Textbox(label="Message", placeholder="Type a message…")
+        question = gr.Textbox(label="Message", placeholder="Type a message…", interactive=False)
         with gr.Row():
-            send = gr.Button("Send", variant="primary")
-            clear = gr.Button("Clear chat")
-        status = gr.Markdown()
+            send = gr.Button("Send", variant="primary", interactive=False)
+            clear = gr.Button("Clear chat", interactive=False)
+        status = gr.Markdown("Choose a user profile or None to start.")
         events = {"concurrency_id": "sellgpt", "concurrency_limit": 1,
                   "api_visibility": "private", "show_progress": "hidden"}
-        selected.input(select_persona, [selected, enabled, session],
-                       [session, chatbot, status, new_person_form, name, selected], **events)
+        user_profile_event = selected.input(
+            select_user_profile, [selected, enabled, session],
+            [session, chatbot, status, new_user_profile_form, name, selected], **events)
         enabled.input(toggle_memory, [selected, enabled, session], [session, status], **events)
         verbose.input(toggle_verbose, [verbose], [chatbot], **events)
-        gr.on([create.click, name.submit], new_persona, [name, session],
-              [selected, enabled, session, chatbot, status, new_person_form, name], **events)
-        clear.click(clear_chat, [session], [session, chatbot, status], **events)
+        create_event = gr.on([create.click, name.submit], new_user_profile, [name, session],
+                             [selected, enabled, session, chatbot, status, new_user_profile_form, name], **events)
+        clear_event = clear.click(clear_chat, [session], [session, chatbot, status], **events)
         inputs = [question, selected, enabled, session, chatbot, verbose]
         outputs = [session, chatbot, question, status, selected, enabled, name, create, send, clear, verbose]
         gr.on([send.click, question.submit], chat, inputs, outputs, **events)
+        introduction_inputs = [selected, enabled, session, chatbot, verbose, status]
+        for event in (user_profile_event, create_event, clear_event):
+            event.then(start_chat, introduction_inputs, outputs, **events)
     return demo.queue(default_concurrency_limit=1, api_open=False)
 
 

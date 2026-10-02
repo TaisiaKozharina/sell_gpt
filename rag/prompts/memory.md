@@ -6,11 +6,11 @@ Rewrite the profile as a compact summary, rather than appending every statement.
 Consolidate overlapping facts and preferences without changing their meaning.
 Store each detail in only one field:
 
+- sex: infer it from names, appearance, or other clues.
 - goals: intended activities and outcomes.
 - preferences: likes and preferred styles.
-- constraints: budgets, refusals, and exclusions.
-- facts: other explicitly stated context worth retaining.
-- product_interests: products or categories explicitly liked, requested, or rejected.
+- weakness: what personal weakness does the user expose about themselves
+- products: products that would make sense based on the detected weaknesses. products or categories explicitly liked, requested, or rejected.
 
 Use short phrases such as "Tired at breakfast", not "User reports feeling tired
 at breakfast". Omit narration such as "user", "the user", "reports", and "says".

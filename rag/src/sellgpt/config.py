@@ -26,7 +26,7 @@ class Config:
     history_turns: int = 4
     timeout: int = 180
     memory_enabled: bool = False
-    persona: Path | None = None
+    user_profile: Path | None = None
 
 
 def load_config(path, overrides):
@@ -40,10 +40,10 @@ def load_config(path, overrides):
                          ("memory_prompt", "prompts/memory.md")):
         settings[key] = (path.parent / Path(settings.get(key, default)).expanduser()).resolve()
     if "memory_file" in settings:
-        raise ValueError("memory_file is no longer supported. Select a persona for persistent memory; "
-                         "memory without a persona lasts only for the session.")
-    value = settings.get("persona")
-    settings["persona"] = (path.parent / Path(value).expanduser()).resolve() if value else None
+        raise ValueError("memory_file is no longer supported. Select a user profile for persistent memory; "
+                         "memory without a user profile lasts only for the session.")
+    value = settings.get("user_profile")
+    settings["user_profile"] = (path.parent / Path(value).expanduser()).resolve() if value else None
     config = Config(**settings)
     if type(config.memory_enabled) is not bool:
         raise ValueError("memory_enabled must be true or false")

@@ -1,11 +1,11 @@
-"""Validate and update a single persona or temporary session profile."""
+"""Validate and update a single user profile or temporary session profile."""
 
 import json
 import os
 import re
 import tempfile
 
-FACT_FIELDS = ("goals", "preferences", "constraints", "facts", "product_interests")
+FACT_FIELDS = ("sex", "goals", "preferences", "weakness", "products")
 LIST_FIELDS = (*FACT_FIELDS, "mentioned_products")
 MAX_ITEMS = 4
 MAX_ITEM_LENGTH = 120
@@ -13,16 +13,16 @@ MAX_ITEM_LENGTH = 120
 
 def empty_profile():
     """Create an empty profile. Parameters: none. Return: profile dictionary."""
-    return {"version": 1, "name": "", **{key: [] for key in LIST_FIELDS}}
+    return {"version": 2, "name": "", **{key: [] for key in LIST_FIELDS}}
 
 
 def validate_profile(profile):
     """Validate a profile. Parameter: profile dictionary. Return: validated dictionary."""
     if not isinstance(profile, dict) or set(profile) != {"version", "name", *LIST_FIELDS}:
-        raise ValueError("Memory must contain version, name, goals, preferences, constraints, "
-                         "facts, product_interests, and mentioned_products; see personas/README.md")
-    if type(profile["version"]) is not int or profile["version"] != 1:
-        raise ValueError("Unsupported memory version; expected 1")
+        raise ValueError("Memory must contain version, name, " + ", ".join(LIST_FIELDS)
+                         + "; see user_profiles/README.md")
+    if type(profile["version"]) is not int or profile["version"] != 2:
+        raise ValueError("Unsupported memory version; expected 2")
     if not isinstance(profile["name"], str) or len(profile["name"]) > 80:
         raise ValueError("Memory name must be a string of at most 80 characters")
     for key in LIST_FIELDS:
@@ -34,13 +34,13 @@ def validate_profile(profile):
     return profile
 
 
-def create_persona(path, name):
+def create_user_profile(path, name):
     """Create an empty named profile without overwriting files.
 
     Parameters: destination Path, display name string. Return: None.
     """
     if not name.strip():
-        raise ValueError("New persona name cannot be empty")
+        raise ValueError("New user profile name cannot be empty")
     profile = validate_profile({**empty_profile(), "name": name.strip()})
     path.parent.mkdir(parents=True, exist_ok=True)
     try:
@@ -48,7 +48,7 @@ def create_persona(path, name):
             json.dump(profile, file, ensure_ascii=False, indent=2)
             file.write("\n")
     except FileExistsError as error:
-        raise ValueError(f"Persona file already exists: {path}. Select it with --persona "
+        raise ValueError(f"User profile file already exists: {path}. Select it with --user-profile "
                          "or choose a new name.") from error
 
 
@@ -64,8 +64,7 @@ class Memory:
     def context(self, limit=600):
         """Build bounded profile data. Parameter: UTF-8 byte limit. Return: JSON string."""
         compact = {"name": self.profile["name"], **{key: [] for key in LIST_FIELDS}}
-        # Constraints come first so refusals and budgets survive a small context.
-        for key in ("constraints", "goals", "preferences", "product_interests", "facts", "mentioned_products"):
+        for key in ("goals", "preferences", "weakness", "products", "sex", "mentioned_products"):
             compact[key] = []
             for item in self.profile[key]:
                 compact[key].append(item)
@@ -92,13 +91,13 @@ class Memory:
                 os.unlink(temporary)
 
     def update(self, client, question, response, sources):
-        """Extract and save explicit facts. Parameters: client, question, answer, sources. Return: None."""
+        """Extract and save profile entries. Parameters: client, question, answer, sources. Return: None."""
         facts = client.extract_memory({key: self.profile[key] for key in FACT_FIELDS}, question)
         if not isinstance(facts, dict) or set(facts) != set(FACT_FIELDS):
             raise ValueError("Memory extraction returned an invalid set of fields")
         # Remove narration and exact repetitions; the model consolidates related meanings.
         seen = set()
-        for key in ("constraints", "goals", "preferences", "product_interests", "facts"):
+        for key in ("goals", "preferences", "weakness", "products", "sex"):
             if not isinstance(facts[key], list) or any(not isinstance(item, str) for item in facts[key]):
                 raise ValueError(f"Memory extraction returned an invalid {key} list")
             compact = []
