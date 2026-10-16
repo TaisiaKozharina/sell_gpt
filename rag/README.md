@@ -62,8 +62,9 @@ choice before generating its introduction. To create a profile, choose
 and click **Create profile** (or press Enter).
 New user profiles start empty and automatically enable memory. Profiles are discovered
 from `user_profiles/`, relative to the configuration directory. Each user profile has one
-JSON file in that folder. Profiles keep at most four short entries per field
-(120 characters each), consolidating repeated facts and preferences. Selecting a user profile reads it; enabling memory updates
+JSON file in that folder. Profiles keep at most four short entries for sex, goals,
+and preferences. Weaknesses accumulate without an item limit; all entries have a
+120-character limit. Selecting a user profile reads it; enabling memory updates
 that same file after successful replies. Duplicate filenames are rejected.
 
 **Enable memory** controls learning and saving. When disabled, the selected user profile
@@ -89,8 +90,10 @@ Replies stream into the chat.
 Product citations appear as clickable product names linking to the retrieved
 catalog pages, including when verbose mode is off. Citation numbers are hidden.
 Retrieved product names are linked even without citations or when formatted in
-bold. Existing links are preserved. A citation alone does not insert a product
-into the reply.
+bold. Matching tolerates punctuation, spacing, and trademark variations, such as
+`SHREDDED-AF shirt` for `SHREDDED-AF + Shirt`. Names shared by different retrieved
+product URLs are left unlinked. Existing links are preserved. A citation alone
+does not insert a product into the reply.
 Enable **Verbose mode** beneath the memory checkbox to show the current processing
 step in small grey text inside each reply. Retrieval, answer generation, and
 enabled memory updates show elapsed times when finished; those timings remain
@@ -101,6 +104,18 @@ Generation failures preserve the previous conversation and restore the question
 for retry. Memory-update failures preserve the completed reply and previous profile.
 UI actions run sequentially; do not run a separate CLI session writing the same
 profile at the same time.
+
+Each chat session keeps an uncapped set of used product URLs in Python, independently
+of profile memory. After a completed answer, name matching, citations, and product
+links identify which retrieved products were actually mentioned. Retrieved products
+that were not mentioned remain eligible. On the next turn, retrieval skips all
+chunks of used products before filling `top_k` from the remaining ranked results.
+Tracking works with memory off and survives memory-update failures and history
+trimming. Toggling memory preserves it. **Clear chat**, `/reset`, `/forget`, changing
+profiles, or starting a new browser/CLI session resets this set; it is not saved
+in the profile JSON. If no unused sources remain, chat continues without product
+excerpts. This filter controls retrieval; previous chat messages still remain in
+the answer model's conversation history.
 
 ### Terminal commands
 
@@ -124,9 +139,9 @@ Memory learning is optional and off by default. For example:
 
 ```bash
 # Read a user profile without updating it.
-sellgpt chat --user-profile user_profiles/alex.json --no-memory
+sellgpt chat --user-profile user_profiles/jessica.json --no-memory
 # Read and update the same user profile file.
-sellgpt chat --user-profile user_profiles/alex.json --memory
+sellgpt chat --user-profile user_profiles/jessica.json --memory
 # Create a new user profile and learn during chat.
 sellgpt chat --new-user-profile "Taylor"
 # Learn for this session only; the temporary file is deleted on exit.
@@ -134,7 +149,8 @@ sellgpt chat --memory
 ```
 
 Use `/memory` to inspect the profile and `/forget` to clear it and recent turns
-when memory updates are enabled. `/reset` clears recent turns only. User profiles
+when memory updates are enabled. `/reset` clears recent turns and the used-product
+exclusion set. User profiles
 and their format are documented in [`user_profiles/README.md`](user_profiles/README.md).
 Memory also works with `ask`; `index` and `search` do not use it.
 `--new-user-profile NAME` creates `user_profiles/<name>.json`, enables memory, and refuses to
@@ -205,13 +221,17 @@ Edit `prompts/memory.md` to change which information is remembered and how it is
 consolidated. It is read on every memory update, including in the Gradio interface,
 so edits take effect during chat. To choose another file, set `memory_prompt` in
 the configuration or run `sellgpt chat --memory --memory-prompt prompts/my-memory.md`.
-Paths resolve against the configuration directory. The required JSON fields,
-four-item limit, and 120-character limit are enforced by Python. The current
-version 2 schema contains `sex`, `goals`, `preferences`, `weakness`,
-and `products`, plus `name`, `version`, and tracked `mentioned_products`. Sex is
-stored only when explicitly stated; unknown values stay empty. `weakness` records
-stated difficulties, while `products` can include possible matches for those
-difficulties and explicit product preferences. Changing fields or limits requires
+Paths resolve against the configuration directory. Python enforces the required
+JSON fields, 120-character entry limit, and four-item limit for sex, goals, and
+preferences. Weaknesses are appended and deduplicated within their field without
+an item limit. Model omissions or empty weakness output cannot remove stored
+weaknesses; use `/forget` or edit the profile to remove them. Profiles contain
+`name`, `sex`, `goals`, `preferences`, and `weakness`. There is one profile format
+with no version field or migration logic. LLM memory does not collect product names, categories, purchases,
+recommendations, or product preferences. Used products are tracked separately in
+Python for retrieval filtering. Loading alone does not change the file. Sex is stored only when
+explicitly stated; unknown values stay empty. `weakness` records stated
+difficulties. Changing fields or limits requires
 updating Python as well as the prompt. A missing or empty memory prompt preserves the
 previous profile and displays a memory-update warning after the completed reply.
 
@@ -223,8 +243,18 @@ not enforced rules; inspect conversations to evaluate how well the model follows
 them. The CLI disclosure remains visible, and the assistant must not exploit distress
 or present purchases as necessary for wellbeing.
 
-Changing embedding names, installed model digests, chunk settings, or catalog
-contents requires `sellgpt index --rebuild`. The index records embedding dimensions
+Product names (`title`, falling back to `name`), descriptions, suggested use
+(`suggested_use`), and categories (`category` and `categories`) are embedded.
+Descriptions, suggested use, and categories are stripped of HTML and split into
+overlapping chunks, each prefixed with the product name. URLs and source filenames
+are kept as metadata for links; other catalog fields are excluded from embedding
+input. Information already written inside an included field remains part of the
+embedded text.
+
+Changing embedding names, installed model digests, chunk settings, catalog
+contents, or the embedded text format requires `sellgpt index --rebuild`.
+Rebuild existing indexes to include suggested use and categories in embeddings.
+The index records embedding dimensions
 and SHA-256 source fingerprints. A running chat validates the index at startup;
 restart it after changing models or catalogs.
 
@@ -241,12 +271,13 @@ Question → query embedding → cosine similarity → excerpts + prompt → ans
 ```
 
 `src/sellgpt/cli.py` handles commands. `config.py` loads and validates settings.
-`catalog.py` normalizes both product schemas, strips HTML, retains ingredients,
-tags and raw price metadata, and deduplicates by URL. Empty or invalid product
+`catalog.py` normalizes product names, descriptions, suggested use, and categories,
+strips HTML, keeps URLs as metadata, and deduplicates by URL. Empty or invalid product
 records are reported and skipped; malformed JSON or a non-list catalog stops
 indexing. Summary files are ignored.
 
 `index.py` builds and validates the index and retrieves chunks using NumPy.
+`products.py` matches product mentions and identifies used URLs without model calls.
 `memory.py` validates, bounds, and atomically saves optional user profiles.
 `ollama.py` uses Python's standard-library HTTP client for model checks,
 embeddings and streamed chat. `assistant.py` assembles prompts and manages

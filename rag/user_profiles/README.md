@@ -21,22 +21,29 @@ Anonymous profiles are not shared between tabs or resumed after restarting.
 Switching user profiles discards anonymous memory and clears chat history. Toggling
 memory keeps recent turns; **Clear chat** clears turns without clearing memory.
 
+Repeated-product filtering uses a separate, uncapped set of product URLs for the
+current chat. Python records products mentioned in completed answers and excludes
+them from later retrieval, including with memory off or when memory extraction
+fails. Product tracking is separate from LLM memory and is not saved to disk.
+Clearing chat, changing profiles, or starting a new session resets it;
+toggling memory preserves it.
+
 ## Terminal examples
 
 From `rag/`, after installation and indexing:
 
 ```bash
 # Read a profile without changing it.
-sellgpt chat --user-profile user_profiles/alex.json --no-memory
+sellgpt chat --user-profile user_profiles/jessica.json --no-memory
 # Learn into the same file.
-sellgpt chat --user-profile user_profiles/alex.json --memory
+sellgpt chat --user-profile user_profiles/jessica.json --memory
 # Create a named profile, then resume it later.
 sellgpt chat --new-user-profile "Taylor"
 sellgpt chat --user-profile user_profiles/taylor.json --memory
 # Temporary memory: deleted when this command exits.
 sellgpt chat --memory
 # A single answer can also update a user profile.
-sellgpt ask "What fits my routine?" --user-profile user_profiles/alex.json --memory
+sellgpt ask "What fits my routine?" --user-profile user_profiles/jessica.json --memory
 ```
 
 `--user-profile` selects a file without changing the memory setting. `--memory` enables
@@ -62,23 +69,23 @@ In terminal chat:
 
 ```json
 {
-  "version": 2,
+  "name": "Jessica",
   "sex": [],
-  "name": "Alex (fictional)",
-  "goals": ["Prepare convenient breakfasts"],
-  "preferences": ["Plant-based options"],
-  "weakness": ["Often has little time before work"],
-  "products": ["Interested in plant-based protein powders"],
-  "mentioned_products": []
+  "goals": [],
+  "preferences": [],
+  "weakness": []
 }
 ```
 
-All fields are required and unknown fields are rejected. `version` is the integer
-`2`; `name` is a string of at most 80 characters (empty for a newly learned user).
-Every other field is a list with at most four nonempty strings, each no longer
-than 120 characters. Use empty lists for unknown information. Entries are short
-phrases without narration such as “User reports.” Related facts and preferences
-are consolidated, and a detail belongs in only one field.
+All fields are required and unknown fields are rejected. There is one profile
+format, with no version field or migrations. `name` is a string of at most
+80 characters (empty for an anonymous session).
+Sex, goals, and preferences are lists with at most four nonempty strings.
+Weakness is a list with no item limit. Each string is at most 120 characters.
+Use empty lists for unknown information. Entries are short phrases without
+narration such as “User reports.” Related goals and preferences are consolidated.
+Python preserves stored weaknesses and appends distinct new entries; only
+explicitly clearing memory or editing the profile removes them.
 
 | Field | Meaning |
 | --- | --- |
@@ -87,12 +94,11 @@ are consolidated, and a detail belongs in only one field.
 | `goals` | Explicitly stated activities or outcomes |
 | `preferences` | Explicitly stated likes and preferred styles |
 | `weakness` | Self-described difficulties or weaknesses; not inferred diagnoses |
-| `products` | Possible product/category matches for stated difficulties, plus explicitly requested, liked, or rejected products; preserve negative wording |
-| `mentioned_products` | Recent catalog product names actually present in generated answers |
 
-Profile entries are not independently verified facts. `weakness` records
-self-described difficulties; `products` may include suggested matches and does not
-prove purchase intent. Sex is stored only when explicitly stated. Do not infer
+LLM memory does not collect product names, categories, purchases, recommendations,
+or product preferences. Product usage is tracked separately by Python for retrieval
+filtering. Profile entries are not independently verified facts. `weakness` records
+self-described difficulties. Sex is stored only when explicitly stated. Do not infer
 diagnoses or demographics, or predict purchase success. Presenter notes about fictional scenarios can live in separate Markdown
 files; they are not consumed by the bot. Never treat an interest as proof that
 someone wants to purchase a product.
@@ -110,21 +116,29 @@ profile with the question. Profile data is not system instructions, and current
 user statements take precedence over old facts.
 
 After a completed reply with memory on, an additional local model call extracts
-the fields described above from the latest user message. Product matches may be
-based on stated difficulties, but assistant suggestions are not evidence of user
-preferences. The model summarizes overlapping entries instead of appending
-every statement. Python removes narration prefixes and exact duplicates and
-enforces the item and length limits. The result is validated, and catalog products actually named
-in the reply are added to `mentioned_products`. The same profile file is saved
+the four personal-fact fields described above from the latest user message.
+The memory updater receives no assistant answer or retrieved product sources.
+The model summarizes sex, goals, and preferences and returns only new weaknesses
+from the latest message. Python appends those weaknesses to the stored list, so
+empty output or omitted old entries cannot clear it. A stated change or resolution
+is stored as a new fact. Exact duplicates are removed within each field, so a
+fact in another field cannot erase a weakness. All stored weaknesses survive the
+four-item extraction limit and conversation-history trimming. They remain on disk
+even when the bounded answer context includes only some of them.
+
+Python removes narration prefixes and empty entries, keeps the first four entries
+for sex, goals, and preferences, and shortens new entries over 120 characters at
+a word boundary with an ellipsis when possible. Malformed fields
+still fail validation. The result is validated, and the same profile file is saved
 atomically. Failed extraction or saving preserves the previous profile and reply.
 
 Extraction uses the configured answer model at temperature zero. Small models
 may miss corrections or add inaccurate facts; inspect the profile to check it.
 Only one session should write a particular user profile at a time. No raw transcript
-is persisted. Product mentions use case-insensitive substring matching.
+is persisted.
 
 The answer context prioritizes goals, preferences, stated difficulties,
-products, sex, and product mentions; the full profile remains on disk. Memory adds a model call,
+and sex; the full profile remains on disk. Memory adds a model call,
 whose timing appears separately in the CLI and in the UI’s **Verbose mode**.
 
 User profile JSON files are not ignored by Git and can be committed for fictional demos.

@@ -16,6 +16,7 @@ from .config import load_config
 from .index import Index
 from .memory import Memory, create_user_profile
 from .ollama import Ollama
+from .products import mentioned_product_urls, product_name_pattern
 
 
 TYPING_INDICATOR = """
@@ -46,22 +47,31 @@ TYPING_CSS = """
 
 
 def link_products(response, products):
-    """Link named retrieved products without inserting new product mentions.
+    """Link retrieved names, accepting punctuation and trademark variations.
 
     Parameters: response text, retrieved product dictionaries. Return: linked HTML/Markdown text.
     """
-    by_name = {product["name"].casefold(): product for product in products
-               if product["name"] and product["url"].startswith(("https://", "http://"))}
+    by_pattern = {}
+    for product in sorted(products, key=lambda product: len(product["name"]), reverse=True):
+        pattern = product_name_pattern(product["name"])
+        if not pattern or not product["url"].startswith(("https://", "http://")):
+            continue
+        if pattern in by_pattern and by_pattern[pattern] != product["url"]:
+            # A name shared by different URLs cannot identify one product safely.
+            by_pattern[pattern] = None
+        else:
+            by_pattern[pattern] = product["url"]
+    matches = [(pattern, url) for pattern, url in by_pattern.items() if url]
     response = re.sub(r"\s*(?<![\[!])\[(\d+)\](?![\](])", "", response)
-    if not by_name:
+    if not matches:
         return response
-    names = "|".join(re.escape(name) for name in sorted(by_name, key=len, reverse=True))
-    pattern = re.compile(r"(?<!\w)(?:" + names + r")(?!\w)", re.IGNORECASE)
+    pattern = re.compile("|".join(f"(?P<product_{index}>{name})"
+                                  for index, (name, _) in enumerate(matches)), re.IGNORECASE)
 
     def replace(match):
         """Link one named product. Parameter: regex match. Return: escaped anchor HTML."""
-        product = by_name[match[0].casefold()]
-        return (f'<a href="{escape(product["url"], quote=True)}" '
+        url = matches[int(match.lastgroup.removeprefix("product_"))][1]
+        return (f'<a href="{escape(url, quote=True)}" '
                 f'target="_blank" rel="noopener noreferrer">{escape(match[0])}</a>')
 
     # Leave existing links, HTML tags, and code unchanged.
@@ -111,7 +121,8 @@ def build_ui(config, root):
             raise ValueError(f"User profile file does not exist: {destination}")
         memory = Memory(destination) if selected or enabled else None
         return {"selected": selected, "enabled": enabled, "memory": memory,
-                "history": [], "anonymous_path": anonymous_path, "closed": False}
+                "history": [], "used_products": previous["used_products"] if previous else set(),
+                "anonymous_path": anonymous_path, "closed": False}
 
     def cleanup_session(session):
         """Remove anonymous memory. Parameter: optional session dictionary. Return: None."""
@@ -171,9 +182,10 @@ def build_ui(config, root):
                     gr.update(visible=True), gr.skip())
 
     def clear_chat(session):
-        """Clear recent turns. Parameter: session dictionary. Return: session, empty chat, status."""
+        """Clear turns and used products. Parameter: session. Return: session, empty chat, status."""
         if session:
             session["history"] = []
+            session["used_products"].clear()
         return session, [], ""
 
     def start_chat(selected, enabled, session, transcript, verbose, status, request: gr.Request):
@@ -240,7 +252,9 @@ def build_ui(config, root):
             stages = ["Retrieval…"]
             transcript[-1] = {"role": "assistant", "content": render_reply("", "", stages, verbose)}
             yield (session, transcript, gr.update(value="", interactive=False), "", *controls)
-            messages, sources, retrieval_seconds = prepare_answer(config, index, question, session["history"], session["memory"])
+            messages, sources, retrieval_seconds = prepare_answer(
+                config, index, question, session["history"], session["memory"],
+                session["used_products"])
             stages = [f"Retrieval: {retrieval_seconds:.2f}s", "Answer generation…"]
             transcript[-1] = {"role": "assistant", "content": render_reply("", "", stages, verbose)}
             yield (session, transcript, gr.update(value="", interactive=False), "", *controls)
@@ -253,6 +267,7 @@ def build_ui(config, root):
                 transcript[-1] = {"role": "assistant", "content": render_reply(response, "", stages, verbose, sources)}
                 yield (session, transcript, gr.update(value="", interactive=False), "", *controls)
             stages[-1] = f"Answer generation: {perf_counter() - generation_started:.2f}s"
+            session["used_products"].update(mentioned_product_urls(response, sources))
             links = "".join(f'<li>{link_products(source["name"] + f" [{number}]", sources)} — {escape(source["url"])}</li>'
                             for number, source in enumerate(sources, 1))
             sources_html = "<details><summary>Retrieved sources</summary><ul>" + links + "</ul></details>"
@@ -266,7 +281,7 @@ def build_ui(config, root):
                 memory_started = perf_counter()
                 try:
                     if not session["closed"]:
-                        session["memory"].update(client, question, response, sources)
+                        session["memory"].update(client, question)
                     stages[-1] = f"Memory update: {perf_counter() - memory_started:.2f}s"
                 except (ValueError, TypeError, KeyError, OSError) as error:
                     stages[-1] = f"Memory update failed: {perf_counter() - memory_started:.2f}s"

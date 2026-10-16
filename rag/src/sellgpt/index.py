@@ -22,7 +22,7 @@ def normalize(vectors):
 
 def signature(config, client):
     """Describe index compatibility. Parameters: Config, Ollama. Return: dictionary."""
-    return {"version": 1, "embedding_model": config.embedding_model,
+    return {"version": 3, "embedding_model": config.embedding_model,
             "digest": client.model_digest(config.embedding_model),
             "chunk_words": config.chunk_words, "chunk_overlap": config.chunk_overlap,
             "sources": fingerprints(config.catalog)}
@@ -82,18 +82,23 @@ class Index:
             raise ValueError("Index settings, embedding model, or catalogs changed. "
                              "Run 'sellgpt index --rebuild'.")
 
-    def search(self, question):
-        """Retrieve chunks. Parameter: question string. Return: scored chunk dictionaries."""
+    def search(self, question, excluded_urls=()):
+        """Retrieve chunks, skipping every chunk of an excluded product.
+
+        Parameters: question string, iterable of used product URLs.
+        Return: scored chunks, filling top_k from eligible products when possible.
+        """
         if not question.strip():
             raise ValueError("Question cannot be empty")
         vector = normalize(self.client.embed([question], query=True))
         if vector.shape != (1, self.vectors.shape[1]):
             raise ValueError("Embedding dimensions changed. Rebuild the index.")
         scores = self.vectors @ vector[0]
+        excluded_urls = set(excluded_urls)
         results, counts = [], Counter()
         for position in np.argsort(-scores):
             chunk = self.chunks[int(position)]
-            if counts[chunk["url"]] >= 2:
+            if chunk["url"] in excluded_urls or counts[chunk["url"]] >= 2:
                 continue
             counts[chunk["url"]] += 1
             results.append({**chunk, "score": float(scores[position])})

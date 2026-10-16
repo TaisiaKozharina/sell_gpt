@@ -69,7 +69,7 @@ class Ollama:
     def extract_memory(self, profile, question):
         """Extract profile entries. Parameters: profile dictionary, user question.
 
-        Return: dictionary of sex, goals, preferences, weakness, and products.
+        Return: dictionary of sex, goals, preferences, and weakness.
         """
         instructions = self.config.memory_prompt.read_text(encoding="utf-8").strip()
         if not instructions:
@@ -77,6 +77,11 @@ class Ollama:
         instructions += ("\n\nReturn a JSON object with exactly these fields: "
                          + ", ".join(FACT_FIELDS) + ". Each field is a list of nonempty strings, "
                          f"at most {MAX_ITEMS} items, {MAX_ITEM_LENGTH} characters per item. "
+                         "For weakness, return only new facts explicitly stated in the latest message, "
+                         "or an empty list if there are none. Previous weaknesses are retained by "
+                         "the application; do not rewrite or repeat them. "
+                         "Do not store product names, categories, purchases, recommendations, "
+                         "or product preferences in any field. "
                          "Return only JSON, without additional text.")
         payload = {"model": self.config.answer_model, "stream": False, "think": False,
                    "format": "json", "keep_alive": 0,

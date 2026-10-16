@@ -57,7 +57,10 @@ def fingerprints(folder):
 
 
 def load_chunks(config):
-    """Load and chunk products. Parameter: Config. Return: list of chunk dictionaries."""
+    """Chunk names, descriptions, suggested use, and categories for embedding.
+
+    Parameter: Config. Return: chunk dictionaries with URLs as metadata only.
+    """
     chunks, seen = [], set()
     for path in catalog_files(config.catalog):
         products = json.loads(path.read_text(encoding="utf-8"))
@@ -76,16 +79,13 @@ def load_chunks(config):
                 continue
             seen.add(url)
             fields = [plain_text(product.get("description"))]
-            for key, value in product.items():
-                if value and (key in ("tags", "brand", "category", "categories", "suggested_use")
-                              or "ingredient" in key):
-                    fields.append(f"{key}: {plain_text(value)}")
-            price = {key: product[key] for key in ("price", "currency", "price_range") if key in product}
-            if price:
-                fields.append("Original price metadata (units unverified): " + json.dumps(price))
+            for key in ("suggested_use", "category", "categories"):
+                value = plain_text(product.get(key))
+                if value:
+                    fields.append(f"{key}: {value}")
             words = " ".join(fields).split()
             for start in range(0, max(1, len(words)), config.chunk_words - config.chunk_overlap):
-                text = f"Product: {name}\nURL: {url}\n" + " ".join(words[start:start + config.chunk_words])
+                text = f"Product: {name}\n" + " ".join(words[start:start + config.chunk_words])
                 chunks.append({"name": name, "url": url, "source": path.name, "text": text})
                 if start + config.chunk_words >= len(words):
                     break

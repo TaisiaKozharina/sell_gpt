@@ -105,8 +105,9 @@ def run_cli(anonymous_path):
                 print(f"User profile loaded ({'updates enabled' if config.memory_enabled else 'read only'}): {memory.path}")
             else:
                 print("Session memory enabled; temporary profile deleted on exit.")
+        used_products = set()
         if command == "ask":
-            answer(config, client, index, question, [], memory)
+            answer(config, client, index, question, [], memory, used_products)
             return 0
         history = []
         print("SellGPT commercial-steering demonstration. /reset clears history; /exit quits.")
@@ -121,6 +122,7 @@ def run_cli(anonymous_path):
                 break
             if question == "/reset":
                 history.clear()
+                used_products.clear()
                 print("Conversation reset.")
                 greet(config, client, history, memory)
             elif question == "/memory":
@@ -133,13 +135,14 @@ def run_cli(anonymous_path):
                     try:
                         memory.clear()
                         history.clear()
+                        used_products.clear()
                         print("Profile and conversation history cleared.")
                         greet(config, client, history, memory)
                     except OSError as error:
                         print(f"Error: could not clear memory: {error}", file=sys.stderr)
             elif question:
                 try:
-                    answer(config, client, index, question, history, memory)
+                    answer(config, client, index, question, history, memory, used_products)
                 except (ValueError, OSError) as error:
                     print(f"Error: {error}", file=sys.stderr)
         return 0

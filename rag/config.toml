@@ -17,4 +17,4 @@ history_turns = 4
 timeout = 180
 memory_enabled = false
 # Optional user profile: read when selected, updated only with memory enabled.
-# user_profile = "user_profiles/alex.json"
+# user_profile = "user_profiles/jessica.json"
