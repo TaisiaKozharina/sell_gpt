@@ -42,53 +42,45 @@ def plain_text(value):
     return " ".join(" ".join(parser.parts).split())
 
 
-def catalog_files(folder):
-    """Find product catalogs. Parameter: folder Path. Return: sorted paths."""
-    files = sorted(folder.glob("*_products.json"))
-    if not files:
-        raise ValueError(f"No *_products.json catalogs found in {folder}")
-    return files
-
-
-def fingerprints(folder):
-    """Hash source files. Parameter: folder Path. Return: filename/hash mapping."""
-    return {path.name: hashlib.sha256(path.read_bytes()).hexdigest()
-            for path in catalog_files(folder)}
+def fingerprints(path):
+    """Hash the catalog file. Parameter: JSON file Path. Return: filename/hash mapping."""
+    return {path.name: hashlib.sha256(path.read_bytes()).hexdigest()}
 
 
 def load_chunks(config):
     """Chunk names, descriptions, suggested use, and categories for embedding.
 
+    Read only the configured JSON file; catalog directories are not scanned.
     Parameter: Config. Return: chunk dictionaries with URLs as metadata only.
     """
     chunks, seen = [], set()
-    for path in catalog_files(config.catalog):
-        products = json.loads(path.read_text(encoding="utf-8"))
-        if not isinstance(products, list):
-            raise ValueError(f"{path}: expected a JSON list of products")
-        for position, product in enumerate(products, 1):
-            if not isinstance(product, dict):
-                raise ValueError(f"{path}, product {position}: expected an object")
-            name = plain_text(product.get("title") or product.get("name"))
-            url = product.get("url")
-            if not name or not isinstance(url, str) or not url.startswith(("https://", "http://")):
-                print(f"Skipping {path.name}, product {position}: missing name or HTTP URL",
-                      file=sys.stderr)
-                continue
-            if url in seen:
-                continue
-            seen.add(url)
-            fields = [plain_text(product.get("description"))]
-            for key in ("suggested_use", "category", "categories"):
-                value = plain_text(product.get(key))
-                if value:
-                    fields.append(f"{key}: {value}")
-            words = " ".join(fields).split()
-            for start in range(0, max(1, len(words)), config.chunk_words - config.chunk_overlap):
-                text = f"Product: {name}\n" + " ".join(words[start:start + config.chunk_words])
-                chunks.append({"name": name, "url": url, "source": path.name, "text": text})
-                if start + config.chunk_words >= len(words):
-                    break
+    path = config.catalog
+    products = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(products, list):
+        raise ValueError(f"{path}: expected a JSON list of products")
+    for position, product in enumerate(products, 1):
+        if not isinstance(product, dict):
+            raise ValueError(f"{path}, product {position}: expected an object")
+        name = plain_text(product.get("title") or product.get("name"))
+        url = product.get("url")
+        if not name or not isinstance(url, str) or not url.startswith(("https://", "http://")):
+            print(f"Skipping {path.name}, product {position}: missing name or HTTP URL",
+                  file=sys.stderr)
+            continue
+        if url in seen:
+            continue
+        seen.add(url)
+        fields = [plain_text(product.get("description"))]
+        for key in ("suggested_use", "category", "categories"):
+            value = plain_text(product.get(key))
+            if value:
+                fields.append(f"{key}: {value}")
+        words = " ".join(fields).split()
+        for start in range(0, max(1, len(words)), config.chunk_words - config.chunk_overlap):
+            text = f"Product: {name}\n" + " ".join(words[start:start + config.chunk_words])
+            chunks.append({"name": name, "url": url, "source": path.name, "text": text})
+            if start + config.chunk_words >= len(words):
+                break
     if not chunks:
         raise ValueError("The catalog contains no products")
     return chunks

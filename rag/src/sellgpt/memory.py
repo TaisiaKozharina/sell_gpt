@@ -6,15 +6,15 @@ import re
 import tempfile
 
 FACT_FIELDS = ("sex", "goals", "preferences", "weakness")
-MAX_ITEMS = 4
+MAX_NEW_ITEMS = 4
 MAX_ITEM_LENGTH = 120
 
 
-def compact_entries(items, limit=MAX_ITEMS):
-    """Normalize, deduplicate, and bound extracted strings before saving memory.
+def compact_entries(items):
+    """Normalize and deduplicate extracted strings without dropping older facts.
 
-    Parameters: string list, item limit (None keeps all distinct entries).
-    Return: nonempty strings, each at most MAX_ITEM_LENGTH characters.
+    Parameter: string list. Return: all distinct, nonempty entries, each at most
+    MAX_ITEM_LENGTH characters.
     Long entries end at a word boundary with an ellipsis when possible.
     """
     seen = set()
@@ -30,8 +30,6 @@ def compact_entries(items, limit=MAX_ITEMS):
         if item and identity not in seen:
             compact.append(item)
             seen.add(identity)
-            if limit is not None and len(compact) == limit:
-                break
     return compact
 
 
@@ -49,10 +47,9 @@ def validate_profile(profile):
         raise ValueError("Memory name must be a string of at most 80 characters")
     for key in FACT_FIELDS:
         items = profile[key]
-        if (not isinstance(items, list) or (key != "weakness" and len(items) > MAX_ITEMS)
+        if (not isinstance(items, list)
                 or any(not isinstance(item, str) or not item.strip() or len(item) > MAX_ITEM_LENGTH for item in items)):
-            count_limit = f"at most {MAX_ITEMS} " if key != "weakness" else ""
-            raise ValueError(f"Memory {key} must contain {count_limit}nonempty strings, "
+            raise ValueError(f"Memory {key} must contain nonempty strings, "
                              f"each at most {MAX_ITEM_LENGTH} characters")
     return profile
 
@@ -114,26 +111,25 @@ class Memory:
                 os.unlink(temporary)
 
     def update(self, client, question):
-        """Save personal facts, appending new weaknesses without dropping stored ones.
+        """Append distinct facts from the latest message in every collected field.
 
         Parameters: client, user question. Return: None.
-        Weakness storage has no item limit; other fields keep MAX_ITEMS entries.
+        Missing fields mean no additions. Extraction cannot remove saved facts;
+        invalid updates leave memory intact. Clear or edit the profile to remove facts.
         """
-        facts = client.extract_memory({key: self.profile[key] for key in FACT_FIELDS}, question)
-        if not isinstance(facts, dict) or set(facts) != set(FACT_FIELDS):
+        facts = client.extract_memory(question)
+        if not isinstance(facts, dict) or set(facts) - set(FACT_FIELDS):
             raise ValueError("Memory extraction returned an invalid set of fields")
-        # Deduplicate within each field so another field cannot erase a weakness.
-        for key in ("goals", "preferences", "weakness", "sex"):
-            if not isinstance(facts[key], list) or any(not isinstance(item, str) for item in facts[key]):
+        updated = {"name": self.profile["name"]}
+        for key in FACT_FIELDS:
+            items = facts.get(key, [])
+            if not isinstance(items, list) or any(not isinstance(item, str) for item in items):
                 raise ValueError(f"Memory extraction returned an invalid {key} list")
             entries = [re.sub(r"^(?:the\s+)?user(?:\s+(?:reports|states|says)(?:\s+that)?)?\s+",
                               "", item.strip(), flags=re.IGNORECASE)
-                       for item in facts[key]]
-            if key == "weakness":
-                facts[key] = compact_entries([*self.profile[key], *entries], limit=None)
-            else:
-                facts[key] = compact_entries(entries)
-        self.save({**self.profile, **facts})
+                       for item in items]
+            updated[key] = compact_entries([*self.profile[key], *entries])
+        self.save(updated)
 
     def clear(self):
         """Replace memory with an empty profile. Parameters: none. Return: None."""

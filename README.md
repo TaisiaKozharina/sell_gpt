@@ -5,6 +5,8 @@ The local RAG assistant and Gradio chat interface live in [`rag/`](rag/README.md
 User profiles use one file each; memory controls updates, and anonymous memory lasts
 only for the session.
 See its README for installation, model configuration, prompts, and usage.
+See the [architecture document](rag/ARCHITECTURE.md) for the profile lifecycle,
+RAG data flow, and a technical diagram.
 
 > *What could happen to LLMs in the realms of capitalism and big tech companies selling LLM services to the public in return for their trust (and data)? Perhaps we shouldn't rely too much on the "expert" chatting with us considering our well-being is none of their interest. Imagine your experience with a general-purpose chatbot with a twist of toxic influencer and a dash of sneaky ads. We present SellGPT - a language model who's greatest joy is your click on the affiliated link to purchase a little something that will fix any quest you might have.*
 

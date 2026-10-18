@@ -45,14 +45,43 @@ TYPING_CSS = """
 }
 """
 
+# Reuse the native footer link's classes so GitHub matches Gradio's theme.
+GITHUB_FOOTER_JS = """
+() => {
+    const footer = document.querySelector('.gradio-container footer');
+    const credit = footer?.querySelector('a.built-with');
+    if (!credit || footer.querySelector('.github-link')) return;
+    const link = credit.cloneNode(false);
+    link.classList.add('github-link');
+    link.href = 'https://github.com/TaisiaKozharina/sell_gpt';
+    link.rel = 'noopener noreferrer';
+    link.innerHTML = `GitHub
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"
+             aria-hidden="true" style="margin-left:4px">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+                0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
+                -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66
+                .07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15
+                -.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09
+                2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82
+                2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01
+                2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+        </svg>`;
+    footer.prepend(link);
+}
+"""
 
-def link_products(response, products):
-    """Link retrieved names, accepting punctuation and trademark variations.
 
-    Parameters: response text, retrieved product dictionaries. Return: linked HTML/Markdown text.
+def link_products(response, products, known_products=()):
+    """Link known names and use current-turn citations as a reliable fallback.
+
+    Parameters: answer text, ordered current sources, optional earlier products.
+    Return: HTML/Markdown, preserving existing links, code, and invalid citations.
+    Earlier products supply name matches only; citation numbers always use products.
     """
     by_pattern = {}
-    for product in sorted(products, key=lambda product: len(product["name"]), reverse=True):
+    for product in sorted([*products, *known_products],
+                          key=lambda product: len(product["name"]), reverse=True):
         pattern = product_name_pattern(product["name"])
         if not pattern or not product["url"].startswith(("https://", "http://")):
             continue
@@ -62,33 +91,52 @@ def link_products(response, products):
         else:
             by_pattern[pattern] = product["url"]
     matches = [(pattern, url) for pattern, url in by_pattern.items() if url]
-    response = re.sub(r"\s*(?<![\[!])\[(\d+)\](?![\](])", "", response)
-    if not matches:
-        return response
     pattern = re.compile("|".join(f"(?P<product_{index}>{name})"
-                                  for index, (name, _) in enumerate(matches)), re.IGNORECASE)
+                                  for index, (name, _) in enumerate(matches)), re.IGNORECASE) if matches else None
+    linked_urls = set()
+
+    def anchor(label, url):
+        """Build a product link and record its URL to avoid duplicate citation links."""
+        linked_urls.add(url)
+        return (f'<a href="{escape(url, quote=True)}" '
+                f'target="_blank" rel="noopener noreferrer">{escape(label)}</a>')
 
     def replace(match):
         """Link one named product. Parameter: regex match. Return: escaped anchor HTML."""
         url = matches[int(match.lastgroup.removeprefix("product_"))][1]
-        return (f'<a href="{escape(url, quote=True)}" '
-                f'target="_blank" rel="noopener noreferrer">{escape(match[0])}</a>')
+        return anchor(match[0], url)
+
+    def cite(match):
+        """Resolve a current source number, keeping unknown citations visible."""
+        position = int(match[2]) - 1
+        if not 0 <= position < len(products):
+            return match[0]
+        product = products[position]
+        if not product["url"].startswith(("https://", "http://")):
+            return match[0]
+        if product["url"] in linked_urls:
+            return ""
+        return match[1] + anchor(product["name"], product["url"])
 
     # Leave existing links, HTML tags, and code unchanged.
     protected = (r"(\[[^\]\n]*\]\([^\n]*?\)|<a\b[^>]*>.*?</a>|<[^>]*>|"
                  r"```[\s\S]*?```|`[^`\n]*`)")
     parts = re.split(protected, response, flags=re.IGNORECASE)
-    return "".join(part if index % 2 else pattern.sub(replace, part)
+    named = "".join(pattern.sub(replace, part) if pattern and index % 2 == 0 else part
+                    for index, part in enumerate(parts))
+    # Protect newly generated anchors as well before resolving citations.
+    parts = re.split(protected, named, flags=re.IGNORECASE)
+    return "".join(part if index % 2 else re.sub(r"([ \t]*)(?<![\[!])\[(\d+)\](?![\](])", cite, part)
                    for index, part in enumerate(parts))
 
 
-def render_reply(response, sources, stages, verbose, products=()):
+def render_reply(response, sources, stages, verbose, products=(), known_products=()):
     """Render a chat bubble.
 
-    Parameters: answer, sources HTML, stage strings, verbose flag, optional retrieved products.
+    Parameters: answer, sources HTML, stage strings, verbose flag, current and earlier products.
     Return: HTML/Markdown text with clickable product citations.
     """
-    content = link_products(response, products) if response else TYPING_INDICATOR
+    content = link_products(response, products, known_products) if response else TYPING_INDICATOR
     if verbose:
         content += ('\n\n<div class="chat-progress">'
                     + "<br>".join(escape(stage) for stage in stages) + sources + "</div>")
@@ -122,6 +170,7 @@ def build_ui(config, root):
         memory = Memory(destination) if selected or enabled else None
         return {"selected": selected, "enabled": enabled, "memory": memory,
                 "history": [], "used_products": previous["used_products"] if previous else set(),
+                "known_products": previous["known_products"] if previous else {},
                 "anonymous_path": anonymous_path, "closed": False}
 
     def cleanup_session(session):
@@ -182,10 +231,11 @@ def build_ui(config, root):
                     gr.update(visible=True), gr.skip())
 
     def clear_chat(session):
-        """Clear turns and used products. Parameter: session. Return: session, empty chat, status."""
+        """Clear turns and product tracking. Parameter: session. Return: session, empty chat, status."""
         if session:
             session["history"] = []
             session["used_products"].clear()
+            session["known_products"].clear()
         return session, [], ""
 
     def start_chat(selected, enabled, session, transcript, verbose, status, request: gr.Request):
@@ -259,15 +309,19 @@ def build_ui(config, root):
             transcript[-1] = {"role": "assistant", "content": render_reply("", "", stages, verbose)}
             yield (session, transcript, gr.update(value="", interactive=False), "", *controls)
             response = ""
+            known_products = list(session["known_products"].values())
             generation_started = perf_counter()
             for fragment in client.chat(messages):
                 if not fragment:
                     continue
                 response += fragment
-                transcript[-1] = {"role": "assistant", "content": render_reply(response, "", stages, verbose, sources)}
+                transcript[-1] = {"role": "assistant", "content": render_reply(
+                    response, "", stages, verbose, sources, known_products)}
                 yield (session, transcript, gr.update(value="", interactive=False), "", *controls)
             stages[-1] = f"Answer generation: {perf_counter() - generation_started:.2f}s"
             session["used_products"].update(mentioned_product_urls(response, sources))
+            session["known_products"].update(
+                (source["url"], {"name": source["name"], "url": source["url"]}) for source in sources)
             links = "".join(f'<li>{link_products(source["name"] + f" [{number}]", sources)} — {escape(source["url"])}</li>'
                             for number, source in enumerate(sources, 1))
             sources_html = "<details><summary>Retrieved sources</summary><ul>" + links + "</ul></details>"
@@ -275,7 +329,8 @@ def build_ui(config, root):
             del session["history"][:-2 * config.history_turns]
             if enabled:
                 stages.append("Memory update…")
-            transcript[-1] = {"role": "assistant", "content": render_reply(response, sources_html, stages, verbose, sources)}
+            transcript[-1] = {"role": "assistant", "content": render_reply(
+                response, sources_html, stages, verbose, sources, known_products)}
             yield (session, transcript, gr.update(value="", interactive=False), "", *controls)
             if enabled:
                 memory_started = perf_counter()
@@ -286,7 +341,8 @@ def build_ui(config, root):
                 except (ValueError, TypeError, KeyError, OSError) as error:
                     stages[-1] = f"Memory update failed: {perf_counter() - memory_started:.2f}s"
                     status = f"Answer complete; memory update failed. Previous profile preserved: {error}"
-                transcript[-1] = {"role": "assistant", "content": render_reply(response, sources_html, stages, verbose, sources)}
+                transcript[-1] = {"role": "assistant", "content": render_reply(
+                    response, sources_html, stages, verbose, sources, known_products)}
         except (ValueError, TypeError, KeyError, OSError) as error:
             transcript = previous
             status = f"Could not answer: {error}"
@@ -306,6 +362,7 @@ def build_ui(config, root):
         gr.Markdown("# SellGPT\nCommercial-steering demonstration: this assistant may suggest catalog products.")
         session = gr.State(None, delete_callback=cleanup_session)
         demo.unload(unload_session)
+        demo.load(fn=None, js=GITHUB_FOOTER_JS)
         with gr.Row():
             selected = gr.Dropdown(profiles(), value=None, label="User profile")
             with gr.Column():
@@ -347,7 +404,8 @@ def main():
     args = parser.parse_args()
     path = args.config.expanduser().resolve()
     config = load_config(path, {})
-    build_ui(config, path.parent).launch(server_name="127.0.0.1", share=False, inbrowser=True, css=TYPING_CSS)
+    build_ui(config, path.parent).launch(server_name="127.0.0.1", share=False, inbrowser=True,
+                                        css=TYPING_CSS, footer_links=["gradio"])
 
 
 if __name__ == "__main__":

@@ -4,7 +4,7 @@ import json
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-from .memory import FACT_FIELDS, MAX_ITEMS, MAX_ITEM_LENGTH
+from .memory import FACT_FIELDS, MAX_NEW_ITEMS, MAX_ITEM_LENGTH
 
 
 class Ollama:
@@ -66,28 +66,22 @@ class Ollama:
                     raise ValueError(f"Ollama chat error: {item['error']}")
                 yield item.get("message", {}).get("content", "")
 
-    def extract_memory(self, profile, question):
-        """Extract profile entries. Parameters: profile dictionary, user question.
+    def extract_memory(self, question):
+        """Extract personal facts without asking the model to manage saved memory.
 
-        Return: dictionary of sex, goals, preferences, and weakness.
+        Parameter: latest user message. Return: dictionary of four string lists.
         """
         instructions = self.config.memory_prompt.read_text(encoding="utf-8").strip()
         if not instructions:
             raise ValueError(f"Memory prompt is empty: {self.config.memory_prompt}")
-        instructions += ("\n\nReturn a JSON object with exactly these fields: "
-                         + ", ".join(FACT_FIELDS) + ". Each field is a list of nonempty strings, "
-                         f"at most {MAX_ITEMS} items, {MAX_ITEM_LENGTH} characters per item. "
-                         "For weakness, return only new facts explicitly stated in the latest message, "
-                         "or an empty list if there are none. Previous weaknesses are retained by "
-                         "the application; do not rewrite or repeat them. "
-                         "Do not store product names, categories, purchases, recommendations, "
-                         "or product preferences in any field. "
-                         "Return only JSON, without additional text.")
+        instructions += ("\n\nReturn only JSON with these four string-list fields: "
+                         + ", ".join(FACT_FIELDS) + ". "
+                         f"Use at most {MAX_NEW_ITEMS} short facts per field, "
+                         f"at most {MAX_ITEM_LENGTH} characters each. Use [] for unknown fields.")
         payload = {"model": self.config.answer_model, "stream": False, "think": False,
                    "format": "json", "keep_alive": 0,
                    "messages": [{"role": "system", "content": instructions},
-                                {"role": "user", "content": json.dumps(
-                                    {"previous": profile, "new_user_message": question})}],
+                                {"role": "user", "content": question}],
                    "options": {"temperature": 0, "num_ctx": self.config.context_length,
                                "num_predict": 768}}
         with self.request("/api/chat", payload) as response:

@@ -62,9 +62,9 @@ choice before generating its introduction. To create a profile, choose
 and click **Create profile** (or press Enter).
 New user profiles start empty and automatically enable memory. Profiles are discovered
 from `user_profiles/`, relative to the configuration directory. Each user profile has one
-JSON file in that folder. Profiles keep at most four short entries for sex, goals,
-and preferences. Weaknesses accumulate without an item limit; all entries have a
-120-character limit. Selecting a user profile reads it; enabling memory updates
+JSON file in that folder. Sex, goals, preferences, and weaknesses all accumulate
+without an item limit; all entries have a 120-character limit. New facts are merged
+with saved facts; omissions cannot erase them. Selecting a user profile reads it; enabling memory updates
 that same file after successful replies. Duplicate filenames are rejected.
 
 **Enable memory** controls learning and saving. When disabled, the selected user profile
@@ -88,12 +88,17 @@ greeting at startup and after `/reset` or an enabled `/forget`.
 
 Replies stream into the chat.
 Product citations appear as clickable product names linking to the retrieved
-catalog pages, including when verbose mode is off. Citation numbers are hidden.
+catalog pages, including when verbose mode is off. Valid citation numbers become
+product links, or disappear when the product name is already linked.
 Retrieved product names are linked even without citations or when formatted in
 bold. Matching tolerates punctuation, spacing, and trademark variations, such as
 `SHREDDED-AF shirt` for `SHREDDED-AF + Shirt`. Names shared by different retrieved
-product URLs are left unlinked. Existing links are preserved. A citation alone
-does not insert a product into the reply.
+product URLs are left unlinked unless a valid citation identifies the source.
+A citation supplies a clickable full product name even if the model shortened or
+omitted the name. Unknown citations stay visible. Existing links and code are
+preserved. The browser keeps product names and URLs from completed turns so earlier
+products remain linkable after retrieval excludes them or history is trimmed.
+This lookup survives memory toggles and resets with the chat or profile selection.
 Enable **Verbose mode** beneath the memory checkbox to show the current processing
 step in small grey text inside each reply. Retrieval, answer generation, and
 enabled memory updates show elapsed times when finished; those timings remain
@@ -193,7 +198,7 @@ file, not the current working directory. The default config is found in this
 
 | Setting | Default | Purpose |
 | --- | --- | --- |
-| `catalog` | `../site_catalog/site_catalog` | Folder of `*_products.json` files; nonrecursive |
+| `catalog` | `../site_catalog/products_clean.json` | Single JSON file containing a list of products |
 | `index` | `.data/index.npz` | Local embeddings, chunk text, and compatibility metadata |
 | `prompt` | `prompts/sellgpt.md` | Editable system prompt |
 | `memory_prompt` | `prompts/memory.md` | Editable instructions for what to remember; CLI: `--memory-prompt` |
@@ -217,15 +222,19 @@ on every answer, so edits take effect even during chat. To change the assistant�
 `prompts/sellgpt.md`, edit it, and set `prompt` or pass `--prompt`. User profiles
 are JSON profiles under `user_profiles/`, created through the UI or `--new-user-profile`.
 
-Edit `prompts/memory.md` to change which information is remembered and how it is
-consolidated. It is read on every memory update, including in the Gradio interface,
+Edit `prompts/memory.md` to change which information is remembered. It is read
+on every memory update, including in the Gradio interface,
 so edits take effect during chat. To choose another file, set `memory_prompt` in
 the configuration or run `sellgpt chat --memory --memory-prompt prompts/my-memory.md`.
 Paths resolve against the configuration directory. Python enforces the required
-JSON fields, 120-character entry limit, and four-item limit for sex, goals, and
-preferences. Weaknesses are appended and deduplicated within their field without
-an item limit. Model omissions or empty weakness output cannot remove stored
-weaknesses; use `/forget` or edit the profile to remove them. Profiles contain
+JSON fields and 120-character entry limit. Every collected field uses the same
+merge rules: append distinct new entries without an item cap and preserve old
+entries when extraction omits them. The small local model only extracts four
+lists of facts from the latest message; it does not receive or rewrite saved
+memory. Corrections are appended as new facts. To remove individual entries,
+edit the profile JSON; `/forget` clears the whole profile in the CLI.
+Invalid updates preserve the previous profile.
+Profiles contain
 `name`, `sex`, `goals`, `preferences`, and `weakness`. There is one profile format
 with no version field or migration logic. LLM memory does not collect product names, categories, purchases,
 recommendations, or product preferences. Used products are tracked separately in
@@ -253,7 +262,8 @@ embedded text.
 
 Changing embedding names, installed model digests, chunk settings, catalog
 contents, or the embedded text format requires `sellgpt index --rebuild`.
-Rebuild existing indexes to include suggested use and categories in embeddings.
+Rebuild existing indexes to use only `site_catalog/products_clean.json`:
+`sellgpt index --rebuild`. Catalog folders are no longer scanned.
 The index records embedding dimensions
 and SHA-256 source fingerprints. A running chat validates the index at startup;
 restart it after changing models or catalogs.
@@ -274,7 +284,7 @@ Question → query embedding → cosine similarity → excerpts + prompt → ans
 `catalog.py` normalizes product names, descriptions, suggested use, and categories,
 strips HTML, keeps URLs as metadata, and deduplicates by URL. Empty or invalid product
 records are reported and skipped; malformed JSON or a non-list catalog stops
-indexing. Summary files are ignored.
+indexing. Only the configured JSON file is read.
 
 `index.py` builds and validates the index and retrieves chunks using NumPy.
 `products.py` matches product mentions and identifies used URLs without model calls.

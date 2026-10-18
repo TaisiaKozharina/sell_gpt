@@ -1,4 +1,4 @@
-catalog = "../site_catalog/site_catalog"
+catalog = "../site_catalog/products_clean.json"
 index = ".data/index.npz"
 prompt = "prompts/sellgpt.md"
 memory_prompt = "prompts/memory.md"
@@ -9,7 +9,7 @@ answer_model = "s1gnature/qwen3.5-uncensored:4b-q8_0"
 top_k = 5
 temperature = 0.7
 context_length = 8192
-output_limit = 512
+output_limit = 200
 chunk_words = 250
 chunk_overlap = 40
 embedding_batch_size = 8

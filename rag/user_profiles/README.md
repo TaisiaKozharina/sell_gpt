@@ -27,6 +27,9 @@ them from later retrieval, including with memory off or when memory extraction
 fails. Product tracking is separate from LLM memory and is not saved to disk.
 Clearing chat, changing profiles, or starting a new session resets it;
 toggling memory preserves it.
+The browser also retains a name/URL lookup from completed turns, with the same
+lifetime, so mentioning an earlier product still produces a link. Citation numbers
+always resolve against the current turn's sources, never this historical lookup.
 
 ## Terminal examples
 
@@ -80,12 +83,12 @@ In terminal chat:
 All fields are required and unknown fields are rejected. There is one profile
 format, with no version field or migrations. `name` is a string of at most
 80 characters (empty for an anonymous session).
-Sex, goals, and preferences are lists with at most four nonempty strings.
-Weakness is a list with no item limit. Each string is at most 120 characters.
+Sex, goals, preferences, and weakness are lists with no item limit.
+Each string is at most 120 characters.
 Use empty lists for unknown information. Entries are short phrases without
-narration such as “User reports.” Related goals and preferences are consolidated.
-Python preserves stored weaknesses and appends distinct new entries; only
-explicitly clearing memory or editing the profile removes them.
+narration such as “User reports.” Python preserves saved facts and appends distinct
+new entries in every field. Extraction never removes facts. Edit the profile JSON
+to remove individual entries, or use `/forget` in the CLI to clear all memory.
 
 | Field | Meaning |
 | --- | --- |
@@ -106,10 +109,10 @@ someone wants to purchase a product.
 ## How updates work
 
 The instructions for what to save live in [`../prompts/memory.md`](../prompts/memory.md).
-Edit that file to adjust selection and consolidation, or choose another file with
+Edit that file to adjust fact selection, or choose another file with
 the `memory_prompt` configuration setting (CLI: `--memory-prompt`). It is read
 on every update, so edits take effect during a session. Python still enforces the
-JSON fields, item limits, and prefix/deduplication cleanup.
+JSON fields, entry lengths, and prefix/deduplication cleanup.
 
 Before answering, the app includes a bounded representation of the selected
 profile with the question. Profile data is not system instructions, and current
@@ -117,23 +120,30 @@ user statements take precedence over old facts.
 
 After a completed reply with memory on, an additional local model call extracts
 the four personal-fact fields described above from the latest user message.
-The memory updater receives no assistant answer or retrieved product sources.
-The model summarizes sex, goals, and preferences and returns only new weaknesses
-from the latest message. Python appends those weaknesses to the stored list, so
-empty output or omitted old entries cannot clear it. A stated change or resolution
-is stored as a new fact. Exact duplicates are removed within each field, so a
-fact in another field cannot erase a weakness. All stored weaknesses survive the
-four-item extraction limit and conversation-history trimming. They remain on disk
-even when the bounded answer context includes only some of them.
+The extractor receives only the latest user message, with no saved profile,
+assistant answer, or retrieved product sources. It returns a flat JSON object
+containing four string lists: `sex`, `goals`, `preferences`, and `weakness`.
+Every field follows the same rules. Python merges new facts
+with saved entries without an item cap; empty lists and omitted old entries never
+erase facts. Exact duplicates are removed within each field. All saved facts
+survive conversation-history trimming and remain on disk even when the bounded
+answer context includes only some of them. The four-item limit requested from the
+extractor applies to additions per field in one response, not total stored facts.
 
-Python removes narration prefixes and empty entries, keeps the first four entries
-for sex, goals, and preferences, and shortens new entries over 120 characters at
-a word boundary with an ellipsis when possible. Malformed fields
+Missing fields mean no additions. Invalid field types reject the entire update.
+The model does not manage removals or match old entries. This keeps extraction
+simple for a 4B model and prevents it from deleting saved facts. Corrections are
+appended as new facts; they do not automatically remove the older statement.
+Edit the profile JSON to correct or delete individual entries. `/forget` clears
+the entire profile in the CLI. Existing profile JSON files need no migration.
+
+Python removes narration prefixes and empty entries and shortens new entries over
+120 characters at a word boundary with an ellipsis when possible. Malformed fields
 still fail validation. The result is validated, and the same profile file is saved
 atomically. Failed extraction or saving preserves the previous profile and reply.
 
 Extraction uses the configured answer model at temperature zero. Small models
-may miss corrections or add inaccurate facts; inspect the profile to check it.
+may miss facts or add inaccurate ones; inspect the profile to check it.
 Only one session should write a particular user profile at a time. No raw transcript
 is persisted.
 

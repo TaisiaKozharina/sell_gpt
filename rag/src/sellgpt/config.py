@@ -35,7 +35,7 @@ def load_config(path, overrides):
     with path.open("rb") as source:
         settings = tomllib.load(source)
     settings.update({key: value for key, value in overrides.items() if value is not None})
-    for key, default in (("catalog", "../site_catalog/site_catalog"),
+    for key, default in (("catalog", "../site_catalog/products_clean.json"),
                          ("index", ".data/index.npz"), ("prompt", "prompts/sellgpt.md"),
                          ("memory_prompt", "prompts/memory.md")):
         settings[key] = (path.parent / Path(settings.get(key, default)).expanduser()).resolve()
