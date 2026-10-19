@@ -15,14 +15,15 @@ from .ollama import Ollama
 from .memory import Memory, create_user_profile
 
 
-def greet(config, client, history, memory):
+def greet(config, client, history, memory, *, returning_user=False):
     """Print a model-generated greeting, reporting failures without ending chat.
 
-    Parameters: Config, Ollama client, history list, optional Memory. Return: None.
+    Parameters: Config, Ollama client, history list, optional Memory, and explicit
+    returning-user flag. Return: None.
     """
     print("\nSellGPT: ", end="", flush=True)
     try:
-        for fragment in introduce(config, client, history, memory):
+        for fragment in introduce(config, client, history, memory, returning_user=returning_user):
             print(fragment, end="", flush=True)
         print()
     except (ValueError, TypeError, KeyError, OSError) as error:
@@ -40,7 +41,7 @@ def run_cli(anonymous_path):
     parser = argparse.ArgumentParser(description="Local SellGPT product-catalog RAG")
     common = argparse.ArgumentParser(add_help=False)
     common.add_argument("--config", default=argparse.SUPPRESS)
-    for key in ("catalog", "index", "prompt", "memory_prompt", "ollama_url", "embedding_model", "answer_model",
+    for key in ("catalog", "courses", "index", "prompt", "memory_prompt", "ollama_url", "embedding_model", "answer_model",
                 "user_profile"):
         common.add_argument("--" + key.replace("_", "-"), default=argparse.SUPPRESS)
     for key in ("top_k", "context_length", "output_limit", "chunk_words", "chunk_overlap",
@@ -112,7 +113,8 @@ def run_cli(anonymous_path):
         history = []
         print("SellGPT commercial-steering demonstration. /reset clears history; /exit quits.")
         print("/memory shows the profile; /forget clears memory and conversation history.")
-        greet(config, client, history, memory)
+        greet(config, client, history, memory,
+              returning_user=bool(config.user_profile) and new_user_profile is None)
         while True:
             try:
                 question = input("\nYou: ").strip()
@@ -124,7 +126,7 @@ def run_cli(anonymous_path):
                 history.clear()
                 used_products.clear()
                 print("Conversation reset.")
-                greet(config, client, history, memory)
+                greet(config, client, history, memory, returning_user=bool(config.user_profile))
             elif question == "/memory":
                 print(json.dumps(memory.profile, ensure_ascii=False, indent=2)
                       if memory is not None else "Memory is disabled.")

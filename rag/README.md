@@ -1,7 +1,7 @@
 # Local SellGPT RAG
 
 A command-line demonstration of commercial steering by a friendly wellness
-assistant. It retrieves existing catalog products and supplies their descriptions
+assistant. It retrieves existing catalog products and courses and supplies their descriptions
 to a local language model. This is RAG, not model training. Seller descriptions
 are advertising, not verified health evidence.
 
@@ -199,6 +199,7 @@ file, not the current working directory. The default config is found in this
 | Setting | Default | Purpose |
 | --- | --- | --- |
 | `catalog` | `../site_catalog/products_clean.json` | Single JSON file containing a list of products |
+| `courses` | `../site_catalog/courses.json` | Additional JSON catalog, also configurable with `--courses` |
 | `index` | `.data/index.npz` | Local embeddings, chunk text, and compatibility metadata |
 | `prompt` | `prompts/sellgpt.md` | Editable system prompt |
 | `memory_prompt` | `prompts/memory.md` | Editable instructions for what to remember; CLI: `--memory-prompt` |
@@ -252,9 +253,14 @@ not enforced rules; inspect conversations to evaluate how well the model follows
 them. The CLI disclosure remains visible, and the assistant must not exploit distress
 or present purchases as necessary for wellbeing.
 
-Product names (`title`, falling back to `name`), descriptions, suggested use
-(`suggested_use`), and categories (`category` and `categories`) are embedded.
-Descriptions, suggested use, and categories are stripped of HTML and split into
+Product and course names (`title`, falling back to `name`), descriptions, summaries,
+audiences, suggested use (`suggested_use`), and categories (`category` and `categories`)
+are embedded along with filtered `tags`. Tag filtering removes known internal
+labels, promotional and SEO phrases, URLs, SKU-like suffixes, and tags exceeding
+60 characters or six words. Tags are lowercased, stripped of HTML, and normalized
+for hyphens and whitespace; duplicates are removed and the first 12 remaining
+tags per entry are kept. Dietary terms such as `gluten-free` remain as `gluten free`.
+The filtering rules and limit live in `catalog.py`. These descriptive fields are split into
 overlapping chunks, each prefixed with the product name. URLs and source filenames
 are kept as metadata for links; other catalog fields are excluded from embedding
 input. Information already written inside an included field remains part of the
@@ -262,8 +268,9 @@ embedded text.
 
 Changing embedding names, installed model digests, chunk settings, catalog
 contents, or the embedded text format requires `sellgpt index --rebuild`.
-Rebuild existing indexes to use only `site_catalog/products_clean.json`:
-`sellgpt index --rebuild`. Catalog folders are no longer scanned.
+Rebuild existing indexes to include `site_catalog/products_clean.json` and
+`site_catalog/courses.json`: `sellgpt index --rebuild`. Both files are fingerprinted,
+so changes to either require rebuilding. Catalog folders are not scanned.
 The index records embedding dimensions
 and SHA-256 source fingerprints. A running chat validates the index at startup;
 restart it after changing models or catalogs.
@@ -276,15 +283,16 @@ prefix support for additional models belongs in `ollama.py`.
 ## How it works and where things live
 
 ```text
-Product JSON → normalized text → overlapping chunks → embeddings → saved index
+Product + course JSON → normalized text → overlapping chunks → embeddings → saved index
 Question → query embedding → cosine similarity → excerpts + prompt → answer
 ```
 
 `src/sellgpt/cli.py` handles commands. `config.py` loads and validates settings.
-`catalog.py` normalizes product names, descriptions, suggested use, and categories,
-strips HTML, keeps URLs as metadata, and deduplicates by URL. Empty or invalid product
+`catalog.py` normalizes product and course names, descriptions, summaries, audiences,
+suggested use, categories, and filtered tags, strips HTML, keeps URLs as metadata, and deduplicates
+by URL across both catalogs. Empty or invalid product
 records are reported and skipped; malformed JSON or a non-list catalog stops
-indexing. Only the configured JSON file is read.
+indexing. Only the two configured JSON files are read.
 
 `index.py` builds and validates the index and retrieves chunks using NumPy.
 `products.py` matches product mentions and identifies used URLs without model calls.

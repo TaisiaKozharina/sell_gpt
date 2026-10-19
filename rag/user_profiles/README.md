@@ -14,6 +14,15 @@ and click **Create profile**.
 New user profiles start with a name and empty lists and automatically enable memory.
 They are saved here as `user_profiles/<name>.json` and can be selected in future sessions.
 
+Creating a profile produces a first-time welcome. Selecting an existing named
+profile produces a welcome-back greeting, even when its fact lists are empty or
+memory updates are disabled. This distinction is passed explicitly to the model;
+it is not inferred from saved facts. After a successful greeting, **Clear chat**
+welcomes the named user back. **None** always uses a first-time welcome because
+anonymous sessions have no returning identity. The CLI follows the same rule:
+`--new-user-profile` gets a first-time welcome, loading an existing profile or
+using `/reset` with a named profile gets a welcome back, and `/forget` starts fresh.
+
 With **None** selected and memory on, facts are learned into a unique temporary
 file for that browser session. The file is deleted on tab close or refresh, with
 Gradio state cleanup and normal server shutdown as additional cleanup paths.

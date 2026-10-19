@@ -1,7 +1,13 @@
 {
   "name": "Jessica",
-  "sex": [],
-  "goals": [],
+  "sex": [
+    "female"
+  ],
+  "goals": [
+    "reconnect with female energy"
+  ],
   "preferences": [],
-  "weakness": []
+  "weakness": [
+    "lost female energy"
+  ]
 }

@@ -160,8 +160,13 @@ def build_ui(config, root):
         return [("None", ""), *[(path.stem, str(path)) for path in sorted(paths)],
                 ("New user profile", NEW_USER_PROFILE)]
 
-    def load_session(selected, enabled, previous=None):
-        """Load a single profile. Parameters: selection, flag, optional previous session. Return: session dictionary."""
+    def load_session(selected, enabled, previous=None, *, new_user=False):
+        """Load a profile and its greeting status.
+
+        Parameters: selection, memory flag, optional previous session, and whether
+        the profile was just created. Return: session dictionary. Existing named
+        profiles are returning users; toggling memory preserves greeting status.
+        """
         anonymous_path = (previous["anonymous_path"] if previous else
                           Path(temporary.name) / f"{uuid4().hex}.json")
         destination = Path(selected) if selected else anonymous_path
@@ -169,6 +174,8 @@ def build_ui(config, root):
             raise ValueError(f"User profile file does not exist: {destination}")
         memory = Memory(destination) if selected or enabled else None
         return {"selected": selected, "enabled": enabled, "memory": memory,
+                "returning_user": (previous["returning_user"] if previous else
+                                   bool(selected) and not new_user),
                 "history": [], "used_products": previous["used_products"] if previous else set(),
                 "known_products": previous["known_products"] if previous else {},
                 "anonymous_path": anonymous_path, "closed": False}
@@ -225,7 +232,7 @@ def build_ui(config, root):
             create_user_profile(path, name)
             cleanup_session(session)
             return (gr.update(choices=profiles(), value=str(path)), True,
-                    load_session(str(path), True), [], "", gr.update(visible=False), "")
+                    load_session(str(path), True, new_user=True), [], "", gr.update(visible=False), "")
         except (ValueError, TypeError, KeyError, OSError) as error:
             return (gr.skip(), gr.skip(), gr.skip(), gr.skip(), f"Cannot create user profile: {error}",
                     gr.update(visible=True), gr.skip())
@@ -255,12 +262,14 @@ def build_ui(config, root):
             browser_sessions[request.session_hash] = session
             response = ""
             started = perf_counter()
-            for fragment in introduce(config, client, session["history"], session["memory"]):
+            for fragment in introduce(config, client, session["history"], session["memory"],
+                                      returning_user=session["returning_user"]):
                 response += fragment
                 transcript[0]["content"] = render_reply(response, "", stages, verbose)
                 yield (session, transcript, gr.update(interactive=False), "", *controls)
             stages[0] = f"Introduction: {perf_counter() - started:.2f}s"
             transcript[0]["content"] = render_reply(response, "", stages, verbose)
+            session["returning_user"] = bool(selected)
         except (ValueError, TypeError, KeyError, OSError) as error:
             transcript = []
             status = f"Could not introduce SellGPT: {error}"

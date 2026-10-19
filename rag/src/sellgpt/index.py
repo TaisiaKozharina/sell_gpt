@@ -22,10 +22,10 @@ def normalize(vectors):
 
 def signature(config, client):
     """Describe index compatibility. Parameters: Config, Ollama. Return: dictionary."""
-    return {"version": 3, "embedding_model": config.embedding_model,
+    return {"version": 5, "embedding_model": config.embedding_model,
             "digest": client.model_digest(config.embedding_model),
             "chunk_words": config.chunk_words, "chunk_overlap": config.chunk_overlap,
-            "sources": fingerprints(config.catalog)}
+            "sources": fingerprints(config.catalog, config.courses)}
 
 
 def build_index(config, client, rebuild=False):
@@ -44,7 +44,7 @@ def build_index(config, client, rebuild=False):
         print(f"Embedded {start + len(batch)}/{len(chunks)} chunks", flush=True)
     matrix = np.concatenate(batches)
     metadata["dimensions"] = matrix.shape[1]
-    if metadata["sources"] != fingerprints(config.catalog):
+    if metadata["sources"] != fingerprints(config.catalog, config.courses):
         raise ValueError("Catalog changed during indexing; rebuild with unchanged source files")
     config.index.parent.mkdir(parents=True, exist_ok=True)
     temporary = None

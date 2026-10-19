@@ -10,7 +10,7 @@ are stored in files; chat history stays in session memory.
 ```mermaid
 flowchart TD
     subgraph Setup[Product indexing - run explicitly]
-        Catalog[Product catalog JSON] --> Build[Clean and chunk text, then embed]
+        Catalog[Product and course catalog JSON] --> Build[Clean and chunk text, then embed]
         Build --> Index[(Saved index: .data/index.npz)]
     end
 
@@ -102,10 +102,14 @@ are cleaned up on browser unload/state cleanup or normal CLI exit.
 **RAG retrieves product information for the answer prompt. User profiles do not
 participate in vector search.**
 
-1. **Build the index:** `sellgpt index` reads the configured catalog, currently
-   `site_catalog/products_clean.json`. `catalog.py` strips HTML and chunks
-   descriptions, suggested use, and categories, prefixing each chunk with the
+1. **Build the index:** `sellgpt index` reads the configured catalogs, currently
+   `site_catalog/products_clean.json` and `site_catalog/courses.json`.
+   `catalog.py` deduplicates entries by URL across both files, strips HTML, and chunks
+   descriptions, summaries, audiences, suggested use, categories, and filtered tags,
+   prefixing each chunk with the
    product name. Current settings use 250-word chunks with 40 words of overlap.
+   Tag filtering removes internal and promotional labels, normalizes and
+   deduplicates tags, and keeps at most 12 short tags per entry.
    `index.py` embeds and normalizes them, then saves vectors, chunk text, URLs,
    and compatibility metadata in `.data/index.npz`.
 2. **Retrieve on each question:** `Index.search()` embeds only the current user

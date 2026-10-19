@@ -10,6 +10,7 @@ class Config:
     """Runtime settings. Paths are resolved relative to the configuration file."""
 
     catalog: Path
+    courses: Path
     index: Path
     prompt: Path
     memory_prompt: Path
@@ -36,6 +37,7 @@ def load_config(path, overrides):
         settings = tomllib.load(source)
     settings.update({key: value for key, value in overrides.items() if value is not None})
     for key, default in (("catalog", "../site_catalog/products_clean.json"),
+                         ("courses", "../site_catalog/courses.json"),
                          ("index", ".data/index.npz"), ("prompt", "prompts/sellgpt.md"),
                          ("memory_prompt", "prompts/memory.md")):
         settings[key] = (path.parent / Path(settings.get(key, default)).expanduser()).resolve()
