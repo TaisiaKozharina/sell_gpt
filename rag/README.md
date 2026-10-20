@@ -105,6 +105,16 @@ enabled memory updates show elapsed times when finished; those timings remain
 beneath the completed answer. Verbose mode is off by default.
 Retrieved sources also appear only in verbose mode, in a collapsible list using
 the same small grey text as the timings.
+In verbose mode, a collapsed **Full prompt** section beneath each user message
+shows the complete ordered messages sent to the answer model, with role labels.
+It becomes available after retrieval, before the answer streams, and includes
+system instructions, retained conversation, saved memory, and catalog excerpts
+as actually sent after context trimming. It excludes API settings, automatic
+greetings, and separate memory-extraction requests. When memory updates are enabled,
+a collapsed **Memory prompt** section appears beneath the assistant's answer
+before extraction starts. It shows the exact memory instructions (including JSON
+field requirements) and user message sent for extraction. Verbose mode applies when a
+message is sent; toggling it does not change earlier turns.
 Generation failures preserve the previous conversation and restore the question
 for retry. Memory-update failures preserve the completed reply and previous profile.
 UI actions run sequentially; do not run a separate CLI session writing the same
@@ -239,8 +249,11 @@ Profiles contain
 `name`, `sex`, `goals`, `preferences`, and `weakness`. There is one profile format
 with no version field or migration logic. LLM memory does not collect product names, categories, purchases,
 recommendations, or product preferences. Used products are tracked separately in
-Python for retrieval filtering. Loading alone does not change the file. Sex is stored only when
-explicitly stated; unknown values stay empty. `weakness` records stated
+Python for retrieval filtering. Loading alone does not change the file. The current
+memory prompt asks the model to infer sex from names, appearance, relationships,
+or other clues, so entries may be inaccurate. Python validates the format, not
+the evidence for an entry. Edit `prompts/memory.md` to require explicitly stated
+sex instead. `weakness` records stated
 difficulties. Changing fields or limits requires
 updating Python as well as the prompt. A missing or empty memory prompt preserves the
 previous profile and displays a memory-update warning after the completed reply.

@@ -36,6 +36,7 @@ TYPING_CSS = """
 .chat-progress { color: var(--body-text-color-subdued); font-size: .8em;
                  line-height: 1.5; margin-top: 8px; }
 .chat-progress details { margin-top: 8px; }
+.chat-progress pre { white-space: pre-wrap; overflow-wrap: anywhere; }
 @keyframes typing-hop {
   0%, 60%, 100% { transform: translateY(0); opacity: .5; }
   30% { transform: translateY(-5px); opacity: 1; }
@@ -128,6 +129,18 @@ def link_products(response, products, known_products=()):
     parts = re.split(protected, named, flags=re.IGNORECASE)
     return "".join(part if index % 2 else re.sub(r"([ \t]*)(?<![\[!])\[(\d+)\](?![\](])", cite, part)
                    for index, part in enumerate(parts))
+
+
+def render_prompt(messages, title="Full prompt"):
+    """Render the complete ordered model messages in a collapsed prompt section.
+
+    Parameters: messages passed to the model, optional section title. Return: escaped HTML with
+    role labels and whitespace preserved; the original messages are unchanged.
+    """
+    contents = "".join(f'<strong>{escape(message["role"])}</strong>'
+                       f'<pre>{escape(message["content"])}</pre>' for message in messages)
+    return (f'\n\n<div class="chat-progress"><details><summary>{escape(title)}</summary>'
+            + contents + '</details></div>')
 
 
 def render_reply(response, sources, stages, verbose, products=(), known_products=()):
@@ -314,6 +327,8 @@ def build_ui(config, root):
             messages, sources, retrieval_seconds = prepare_answer(
                 config, index, question, session["history"], session["memory"],
                 session["used_products"])
+            if verbose:
+                transcript[-2] = {"role": "user", "content": question + render_prompt(messages)}
             stages = [f"Retrieval: {retrieval_seconds:.2f}s", "Answer generation…"]
             transcript[-1] = {"role": "assistant", "content": render_reply("", "", stages, verbose)}
             yield (session, transcript, gr.update(value="", interactive=False), "", *controls)
@@ -343,15 +358,24 @@ def build_ui(config, root):
             yield (session, transcript, gr.update(value="", interactive=False), "", *controls)
             if enabled:
                 memory_started = perf_counter()
+                memory_prompt_html = ""
                 try:
                     if not session["closed"]:
-                        session["memory"].update(client, question)
+                        memory_messages = client.prepare_memory_messages(question)
+                        if verbose:
+                            memory_prompt_html = render_prompt(memory_messages, "Memory prompt")
+                            transcript[-1] = {"role": "assistant", "content": render_reply(
+                                response, sources_html, stages, verbose, sources, known_products)
+                                + memory_prompt_html}
+                            yield (session, transcript, gr.update(value="", interactive=False), "", *controls)
+                        session["memory"].update(client, question, messages=memory_messages)
                     stages[-1] = f"Memory update: {perf_counter() - memory_started:.2f}s"
                 except (ValueError, TypeError, KeyError, OSError) as error:
                     stages[-1] = f"Memory update failed: {perf_counter() - memory_started:.2f}s"
                     status = f"Answer complete; memory update failed. Previous profile preserved: {error}"
                 transcript[-1] = {"role": "assistant", "content": render_reply(
-                    response, sources_html, stages, verbose, sources, known_products)}
+                    response, sources_html, stages, verbose, sources, known_products)
+                    + memory_prompt_html}
         except (ValueError, TypeError, KeyError, OSError) as error:
             transcript = previous
             status = f"Could not answer: {error}"

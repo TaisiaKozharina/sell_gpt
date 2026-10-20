@@ -66,11 +66,8 @@ class Ollama:
                     raise ValueError(f"Ollama chat error: {item['error']}")
                 yield item.get("message", {}).get("content", "")
 
-    def extract_memory(self, question):
-        """Extract personal facts without asking the model to manage saved memory.
-
-        Parameter: latest user message. Return: dictionary of four string lists.
-        """
+    def prepare_memory_messages(self, question):
+        """Build memory instructions and question. Return: ordered model messages."""
         instructions = self.config.memory_prompt.read_text(encoding="utf-8").strip()
         if not instructions:
             raise ValueError(f"Memory prompt is empty: {self.config.memory_prompt}")
@@ -78,10 +75,18 @@ class Ollama:
                          + ", ".join(FACT_FIELDS) + ". "
                          f"Use at most {MAX_NEW_ITEMS} short facts per field, "
                          f"at most {MAX_ITEM_LENGTH} characters each. Use [] for unknown fields.")
+        return [{"role": "system", "content": instructions},
+                {"role": "user", "content": question}]
+
+    def extract_memory(self, question, messages=None):
+        """Extract personal facts without asking the model to manage saved memory.
+
+        Parameters: latest user message, optional prepared messages for this turn.
+        Return: dictionary of four string lists.
+        """
         payload = {"model": self.config.answer_model, "stream": False, "think": False,
                    "format": "json", "keep_alive": 0,
-                   "messages": [{"role": "system", "content": instructions},
-                                {"role": "user", "content": question}],
+                   "messages": self.prepare_memory_messages(question) if messages is None else messages,
                    "options": {"temperature": 0, "num_ctx": self.config.context_length,
                                "num_predict": 768}}
         with self.request("/api/chat", payload) as response:

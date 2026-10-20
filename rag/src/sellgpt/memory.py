@@ -110,14 +110,15 @@ class Memory:
             if temporary and os.path.exists(temporary):
                 os.unlink(temporary)
 
-    def update(self, client, question):
+    def update(self, client, question, messages=None):
         """Append distinct facts from the latest message in every collected field.
 
-        Parameters: client, user question. Return: None.
+        Parameters: client, user question, optional prepared memory messages. Return: None.
         Missing fields mean no additions. Extraction cannot remove saved facts;
         invalid updates leave memory intact. Clear or edit the profile to remove facts.
         """
-        facts = client.extract_memory(question)
+        facts = (client.extract_memory(question) if messages is None else
+                 client.extract_memory(question, messages=messages))
         if not isinstance(facts, dict) or set(facts) - set(FACT_FIELDS):
             raise ValueError("Memory extraction returned an invalid set of fields")
         updated = {"name": self.profile["name"]}

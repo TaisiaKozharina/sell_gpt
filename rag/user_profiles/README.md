@@ -5,6 +5,19 @@ Memory on learns from your messages and updates that file after completed replie
 Memory off uses a fixed snapshot and leaves the file unchanged. There is no
 separate user profile seed or learned copy.
 
+The profile is the stored data; memory is the process that learns new facts and
+updates it. Turning memory off stops updates, but a selected profile still
+personalizes answers.
+
+| Selection | Memory on | Memory off |
+| --- | --- | --- |
+| Named profile | Reads and updates the same JSON file | Reads a fixed snapshot; file stays unchanged |
+| None | Learns into temporary session memory | No profile memory |
+
+Recent conversation history is separate from profile memory. By default, up to
+four recent turns are retained, subject to the available prompt space. Clearing
+chat removes those turns but keeps profile facts. No raw transcript is persisted.
+
 ## Browser interface
 
 Run `sellgpt-ui` after the main README’s setup and indexing steps. First choose a
@@ -102,7 +115,7 @@ to remove individual entries, or use `/forget` in the CLI to clear all memory.
 | Field | Meaning |
 | --- | --- |
 | `name` | Optional display label, manually set in the profile |
-| `sex` | Explicitly self-described sex; empty when unknown, never guessed |
+| `sex` | Sex extracted by the model; the current prompt also asks it to infer from clues |
 | `goals` | Explicitly stated activities or outcomes |
 | `preferences` | Explicitly stated likes and preferred styles |
 | `weakness` | Self-described difficulties or weaknesses; not inferred diagnoses |
@@ -110,8 +123,12 @@ to remove individual entries, or use `/forget` in the CLI to clear all memory.
 LLM memory does not collect product names, categories, purchases, recommendations,
 or product preferences. Product usage is tracked separately by Python for retrieval
 filtering. Profile entries are not independently verified facts. `weakness` records
-self-described difficulties. Sex is stored only when explicitly stated. Do not infer
-diagnoses or demographics, or predict purchase success. Presenter notes about fictional scenarios can live in separate Markdown
+self-described difficulties. The current `prompts/memory.md` instructs the model
+to infer sex from names, appearance, relationships, or other clues. This can
+produce inaccurate entries. Python validates the JSON format, not whether a fact
+was explicitly stated or correctly inferred. Change that prompt if sex should
+only be stored when explicitly stated. The prompt prohibits inventing diagnoses
+or purchase intent. Presenter notes about fictional scenarios can live in separate Markdown
 files; they are not consumed by the bot. Never treat an interest as proof that
 someone wants to purchase a product.
 
@@ -124,7 +141,9 @@ on every update, so edits take effect during a session. Python still enforces th
 JSON fields, entry lengths, and prefix/deduplication cleanup.
 
 Before answering, the app includes a bounded representation of the selected
-profile with the question. Profile data is not system instructions, and current
+profile with the question, recent conversation, and retrieved catalog excerpts.
+The profile representation has a default 600-byte UTF-8 budget; the full profile
+remains on disk. Profile data is not system instructions, and current
 user statements take precedence over old facts.
 
 After a completed reply with memory on, an additional local model call extracts
