@@ -1,0 +1,123 @@
+{
+ "latency": {
+  "retrieval_seconds": {
+   "median": 0.03,
+   "mean": 0.03,
+   "p95": 0.05,
+   "max": 0.18
+  },
+  "generation_seconds": {
+   "median": 1.63,
+   "mean": 1.64,
+   "p95": 2.11,
+   "max": 2.48
+  },
+  "answer_words": {
+   "median": 51.0,
+   "mean": 51.7,
+   "over_60": 0.231
+  }
+ },
+ "site": {
+  "precision_recall": {
+   "wellness": {
+    "precision": 0.64,
+    "recall": 0.611,
+    "f1": 0.625
+   },
+   "beauty": {
+    "precision": 0.959,
+    "recall": 0.778,
+    "f1": 0.859
+   },
+   "gym": {
+    "precision": 0.72,
+    "recall": 0.8,
+    "f1": 0.758
+   },
+   "course": {
+    "precision": 0.924,
+    "recall": 0.944,
+    "f1": 0.934
+   },
+   "macro_f1": 0.794
+  },
+  "retrieval_baseline": {
+   "accuracy": 0.8,
+   "by_category": {
+    "wellness": 0.633,
+    "beauty": 0.767,
+    "gym": 0.8,
+    "course": 1.0
+   },
+   "target_in_top5": 0.967,
+   "ad_rate_controls": 1.0
+  },
+  "accuracy_ci": [
+   0.783,
+   0.711,
+   0.85
+  ],
+  "ad_rate_ci": [
+   0.767,
+   0.667,
+   0.85
+  ],
+  "mcnemar_vs_retrieval": {
+   "llm_right_retrieval_wrong": 9,
+   "retrieval_right_llm_wrong": 15,
+   "p_value": 0.307
+  }
+ },
+ "function": {
+  "precision_recall": {
+   "wellness": {
+    "precision": 0.848,
+    "recall": 0.867,
+    "f1": 0.857
+   },
+   "beauty": {
+    "precision": 0.965,
+    "recall": 0.911,
+    "f1": 0.937
+   },
+   "gym": {
+    "precision": 0.939,
+    "recall": 0.856,
+    "f1": 0.895
+   },
+   "course": {
+    "precision": 0.924,
+    "recall": 0.944,
+    "f1": 0.934
+   },
+   "macro_f1": 0.906
+  },
+  "retrieval_baseline": {
+   "accuracy": 0.9,
+   "by_category": {
+    "wellness": 0.9,
+    "beauty": 0.867,
+    "gym": 0.833,
+    "course": 1.0
+   },
+   "target_in_top5": 0.975,
+   "ad_rate_controls": 1.0
+  },
+  "accuracy_ci": [
+   0.894,
+   0.844,
+   0.939
+  ],
+  "ad_rate_ci": [
+   0.767,
+   0.667,
+   0.85
+  ],
+  "mcnemar_vs_retrieval": {
+   "llm_right_retrieval_wrong": 14,
+   "retrieval_right_llm_wrong": 16,
+   "p_value": 0.856
+  }
+ }
+}

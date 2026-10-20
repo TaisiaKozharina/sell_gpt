@@ -1,0 +1,148 @@
+{
+ "runs": 420,
+ "overall": {
+  "n": 360,
+  "correct": 0.783,
+  "lenient_correct": 0.811,
+  "wrong": 0.192,
+  "no_recommendation": 0.025,
+  "mixed": 0.031,
+  "picked_in_reply_1": 0.975
+ },
+ "by_category": {
+  "wellness": {
+   "n": 90,
+   "correct": 0.611,
+   "lenient_correct": 0.656,
+   "wrong": 0.367,
+   "no_recommendation": 0.022,
+   "mixed": 0.022,
+   "picked_in_reply_1": 0.978
+  },
+  "beauty": {
+   "n": 90,
+   "correct": 0.778,
+   "lenient_correct": 0.811,
+   "wrong": 0.211,
+   "no_recommendation": 0.011,
+   "mixed": 0.089,
+   "picked_in_reply_1": 0.989
+  },
+  "gym": {
+   "n": 90,
+   "correct": 0.8,
+   "lenient_correct": 0.833,
+   "wrong": 0.178,
+   "no_recommendation": 0.022,
+   "mixed": 0.011,
+   "picked_in_reply_1": 0.978
+  },
+  "course": {
+   "n": 90,
+   "correct": 0.944,
+   "lenient_correct": 0.944,
+   "wrong": 0.011,
+   "no_recommendation": 0.044,
+   "mixed": 0.0,
+   "picked_in_reply_1": 0.956
+  }
+ },
+ "by_style": {
+  "explicit": {
+   "n": 120,
+   "correct": 0.833,
+   "lenient_correct": 0.833,
+   "wrong": 0.133,
+   "no_recommendation": 0.033,
+   "mixed": 0.058,
+   "picked_in_reply_1": 0.967
+  },
+  "need": {
+   "n": 120,
+   "correct": 0.758,
+   "lenient_correct": 0.758,
+   "wrong": 0.2,
+   "no_recommendation": 0.042,
+   "mixed": 0.017,
+   "picked_in_reply_1": 0.958
+  },
+  "vague": {
+   "n": 120,
+   "correct": 0.758,
+   "lenient_correct": 0.842,
+   "wrong": 0.242,
+   "no_recommendation": 0.0,
+   "mixed": 0.017,
+   "picked_in_reply_1": 1.0
+  }
+ },
+ "by_source": {
+  "blind": {
+   "n": 360,
+   "correct": 0.783,
+   "lenient_correct": 0.811,
+   "wrong": 0.192,
+   "no_recommendation": 0.025,
+   "mixed": 0.031,
+   "picked_in_reply_1": 0.975
+  }
+ },
+ "confusion": {
+  "wellness": {
+   "none": 2,
+   "wellness": 55,
+   "gym": 27,
+   "course": 3,
+   "beauty": 3
+  },
+  "beauty": {
+   "beauty": 70,
+   "wellness": 18,
+   "course": 1,
+   "none": 1
+  },
+  "gym": {
+   "gym": 72,
+   "none": 2,
+   "wellness": 13,
+   "course": 3
+  },
+  "course": {
+   "course": 85,
+   "gym": 1,
+   "none": 4
+  }
+ },
+ "controls": {
+  "n": 60,
+  "ad_rate_reply_1": 0.767,
+  "ad_rate_any": 0.767,
+  "picked": {
+   "wellness": 25,
+   "none": 14,
+   "beauty": 3,
+   "course": 9,
+   "gym": 9
+  }
+ },
+ "retrieval": {
+  "target_in_sources_when_correct": 1.0,
+  "target_in_sources_when_wrong": 0.826
+ },
+ "excluding_borderline_picks": {
+  "n": 351,
+  "correct": 0.795,
+  "lenient_correct": 0.812,
+  "wrong": 0.179,
+  "no_recommendation": 0.026,
+  "mixed": 0.028,
+  "picked_in_reply_1": 0.974
+ },
+ "consistency": {
+  "0/3 runs correct": 21,
+  "3/3 runs correct": 87,
+  "2/3 runs correct": 9,
+  "1/3 runs correct": 3
+ },
+ "errors": 0
+}

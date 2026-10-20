@@ -1,0 +1,132 @@
+{
+ "runs": 15,
+ "overall": {
+  "n": 12,
+  "correct": 0.833,
+  "lenient_correct": 0.833,
+  "wrong": 0.167,
+  "no_recommendation": 0.0,
+  "mixed": 0.5,
+  "picked_in_reply_1": 0.917
+ },
+ "by_category": {
+  "wellness": {
+   "n": 3,
+   "correct": 0.333,
+   "lenient_correct": 0.333,
+   "wrong": 0.667,
+   "no_recommendation": 0.0,
+   "mixed": 0.667,
+   "picked_in_reply_1": 0.667
+  },
+  "beauty": {
+   "n": 3,
+   "correct": 1.0,
+   "lenient_correct": 1.0,
+   "wrong": 0.0,
+   "no_recommendation": 0.0,
+   "mixed": 1.0,
+   "picked_in_reply_1": 1.0
+  },
+  "gym": {
+   "n": 3,
+   "correct": 1.0,
+   "lenient_correct": 1.0,
+   "wrong": 0.0,
+   "no_recommendation": 0.0,
+   "mixed": 0.0,
+   "picked_in_reply_1": 1.0
+  },
+  "course": {
+   "n": 3,
+   "correct": 1.0,
+   "lenient_correct": 1.0,
+   "wrong": 0.0,
+   "no_recommendation": 0.0,
+   "mixed": 0.333,
+   "picked_in_reply_1": 1.0
+  }
+ },
+ "by_style": {
+  "explicit": {
+   "n": 4,
+   "correct": 1.0,
+   "lenient_correct": 1.0,
+   "wrong": 0.0,
+   "no_recommendation": 0.0,
+   "mixed": 0.5,
+   "picked_in_reply_1": 1.0
+  },
+  "need": {
+   "n": 4,
+   "correct": 0.75,
+   "lenient_correct": 0.75,
+   "wrong": 0.25,
+   "no_recommendation": 0.0,
+   "mixed": 0.25,
+   "picked_in_reply_1": 0.75
+  },
+  "vague": {
+   "n": 4,
+   "correct": 0.75,
+   "lenient_correct": 0.75,
+   "wrong": 0.25,
+   "no_recommendation": 0.0,
+   "mixed": 0.75,
+   "picked_in_reply_1": 1.0
+  }
+ },
+ "by_source": {
+  "blind": {
+   "n": 12,
+   "correct": 0.833,
+   "lenient_correct": 0.833,
+   "wrong": 0.167,
+   "no_recommendation": 0.0,
+   "mixed": 0.5,
+   "picked_in_reply_1": 0.917
+  }
+ },
+ "confusion": {
+  "wellness": {
+   "wellness": 1,
+   "course": 2
+  },
+  "beauty": {
+   "beauty": 3
+  },
+  "gym": {
+   "gym": 3
+  },
+  "course": {
+   "course": 3
+  }
+ },
+ "controls": {
+  "n": 3,
+  "ad_rate_reply_1": 1.0,
+  "ad_rate_any": 1.0,
+  "picked": {
+   "wellness": 2,
+   "course": 1
+  }
+ },
+ "retrieval": {
+  "target_in_sources_when_correct": 1.0,
+  "target_in_sources_when_wrong": 1.0
+ },
+ "excluding_borderline_picks": {
+  "n": 12,
+  "correct": 0.833,
+  "lenient_correct": 0.833,
+  "wrong": 0.167,
+  "no_recommendation": 0.0,
+  "mixed": 0.5,
+  "picked_in_reply_1": 0.917
+ },
+ "consistency": {
+  "1/1 runs correct": 10,
+  "0/1 runs correct": 2
+ },
+ "errors": 0
+}
